@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jesse van Elteren">
-<meta name="dcterms.date" content="2020-07-26">
-<meta name="description" content="Top 3% in a data science competition">
+<meta name="dcterms.date" content="2021-04-29">
+<meta name="description" content="Tweederde van alle turners heeft te maken met grensoverschrijdend gedrag?">
 
-<title>blog - Predicting the value of a house</title>
+<title>blog - Turnonderzoek op het journaal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,22 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">blog</span>
     </a>
   </div>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html">
+    <a class="nav-link" href="../../about.html">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -106,16 +106,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Predicting the value of a house</h1>
+      <h1 class="title">Turnonderzoek op het journaal</h1>
                   <div>
         <div class="description">
-          Top 3% in a data science competition
+          Tweederde van alle turners heeft te maken met grensoverschrijdend gedrag?
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">house</div>
-                <div class="quarto-category">price</div>
-                <div class="quarto-category">prediction</div>
+                <div class="quarto-category">tv</div>
+                <div class="quarto-category">analysis</div>
               </div>
                   </div>
   </div>
@@ -133,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 26, 2020</p>
+        <p class="date">April 29, 2021</p>
       </div>
     </div>
     
@@ -151,11 +150,20 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Recently I’ve made my way into Kaggle. If it’s new for you, I highly recommend checking it out. Kaggle is a platform where organizations host data science competitions. They come up with a data science challenge, make the data available to Kaggle users, and many data scientist worldwide compete to get the highest score on the leaderboard. After a defined period the competition ends and the winner is awarded with a (monetary) price.</p>
-<p>Participants also share their code (kernels), and have discussions on the data. This makes it an excellent platform to learn. The competitions can be a bit intimidating, since it can have extremely large datasets (100GB upwards), the objectives can be challenging (imaging, audio, text, combinations) and figuring out how to submit is not always trivial. But of course you can start with simpler competitions such as the <a href="https://www.kaggle.com/c/titanic">classic Titanic example</a>.</p>
-<p>Since I’m quite familiar with tabular data I decided to give the housing competition a try. <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data">The training data</a> consists of many features describing about 1500 houses and their selling price. After numerous experiments I ended up with a top 3% score on the leaderboard before throwing in the proverbial towel. The rush of inching up the leaderboard made it a great experience!</p>
-<p>Afterwards I wrote about the <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques/discussion/170472">main insights, learnings and questions</a></p>
-<p>Next up: probably a imaging competition with Pytorch or fast.ai</p>
+<p><img src="waddinxveen_turnen.png" class="img-fluid"></p>
+<p>Op het <a href="https://www.npostart.nl/nos-journaal/28-04-2021/POW_04819872">NOS journaal</a>: tweederde van turners heeft te maken met grensoverschrijdend gedrag. Als vader met een meisje op turnen krab je je dan toch even achter de oren… Maar, de interesse was gewekt en voor het lidmaatschap op te zeggen ben ik toch even het <a href="https://dutchgymnastics.nl/assets/Documenten/Veilig-sporten/Verinorm/Verinorm_Ongelijke_leggers_rapport.pdf">ruim 400 pagina’s dikke rapport</a> ingedoken. Uiteraard met de databril op. En dan schrik je toch wel, maar vooral van de eenzijdige journalistiek…</p>
+<p>Waar komt die tweederde vandaan? Het journaal meldt dat het hierbij gaat om oud-sporters en actieve. Dat klopt niet, het gaat om oud sporters (van voor 2014). Deze konden een vragenlijst invullen op de website van de turnbond. De turnbond beschikte niet over de emailadressen van deze turners, dus de participanten moeten op een andere manier hun weg naar de website hebben moeten vinden. 282 deelnemers hebben de vragenlijst ingevuld. Ter referentie, in 2014 had de turnbond 241.435 leden. De onderzoekers melden zelf ook dat de resultaten niet representatief zijn en dat er geen generaliserende conclusies kunnen worden getrokken over de gehele gymsport.</p>
+<p>Er treedt bij dit onderzoek een dubbel selectie-effect op: * Mensen met een sterke mening over het onderwerp zullen de vragenlijst eerder invullen. Vergelijk het met een onderzoek over geluidsoverlast. Welke mensen zullen hierbij reageren, degene die geluidsoverlast ervaren of niet? Om dit effect te verminderen was een alternatieve aanpak geweest om niet aan te kondigen dat dit onderzoek over GOG ging. Maar dat heeft ook weer zo z’n nadelen. * 80% van de deelnemers geeft aan (semi)topsport te hebben beoefend. Van deze oud-topsporters geeft 85% aan met grensoverschrijdend gedrag te maken te hebben gehad. Bij de semi-topsporters is dit 58% en bij de breedtesporters 35%. Het hoge aandeel van topsporters in de respondenten trekt het gemiddelde omhoog naar tweederde. Beide effecten werken vertekenend als je een conclusie wilt trekken over de gehele turnsport. De auteurs benoemen het mogelijke selectie-effect.</p>
+<p>Er zijn ook vragenlijsten per email verstuurd, van de 180.000 turners waarvan gegevens beschikbaar waren zijn alle (semi) topsporters van na 2014 aangeschreven (8147) en 5% (7136) van de overige leden. Ongeveer 18% reageerde. Dit is een ietwat magere respons. Hieronder een gedeelte van de infographic van het rapport, deze geeft het verschil weer tussen de ervaringen van topsporters (60-70% te maken met GOG) en recreatieve sporters (15% te maken met GOG).</p>
+<p>Het aantal respondenten vanuit de recreatieve groep is erg klein, bijvoorbeeld 21 respondenten waren volwassen recreatieve sporters. In werkelijkheid turnt 73% van de turners op recreatief niveau, niet 3% zoals bij de volwassen respondenten. Recreatieve sporters zijn dus enorm ondervertegenwoordigd in de steekproef. Wederom het selectie-effect. De onderzoekers geven aan dat ‘de omvang van grensoverschrijdend gedrag vrijwel niet betrouwbaar is vast te stellen’.</p>
+<p><img src="turnen/selectieeffect.PNG" class="img-fluid"></p>
+<p>Een heel negatief beeld dus op het journaal. Met betrekking tot de breedtesport kan je nauwelijks cijfermatige conclusies trekken, terwijl het wel wordt gepresenteerd als de turnsport als geheel. Bij wedstrijdsporters is er meer zekerheid, maar blijft het selectie-effect een grote onzekerheid. Maar het genuanceerde verhaal paste natuurlijk niet in het journaal.</p>
+<p>Dan is er ook nog een soort positief nieuws, er wordt onderzoek geciteerd uit 2020, door NOC/NSF gepresenteerd als representatief (n=5.000). Turnen staat bij een vergelijkend onderzoek laag in de middenmoot van sporten waar mensen grensoverschrijdend gedrag hebben meegemaakt (voetbal, handbal, hockey, korfbal scoren veel hoger). Bij seksueel grensoverschrijdend gedrag staat turnen nog lager, ongeveer gelijk met ‘schaken’. Zie onder de grafiek over emotioneel grensoverschrijdend gedrag uit dat onderzoek. Hierbij is geen onderscheid gemaakt tussen top- en recreatiesport.</p>
+<p><img src="turnen/egog.PNG" class="img-fluid"></p>
+<p>Meer positief nieuws: van de respondenten geven de volwassenen het turnen gemiddeld een 8 (33% geeft een 9 of 10) en de minderjarigen met een 8,5 (54% geeft een 9 of 10). Deze score ligt bij de topsporters wat lager dan bij de recreanten. Maar komt dat door GOG of doordat topsport als minder leuk wordt ervaren? Het zou interessant zijn om deze getallen nog uit te splitsen in groepen die wel/niet GOG te maken hebben gehad. Dan kan je misschien iets zeggen over de impact van GOG/topsport op turnplezier. Hieronder de grafiek van minderjarige respondenten.</p>
+<p><img src="turnen/score_turnen.PNG" class="img-fluid"></p>
+<p>Dan tenslotte: ik heb echt alleen naar de cijfers gekeken, dit doet niets af aan de ernstige ervaringen die turners in kwestie hebben meegemaakt. Dit is nooit acceptabel en werken aan verbetering van de sport is altijd goed.</p>
+<p>Zolang m’n dochter het leuk vindt (en nog geen topsporter is) ga ik in elk geval met gerust hart en veel plezier naar de 🤸‍♀️turntraining🤸‍♂️!</p>
 
 
 
