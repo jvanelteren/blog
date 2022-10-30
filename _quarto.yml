@@ -5,6 +5,8 @@ website:
   title: "Blog Jesse van Elteren"
   site-url: https://jvanelteren.github.io/blog/
   description: "Data science posts"
+  google-analytics: "UA-1302238-4"
+  twitter-card: true
   navbar:
     right:
       - about.qmd
@@ -16,8 +18,10 @@ website:
         href: index.xml
 format:
   html:
-    theme: cosmo
+    theme:
+      light: united
+      # united
+      dark: darkly
     css: styles.css
-
 
 
