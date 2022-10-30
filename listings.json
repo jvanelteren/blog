@@ -1,0 +1,27 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/gpt3/gpt3.html",
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html",
+      "/posts/2022-01-19-boardgames.html",
+      "/posts/2022-01-03-glide_image_model.html",
+      "/posts/2022-01-02-analysis_aoc_stats.html",
+      "/posts/2021-07-10-aoc.html",
+      "/posts/2021-04-29-turnen.html",
+      "/posts/2021-03-07-kamermoties_topics.html",
+      "/posts/2021-02-20-kamermotieseda.html",
+      "/posts/2020-11-24-face2age.html",
+      "/posts/2020-10-31-data_science_setup.html",
+      "/posts/2020-09-12-redblacktree.html",
+      "/posts/2020-07-26-housing.html",
+      "/posts/2020-04-22-flights_above_nl.html",
+      "/posts/2020-03-23-analyse.html",
+      "/posts/2019-05-28-boardgames.html",
+      "/posts/2019-01-12-widm.html",
+      "/posts/2018-03-02-cryptobot.html",
+      "/posts/2017-06-29-cars.html"
+    ]
+  }
+]
