@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.247">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jesse van Elteren">
+<meta name="dcterms.date" content="2021-07-10">
+<meta name="description" content="Solving puzzles with code">
+
+<title>blog - Advent of Code</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Advent of Code</h1>
+                  <div>
+        <div class="description">
+          Solving puzzles with code
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">puzzles</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Jesse van Elteren </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 10, 2021</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="aoc.PNG" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">aoc</figcaption><p></p>
+</figure>
+</div>
+<p>Remember these 🎅Advent Calenders🎅 where you open a door each day to find a piece of candy? <a href="https://adventofcode.com/">Advent of Code</a> is like that, but with coding puzzles: from 1st to 25th of December, every day a puzzle unlocks at midnight. Each puzzle has two parts where you can earn a star, so you can earn 2 stars per day, adding up to a total of 50. Since 2015 every year the amount of particpants grows, in 2020 over 150.000 people around the world have participated. You can solve the puzzles any way you like. I’ve always used Python, but anything goes, even Excel (if you are brave).</p>
+<p>I was introduced to AoC in 2018. It was a real challenge🤯 to solve all the puzzles. In 2020 I tried to compete for the leaderboard, which meant getting up at 5:50AM 25 times in a row, which was an experience in itself. Never did I get a spot in the top 100, but I am proud to be part of the ~700 people who finished all the puzzles from 2015 onwards.</p>
+<p>For old times sake, I’ve listed my personal Top 9 most memorable puzzles of all time (2015-2020):</p>
+<section id="day-23-category-six" class="level3">
+<h3 class="anchored" data-anchor-id="day-23-category-six">9) 2019 Day 23: <a href="https://adventofcode.com/2019/day/23">Category Six</a></h3>
+<p>A nice puzzle where you had to simulate computers💻 receiving and sending packets over a network to eachother. Memorable because I later could use it to practice using Python🐍 Async.</p>
+</section>
+<section id="day-23-experimental-emergency-teleportation" class="level3">
+<h3 class="anchored" data-anchor-id="day-23-experimental-emergency-teleportation">8) 2018 Day 23: <a href="https://adventofcode.com/2018/day/23">Experimental Emergency Teleportation</a></h3>
+<p>Given a 3D room with many bots that can reach up to a certain distance, what’s the spot where you can reach most bots? Seems simple, but the room is HUGE! This makes solving the puzzle a nice challenge.</p>
+</section>
+<section id="day-13-care-package" class="level3">
+<h3 class="anchored" data-anchor-id="day-13-care-package">7) 2019 Day 13: <a href="https://adventofcode.com/2019/day/13">Care Package</a></h3>
+<p>2019 is a special year for AoC, since you eventually code your own working ‘IntComputer’. During day 13, we used this computer to play <a href="https://en.wikipedia.org/wiki/Arkanoid">arkanoid</a>. Later on there were more puzzles where the IntComputer was used.</p>
+</section>
+<section id="day-21-allergen-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="day-21-allergen-assessment">6) 2020 Day 21: <a href="https://adventofcode.com/2020/day/21">Allergen Assessment</a></h3>
+<p>For many people probably not very memorable, but this got me the 189th spot on the leaderboard💯, where I normally hovered around 1600. Usage of sets in Python just came together for me in this one.</p>
+</section>
+<section id="day-18-many-worlds-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="day-18-many-worlds-interpretation">5) 2019 Day 18: <a href="https://adventofcode.com/2019/day/18">Many-Worlds Interpretation</a></h3>
+<p>Memorable because it was very difficult to solve with code and did it eventually on paper! You’re in a maze and need collect keys🗝. The keys correspond to doors that open when you find the key. The mechanism of unlocking doors makes the amount of possible states explode.</p>
+</section>
+<section id="day-17-reservoir-research" class="level3">
+<h3 class="anchored" data-anchor-id="day-17-reservoir-research">4) 2018 Day 17: <a href="https://adventofcode.com/2018/day/17">Reservoir Research</a></h3>
+<p>Another one from my first year of participation. You have to simulate water🌊 falling down into buckets. Just a great puzzle to toy around with. All AoC puzzles have some kind of story to them. I found this one to be especially memorable.</p>
+</section>
+<section id="day-11-radioisotope-thermoelectric-generators" class="level3">
+<h3 class="anchored" data-anchor-id="day-11-radioisotope-thermoelectric-generators">3) 2016 Day 11: <a href="https://adventofcode.com/2016/day/11">Radioisotope Thermoelectric Generators</a></h3>
+<p>Remember that puzzle of the wolf🐺, chicken🐔 and farmer👨‍🌾 that have a boat to cross the river? That’s the one, but now with 5 animals and 3 rivers. I played with lego blocks trying to find the best solution. Didn’t work, got confused and in the end had to make it into a <a href="https://en.wikipedia.org/wiki/Breadth-first_search">BFS</a>, which is an algorithm that comes around frequently in AoC.</p>
+</section>
+<section id="day-10-the-stars-align" class="level3">
+<h3 class="anchored" data-anchor-id="day-10-the-stars-align">2) 2018 Day 10: <a href="https://adventofcode.com/2018/day/10">The Stars Align</a></h3>
+<p>A puzzle where you are presented with a set of stars🌟 that are moving towards eachother. Again a simulation where at a certain point of time the stars align into a code. Animating the stars and having to zoom in into that tiny spot where they formed the code was lots of fun.</p>
+</section>
+<section id="day-22-slam-shuffle" class="level3">
+<h3 class="anchored" data-anchor-id="day-22-slam-shuffle">1) 2019 Day 22: <a href="https://adventofcode.com/2019/day/22">Slam Shuffle</a></h3>
+<p>And the number one, the only puzzle in 2019 I didn’t solve in the same day. Take a deck of cards🗃, apply some operations on it and identify the card in postion 2020. Easy enough right? Yes, untill for part 2 that deck consists of 119315717514047 cards and you have to apply the operations 101741582076661 times! Good luck brute forcing that. It took me around 20 hours to solve the puzzle and was so close to giving up. Such a great feeling when it finally came together. Wrote <a href="https://www.reddit.com/r/adventofcode/comments/ees6bj/2019_day_22_part_2_story_of_solving_spoilers/">a small post on reddit</a> on it.</p>
+<p>I’ve uploaded my solutions to <a href="https://github.com/jvanelteren/advent_of_code">GitHub</a>. People post their solutions on <a href="https://www.reddit.com/r/adventofcode/">the AoC subreddit</a>, which is a great way to learn from the best.</p>
+<p>Needless to say I highly recommend AoC! See you all December 1st🎄!</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
