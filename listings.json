@@ -2,7 +2,6 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/gpt3/gpt3.html",
       "/posts/bgg/2022-01-19-boardgames.html",
       "/posts/glide/2022-01-03-glide_image_model.html",
       "/posts/aoc/2022-01-02-analysis_aoc_stats.html",
