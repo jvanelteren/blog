@@ -1,5 +1,5 @@
 ---
-title: "blog"
+title: "Personal blog of Jesse van Elteren"
 listing:
   contents: posts
   sort: "date desc"
