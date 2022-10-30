@@ -1,19 +1,19 @@
 ---
 title: "About"
-image: profile.jpg
+image: profile.png
 about:
   template: jolla
   links:
     - icon: twitter
       text: Twitter
-      href: https://twitter.com
+      href: https://twitter.com/jessevanelteren
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://linkedin.com/in/jessevanelteren/
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/jvanelteren/
 
 ---
 
-About this blog
+Welcome to my blog. Here I share some of my personal data science initiatives.
