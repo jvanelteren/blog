@@ -2,78 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jvanelteren.github.io/blog/about.html</loc>
-    <lastmod>2022-10-31T09:35:04.232Z</lastmod>
+    <lastmod>2022-12-25T10:44:41.363Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/index.html</loc>
-    <lastmod>2022-10-31T09:35:05.229Z</lastmod>
+    <lastmod>2022-12-25T10:44:42.556Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/age/2020-11-24-face2age.html</loc>
-    <lastmod>2022-10-31T09:35:05.749Z</lastmod>
+    <lastmod>2022-12-25T10:44:43.070Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/aoc/2021-07-10-aoc.html</loc>
-    <lastmod>2022-10-31T09:35:06.140Z</lastmod>
+    <lastmod>2022-12-25T10:44:43.496Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/aoc/2022-01-02-analysis_aoc_stats.html</loc>
-    <lastmod>2022-10-31T09:35:07.460Z</lastmod>
+    <lastmod>2022-12-25T10:44:44.762Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jvanelteren.github.io/blog/posts/aoc/2022-12-25-analysis_aoc_stats.html</loc>
+    <lastmod>2022-12-25T10:44:46.038Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/bgg/2019-05-28-boardgames.html</loc>
-    <lastmod>2022-10-31T09:35:07.834Z</lastmod>
+    <lastmod>2022-12-25T10:44:46.434Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/bgg/2022-01-19-boardgames.html</loc>
-    <lastmod>2022-10-31T09:35:08.402Z</lastmod>
+    <lastmod>2022-12-25T10:44:47.765Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/btc/2018-03-02-cryptobot.html</loc>
-    <lastmod>2022-10-31T09:35:08.747Z</lastmod>
+    <lastmod>2022-12-25T10:44:48.120Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/cars/2017-06-29-cars.html</loc>
-    <lastmod>2022-10-31T09:35:09.109Z</lastmod>
+    <lastmod>2022-12-25T10:44:48.493Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/covid/2020-03-23-analyse.html</loc>
-    <lastmod>2022-10-31T09:35:09.651Z</lastmod>
+    <lastmod>2022-12-25T10:44:49.037Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/datascience/2020-10-31-data_science_setup.html</loc>
-    <lastmod>2022-10-31T09:35:10.109Z</lastmod>
+    <lastmod>2022-12-25T10:44:49.493Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/flight/2020-04-22-flights_above_nl.html</loc>
-    <lastmod>2022-10-31T09:35:10.986Z</lastmod>
+    <lastmod>2022-12-25T10:44:50.362Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/glide/2022-01-03-glide_image_model.html</loc>
-    <lastmod>2022-10-31T09:35:11.350Z</lastmod>
+    <lastmod>2022-12-25T10:44:50.751Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/housing/2020-07-26-housing.html</loc>
-    <lastmod>2022-10-31T09:35:11.763Z</lastmod>
+    <lastmod>2022-12-25T10:44:51.186Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/mol/2019-01-12-widm.html</loc>
-    <lastmod>2022-10-31T09:35:12.214Z</lastmod>
+    <lastmod>2022-12-25T10:44:51.642Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/moties/2021-02-20-kamermotieseda.html</loc>
-    <lastmod>2022-10-31T09:35:12.727Z</lastmod>
+    <lastmod>2022-12-25T10:44:52.158Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/moties/2021-03-07-kamermoties_topics.html</loc>
-    <lastmod>2022-10-31T09:35:13.259Z</lastmod>
+    <lastmod>2022-12-25T10:44:52.658Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/redblack/2020-09-12-redblacktree.html</loc>
-    <lastmod>2022-10-31T09:35:13.714Z</lastmod>
+    <lastmod>2022-12-25T10:44:53.113Z</lastmod>
   </url>
   <url>
     <loc>https://jvanelteren.github.io/blog/posts/turnen/2021-04-29-turnen.html</loc>
-    <lastmod>2022-10-31T09:35:14.123Z</lastmod>
+    <lastmod>2022-12-25T10:44:53.521Z</lastmod>
   </url>
 </urlset>
