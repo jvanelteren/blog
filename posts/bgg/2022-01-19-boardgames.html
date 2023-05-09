@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.340">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -85,11 +85,11 @@ ga('send', {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Blog Jesse van Elteren - Diving into BoardGameGeek">
 <meta property="og:description" content="Key insights on board game ratings">
-<meta property="og:image" content="https://jvanelteren.github.io/blog/posts\bgg\bggthuis.jpg">
+<meta property="og:image" content="https://jvanelteren.github.io/blog/posts/bgg/bggthuis.jpg">
 <meta property="og:site-name" content="Blog Jesse van Elteren">
 <meta name="twitter:title" content="Blog Jesse van Elteren - Diving into BoardGameGeek">
 <meta name="twitter:description" content="Key insights on board game ratings">
-<meta name="twitter:image" content="https://jvanelteren.github.io/blog/posts\bgg\bggthuis.jpg">
+<meta name="twitter:image" content="https://jvanelteren.github.io/blog/posts/bgg/bggthuis.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -104,35 +104,35 @@ ga('send', {
     <span class="navbar-title">Blog Jesse van Elteren</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -217,96 +217,94 @@ ga('send', {
 </ul>
 <div class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
+<style type="text/css">
+</style>
 
-<style type="text/css">
-</style>
-<table id="T_baefe_" style="display:inline">
-  <caption>Most active users</caption>
-  <thead>
-    <tr>
-      <th class="blank level0">&nbsp;</th>
-      <th class="col_heading level0 col0">user</th>
-      <th class="col_heading level0 col1">count</th>
-      <th class="col_heading level0 col2">average</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th id="T_baefe_level0_row0" class="row_heading level0 row0">1</th>
-      <td id="T_baefe_row0_col0" class="data row0 col0">oldgoat3769967</td>
-      <td id="T_baefe_row0_col1" class="data row0 col1">6471</td>
-      <td id="T_baefe_row0_col2" class="data row0 col2">6.185752</td>
-    </tr>
-    <tr>
-      <th id="T_baefe_level0_row1" class="row_heading level0 row1">2</th>
-      <td id="T_baefe_row1_col0" class="data row1 col0">warta</td>
-      <td id="T_baefe_row1_col1" class="data row1 col1">6289</td>
-      <td id="T_baefe_row1_col2" class="data row1 col2">7.230800</td>
-    </tr>
-    <tr>
-      <th id="T_baefe_level0_row2" class="row_heading level0 row2">3</th>
-      <td id="T_baefe_row2_col0" class="data row2 col0">leffe dubbel</td>
-      <td id="T_baefe_row2_col1" class="data row2 col1">6068</td>
-      <td id="T_baefe_row2_col2" class="data row2 col2">5.937541</td>
-    </tr>
-    <tr>
-      <th id="T_baefe_level0_row3" class="row_heading level0 row3">4</th>
-      <td id="T_baefe_row3_col0" class="data row3 col0">TomVasel</td>
-      <td id="T_baefe_row3_col1" class="data row3 col1">5672</td>
-      <td id="T_baefe_row3_col2" class="data row3 col2">6.401869</td>
-    </tr>
-    <tr>
-      <th id="T_baefe_level0_row4" class="row_heading level0 row4">5</th>
-      <td id="T_baefe_row4_col0" class="data row4 col0">Doel</td>
-      <td id="T_baefe_row4_col1" class="data row4 col1">5131</td>
-      <td id="T_baefe_row4_col2" class="data row4 col2">7.496200</td>
-    </tr>
-  </tbody>
+<table id="T_baefe_" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<caption>Most active users</caption>
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="col_heading level0 col0" data-quarto-table-cell-role="th">user</th>
+<th class="col_heading level0 col1" data-quarto-table-cell-role="th">count</th>
+<th class="col_heading level0 col2" data-quarto-table-cell-role="th">average</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_baefe_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">1</td>
+<td id="T_baefe_row0_col0" class="data row0 col0">oldgoat3769967</td>
+<td id="T_baefe_row0_col1" class="data row0 col1">6471</td>
+<td id="T_baefe_row0_col2" class="data row0 col2">6.185752</td>
+</tr>
+<tr class="even">
+<td id="T_baefe_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">2</td>
+<td id="T_baefe_row1_col0" class="data row1 col0">warta</td>
+<td id="T_baefe_row1_col1" class="data row1 col1">6289</td>
+<td id="T_baefe_row1_col2" class="data row1 col2">7.230800</td>
+</tr>
+<tr class="odd">
+<td id="T_baefe_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">3</td>
+<td id="T_baefe_row2_col0" class="data row2 col0">leffe dubbel</td>
+<td id="T_baefe_row2_col1" class="data row2 col1">6068</td>
+<td id="T_baefe_row2_col2" class="data row2 col2">5.937541</td>
+</tr>
+<tr class="even">
+<td id="T_baefe_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">4</td>
+<td id="T_baefe_row3_col0" class="data row3 col0">TomVasel</td>
+<td id="T_baefe_row3_col1" class="data row3 col1">5672</td>
+<td id="T_baefe_row3_col2" class="data row3 col2">6.401869</td>
+</tr>
+<tr class="odd">
+<td id="T_baefe_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">5</td>
+<td id="T_baefe_row4_col0" class="data row4 col0">Doel</td>
+<td id="T_baefe_row4_col1" class="data row4 col1">5131</td>
+<td id="T_baefe_row4_col2" class="data row4 col2">7.496200</td>
+</tr>
+</tbody>
 </table>
-<style type="text/css">
-</style>
-<table id="T_35a29_" style="display:inline">
-  <caption>Most rated games</caption>
-  <thead>
-    <tr>
-      <th class="blank level0">&nbsp;</th>
-      <th class="col_heading level0 col0">Name</th>
-      <th class="col_heading level0 col1">count</th>
-      <th class="col_heading level0 col2">average</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th id="T_35a29_level0_row0" class="row_heading level0 row0">1</th>
-      <td id="T_35a29_row0_col0" class="data row0 col0">Pandemic</td>
-      <td id="T_35a29_row0_col1" class="data row0 col1">108971</td>
-      <td id="T_35a29_row0_col2" class="data row0 col2">7.594996</td>
-    </tr>
-    <tr>
-      <th id="T_35a29_level0_row1" class="row_heading level0 row1">2</th>
-      <td id="T_35a29_row1_col0" class="data row1 col0">Carcassonne</td>
-      <td id="T_35a29_row1_col1" class="data row1 col1">108881</td>
-      <td id="T_35a29_row1_col2" class="data row1 col2">7.416162</td>
-    </tr>
-    <tr>
-      <th id="T_35a29_level0_row2" class="row_heading level0 row2">3</th>
-      <td id="T_35a29_row2_col0" class="data row2 col0">Catan</td>
-      <td id="T_35a29_row2_col1" class="data row2 col1">108195</td>
-      <td id="T_35a29_row2_col2" class="data row2 col2">7.133179</td>
-    </tr>
-    <tr>
-      <th id="T_35a29_level0_row3" class="row_heading level0 row3">4</th>
-      <td id="T_35a29_row3_col0" class="data row3 col0">7 Wonders</td>
-      <td id="T_35a29_row3_col1" class="data row3 col1">90110</td>
-      <td id="T_35a29_row3_col2" class="data row3 col2">7.733539</td>
-    </tr>
-    <tr>
-      <th id="T_35a29_level0_row4" class="row_heading level0 row4">5</th>
-      <td id="T_35a29_row4_col0" class="data row4 col0">Dominion</td>
-      <td id="T_35a29_row4_col1" class="data row4 col1">81623</td>
-      <td id="T_35a29_row4_col2" class="data row4 col2">7.607675</td>
-    </tr>
-  </tbody>
+<table id="T_35a29_" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<caption>Most rated games</caption>
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="col_heading level0 col0" data-quarto-table-cell-role="th">Name</th>
+<th class="col_heading level0 col1" data-quarto-table-cell-role="th">count</th>
+<th class="col_heading level0 col2" data-quarto-table-cell-role="th">average</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_35a29_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">1</td>
+<td id="T_35a29_row0_col0" class="data row0 col0">Pandemic</td>
+<td id="T_35a29_row0_col1" class="data row0 col1">108971</td>
+<td id="T_35a29_row0_col2" class="data row0 col2">7.594996</td>
+</tr>
+<tr class="even">
+<td id="T_35a29_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">2</td>
+<td id="T_35a29_row1_col0" class="data row1 col0">Carcassonne</td>
+<td id="T_35a29_row1_col1" class="data row1 col1">108881</td>
+<td id="T_35a29_row1_col2" class="data row1 col2">7.416162</td>
+</tr>
+<tr class="odd">
+<td id="T_35a29_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">3</td>
+<td id="T_35a29_row2_col0" class="data row2 col0">Catan</td>
+<td id="T_35a29_row2_col1" class="data row2 col1">108195</td>
+<td id="T_35a29_row2_col2" class="data row2 col2">7.133179</td>
+</tr>
+<tr class="even">
+<td id="T_35a29_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">4</td>
+<td id="T_35a29_row3_col0" class="data row3 col0">7 Wonders</td>
+<td id="T_35a29_row3_col1" class="data row3 col1">90110</td>
+<td id="T_35a29_row3_col2" class="data row3 col2">7.733539</td>
+</tr>
+<tr class="odd">
+<td id="T_35a29_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">5</td>
+<td id="T_35a29_row4_col0" class="data row4 col0">Dominion</td>
+<td id="T_35a29_row4_col1" class="data row4 col1">81623</td>
+<td id="T_35a29_row4_col2" class="data row4 col2">7.607675</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
@@ -370,92 +368,93 @@ ga('send', {
 <p>Let me show you some of the outcomes</p>
 <div class="cell" data-execution_count="23">
 <div class="cell-output cell-output-display" data-execution_count="23">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>name</th>
-      <th>avg_rating</th>
-      <th>yearpublished</th>
-      <th>averageweight</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>Gloomhaven</td>
-      <td>8.64</td>
-      <td>2017</td>
-      <td>3.87</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Twilight Imperium: Fourth Edition</td>
-      <td>8.59</td>
-      <td>2017</td>
-      <td>4.26</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Pandemic Legacy: Season 1</td>
-      <td>8.56</td>
-      <td>2015</td>
-      <td>2.83</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>War of the Ring: Second Edition</td>
-      <td>8.45</td>
-      <td>2012</td>
-      <td>4.17</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Gaia Project</td>
-      <td>8.43</td>
-      <td>2017</td>
-      <td>4.37</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Star Wars: Rebellion</td>
-      <td>8.38</td>
-      <td>2016</td>
-      <td>3.73</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Terraforming Mars</td>
-      <td>8.36</td>
-      <td>2016</td>
-      <td>3.24</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Too Many Bones</td>
-      <td>8.36</td>
-      <td>2017</td>
-      <td>3.84</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Through the Ages: A New Story of Civilization</td>
-      <td>8.35</td>
-      <td>2015</td>
-      <td>4.41</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Aeon's End: War Eternal</td>
-      <td>8.34</td>
-      <td>2017</td>
-      <td>2.93</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">avg_rating</th>
+<th data-quarto-table-cell-role="th">yearpublished</th>
+<th data-quarto-table-cell-role="th">averageweight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Gloomhaven</td>
+<td>8.64</td>
+<td>2017</td>
+<td>3.87</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Twilight Imperium: Fourth Edition</td>
+<td>8.59</td>
+<td>2017</td>
+<td>4.26</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Pandemic Legacy: Season 1</td>
+<td>8.56</td>
+<td>2015</td>
+<td>2.83</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4</td>
+<td>War of the Ring: Second Edition</td>
+<td>8.45</td>
+<td>2012</td>
+<td>4.17</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5</td>
+<td>Gaia Project</td>
+<td>8.43</td>
+<td>2017</td>
+<td>4.37</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">6</td>
+<td>Star Wars: Rebellion</td>
+<td>8.38</td>
+<td>2016</td>
+<td>3.73</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">7</td>
+<td>Terraforming Mars</td>
+<td>8.36</td>
+<td>2016</td>
+<td>3.24</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">8</td>
+<td>Too Many Bones</td>
+<td>8.36</td>
+<td>2017</td>
+<td>3.84</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">9</td>
+<td>Through the Ages: A New Story of Civilization</td>
+<td>8.35</td>
+<td>2015</td>
+<td>4.41</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">10</td>
+<td>Aeon's End: War Eternal</td>
+<td>8.34</td>
+<td>2017</td>
+<td>2.93</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -467,206 +466,208 @@ ga('send', {
 <p>I trained a model that tries to predict the rating of a game based on it’s complexity. What the model cannot explain by complexity (so-called residuals) is more or less the quality of the game without the complexity bias. I’ve taken 1000 reviews as a minimum for the game to be included. That is pretty harsh (only leaves ~15% of the games), but I wanted to be able to recognize some games. This results in the following top 10:</p>
 <div class="cell" data-execution_count="29">
 <div class="cell-output cell-output-display" data-execution_count="29">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>name</th>
-      <th>residual</th>
-      <th>average</th>
-      <th>yearpublished</th>
-      <th>averageweight</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>Crokinole</td>
-      <td>1.75</td>
-      <td>7.95</td>
-      <td>1876</td>
-      <td>1.25</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Monikers</td>
-      <td>1.61</td>
-      <td>7.80</td>
-      <td>2015</td>
-      <td>1.06</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Telestrations: 12 Player Party Pack</td>
-      <td>1.56</td>
-      <td>7.75</td>
-      <td>2011</td>
-      <td>1.07</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Time's Up! Title Recall!</td>
-      <td>1.51</td>
-      <td>7.71</td>
-      <td>2008</td>
-      <td>1.19</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>KLASK</td>
-      <td>1.45</td>
-      <td>7.64</td>
-      <td>2014</td>
-      <td>1.08</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Pandemic Legacy: Season 1</td>
-      <td>1.42</td>
-      <td>8.59</td>
-      <td>2015</td>
-      <td>2.83</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Escape the Dark Castle</td>
-      <td>1.32</td>
-      <td>7.51</td>
-      <td>2017</td>
-      <td>1.23</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Time's Up! Edición Amarilla</td>
-      <td>1.30</td>
-      <td>7.49</td>
-      <td>2008</td>
-      <td>1.11</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Eat Poop You Cat</td>
-      <td>1.26</td>
-      <td>7.45</td>
-      <td>0</td>
-      <td>1.11</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Mythic Battles: Pantheon</td>
-      <td>1.26</td>
-      <td>8.43</td>
-      <td>2017</td>
-      <td>3.03</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">residual</th>
+<th data-quarto-table-cell-role="th">average</th>
+<th data-quarto-table-cell-role="th">yearpublished</th>
+<th data-quarto-table-cell-role="th">averageweight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Crokinole</td>
+<td>1.75</td>
+<td>7.95</td>
+<td>1876</td>
+<td>1.25</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Monikers</td>
+<td>1.61</td>
+<td>7.80</td>
+<td>2015</td>
+<td>1.06</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Telestrations: 12 Player Party Pack</td>
+<td>1.56</td>
+<td>7.75</td>
+<td>2011</td>
+<td>1.07</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Time's Up! Title Recall!</td>
+<td>1.51</td>
+<td>7.71</td>
+<td>2008</td>
+<td>1.19</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5</td>
+<td>KLASK</td>
+<td>1.45</td>
+<td>7.64</td>
+<td>2014</td>
+<td>1.08</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">6</td>
+<td>Pandemic Legacy: Season 1</td>
+<td>1.42</td>
+<td>8.59</td>
+<td>2015</td>
+<td>2.83</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">7</td>
+<td>Escape the Dark Castle</td>
+<td>1.32</td>
+<td>7.51</td>
+<td>2017</td>
+<td>1.23</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">8</td>
+<td>Time's Up! Edición Amarilla</td>
+<td>1.30</td>
+<td>7.49</td>
+<td>2008</td>
+<td>1.11</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">9</td>
+<td>Eat Poop You Cat</td>
+<td>1.26</td>
+<td>7.45</td>
+<td>0</td>
+<td>1.11</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">10</td>
+<td>Mythic Battles: Pantheon</td>
+<td>1.26</td>
+<td>8.43</td>
+<td>2017</td>
+<td>3.03</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
 <p>This list is ordered by residual, the part that the model could not explain. There are a lot of dexterity and party games in the top, which are of course light games. Pandemic Legacy scores high even while being fairly complex. I was a bit shaken by <a href="https://boardgamegeek.com/boardgame/30618/eat-poop-you-cat">Eat Poop You Cat</a>, but it seems a nice game you can play with pen and paper. If we filter out the easiest games we get the following list:</p>
 <div class="cell" data-execution_count="30">
 <div class="cell-output cell-output-display" data-execution_count="30">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>name</th>
-      <th>residual</th>
-      <th>average</th>
-      <th>yearpublished</th>
-      <th>averageweight</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>Pandemic Legacy: Season 1</td>
-      <td>1.42</td>
-      <td>8.59</td>
-      <td>2015</td>
-      <td>2.83</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Mythic Battles: Pantheon</td>
-      <td>1.26</td>
-      <td>8.43</td>
-      <td>2017</td>
-      <td>3.03</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Gloomhaven</td>
-      <td>1.24</td>
-      <td>8.74</td>
-      <td>2017</td>
-      <td>3.87</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Star Realms: Colony Wars</td>
-      <td>1.22</td>
-      <td>7.85</td>
-      <td>2015</td>
-      <td>1.90</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Azul</td>
-      <td>1.21</td>
-      <td>7.80</td>
-      <td>2017</td>
-      <td>1.76</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Aeon's End: War Eternal</td>
-      <td>1.21</td>
-      <td>8.38</td>
-      <td>2017</td>
-      <td>2.93</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>7 Wonders Duel</td>
-      <td>1.19</td>
-      <td>8.11</td>
-      <td>2015</td>
-      <td>2.22</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Twilight Imperium: Fourth Edition</td>
-      <td>1.18</td>
-      <td>8.68</td>
-      <td>2017</td>
-      <td>4.26</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Patchwork</td>
-      <td>1.14</td>
-      <td>7.64</td>
-      <td>2014</td>
-      <td>1.62</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Kingdom Death: Monster</td>
-      <td>1.11</td>
-      <td>8.61</td>
-      <td>2015</td>
-      <td>4.26</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">residual</th>
+<th data-quarto-table-cell-role="th">average</th>
+<th data-quarto-table-cell-role="th">yearpublished</th>
+<th data-quarto-table-cell-role="th">averageweight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Pandemic Legacy: Season 1</td>
+<td>1.42</td>
+<td>8.59</td>
+<td>2015</td>
+<td>2.83</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Mythic Battles: Pantheon</td>
+<td>1.26</td>
+<td>8.43</td>
+<td>2017</td>
+<td>3.03</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Gloomhaven</td>
+<td>1.24</td>
+<td>8.74</td>
+<td>2017</td>
+<td>3.87</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Star Realms: Colony Wars</td>
+<td>1.22</td>
+<td>7.85</td>
+<td>2015</td>
+<td>1.90</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5</td>
+<td>Azul</td>
+<td>1.21</td>
+<td>7.80</td>
+<td>2017</td>
+<td>1.76</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">6</td>
+<td>Aeon's End: War Eternal</td>
+<td>1.21</td>
+<td>8.38</td>
+<td>2017</td>
+<td>2.93</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">7</td>
+<td>7 Wonders Duel</td>
+<td>1.19</td>
+<td>8.11</td>
+<td>2015</td>
+<td>2.22</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">8</td>
+<td>Twilight Imperium: Fourth Edition</td>
+<td>1.18</td>
+<td>8.68</td>
+<td>2017</td>
+<td>4.26</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">9</td>
+<td>Patchwork</td>
+<td>1.14</td>
+<td>7.64</td>
+<td>2014</td>
+<td>1.62</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">10</td>
+<td>Kingdom Death: Monster</td>
+<td>1.11</td>
+<td>8.61</td>
+<td>2015</td>
+<td>4.26</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -698,12 +699,12 @@ ga('send', {
 <p>The average game receives a 6.8 (see the bottom value), then there are all kind of effects going on, with the red bars pushing the prediction higher, the blue ones lower. Chess is quite complex which pushes the prediction up, but it’s also old. Apparently the model also doesn’t like you need to be 6 to play it. All these effects together make the model arrive at a prediction of 7.1.</p>
 <p>Summarizing, we have found that there are multiple features that influence the rating of a game. Also we have explored alternatives of ranking the best games. Finally we put everything together with an explainable machine learning model. Hope you enjoyed this dive into the data behind board games!</p>
 <p>There are also interesting threads on <a href="https://www.reddit.com/r/boardgames/comments/s8fu55/analyzed_all_19m_reviews_from_boardgamegeek_this/">Reddit</a> and <a href="https://boardgamegeek.com/thread/2797942/did-some-data-analysis-all-19m-reviews-bgg">BGG</a> discussing this analysis.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Tip
 </div>
 </div>
@@ -711,12 +712,12 @@ Tip
 <p>Some technical info: I’ve used standard Python data science packages such as Pandas and Matplotlib, SQLite for database, trained models with <a href="https://lightgbm.readthedocs.io/en/latest/">LightGBM</a> and the interpretation with <a href="https://github.com/slundberg/shap">SHAP</a>. For the blogging in a notebook I use <a href="https://github.com/fastai/fastpages">Fastpages</a>. All awesome!</p>
 </div>
 </div>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -871,9 +872,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -938,6 +953,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.340">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -85,13 +85,13 @@ ga('send', {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Blog Jesse van Elteren - Advent of Code analysis through the years">
 <meta property="og:description" content="What can we learn from the stats?">
-<meta property="og:image" content="https://jvanelteren.github.io/blog/posts\aoc\aocstats2.png">
+<meta property="og:image" content="https://jvanelteren.github.io/blog/posts/aoc/aocstats2.png">
 <meta property="og:site-name" content="Blog Jesse van Elteren">
 <meta property="og:image:height" content="302">
 <meta property="og:image:width" content="710">
 <meta name="twitter:title" content="Blog Jesse van Elteren - Advent of Code analysis through the years">
 <meta name="twitter:description" content="What can we learn from the stats?">
-<meta name="twitter:image" content="https://jvanelteren.github.io/blog/posts\aoc\aocstats2.png">
+<meta name="twitter:image" content="https://jvanelteren.github.io/blog/posts/aoc/aocstats2.png">
 <meta name="twitter:image-height" content="302">
 <meta name="twitter:image-width" content="710">
 <meta name="twitter:card" content="summary_large_image">
@@ -108,35 +108,35 @@ ga('send', {
     <span class="navbar-title">Blog Jesse van Elteren</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -703,85 +703,86 @@ ga('send', {
 <p>Most of the people that get points manage to do it only once. The y-axis is logaritmic. Who are having so much grit to get points all 7 seasons?</p>
 <div class="cell" data-execution_count="41">
 <div class="cell-output cell-output-display" data-execution_count="41">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>user</th>
-      <th>amount_seasons</th>
-      <th>total_points</th>
-      <th>total_leaderboard_placements</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>9</th>
-      <td>glguy</td>
-      <td>7</td>
-      <td>10948</td>
-      <td>172</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>etotheipi1</td>
-      <td>7</td>
-      <td>9978</td>
-      <td>179</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>msullivan</td>
-      <td>7</td>
-      <td>8561</td>
-      <td>147</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>Kevin Yap</td>
-      <td>7</td>
-      <td>8282</td>
-      <td>145</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>(anonymous user #60233)</td>
-      <td>7</td>
-      <td>5663</td>
-      <td>111</td>
-    </tr>
-    <tr>
-      <th>69</th>
-      <td>Daniel Rejment</td>
-      <td>7</td>
-      <td>3783</td>
-      <td>78</td>
-    </tr>
-    <tr>
-      <th>81</th>
-      <td>Roderic Day</td>
-      <td>7</td>
-      <td>3578</td>
-      <td>72</td>
-    </tr>
-    <tr>
-      <th>111</th>
-      <td>lukechampine</td>
-      <td>7</td>
-      <td>3013</td>
-      <td>71</td>
-    </tr>
-    <tr>
-      <th>241</th>
-      <td>Shane Mc Cormack</td>
-      <td>7</td>
-      <td>1658</td>
-      <td>29</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">user</th>
+<th data-quarto-table-cell-role="th">amount_seasons</th>
+<th data-quarto-table-cell-role="th">total_points</th>
+<th data-quarto-table-cell-role="th">total_leaderboard_placements</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">9</td>
+<td>glguy</td>
+<td>7</td>
+<td>10948</td>
+<td>172</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">12</td>
+<td>etotheipi1</td>
+<td>7</td>
+<td>9978</td>
+<td>179</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">18</td>
+<td>msullivan</td>
+<td>7</td>
+<td>8561</td>
+<td>147</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">19</td>
+<td>Kevin Yap</td>
+<td>7</td>
+<td>8282</td>
+<td>145</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">43</td>
+<td>(anonymous user #60233)</td>
+<td>7</td>
+<td>5663</td>
+<td>111</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">69</td>
+<td>Daniel Rejment</td>
+<td>7</td>
+<td>3783</td>
+<td>78</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">81</td>
+<td>Roderic Day</td>
+<td>7</td>
+<td>3578</td>
+<td>72</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">111</td>
+<td>lukechampine</td>
+<td>7</td>
+<td>3013</td>
+<td>71</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">241</td>
+<td>Shane Mc Cormack</td>
+<td>7</td>
+<td>1658</td>
+<td>29</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -846,96 +847,98 @@ ga('send', {
 <p><img src="aoceasiest.png" class="img-fluid"></p>
 <div class="cell" data-execution_count="43">
 <div class="cell-output cell-output-display" data-execution_count="43">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>puzzle</th>
-      <th>user</th>
-      <th>time (seconds)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2019-1-1</td>
-      <td>bluepichu</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2018-1-1</td>
-      <td>Tris Emmy Wilson</td>
-      <td>26</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2021-1-1</td>
-      <td>betaveros</td>
-      <td>28</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2020-1-1</td>
-      <td>Anish Singhani</td>
-      <td>35</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2017-2-1</td>
-      <td>xiaowuc1</td>
-      <td>36</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">puzzle</th>
+<th data-quarto-table-cell-role="th">user</th>
+<th data-quarto-table-cell-role="th">time (seconds)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2019-1-1</td>
+<td>bluepichu</td>
+<td>23</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2018-1-1</td>
+<td>Tris Emmy Wilson</td>
+<td>26</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2021-1-1</td>
+<td>betaveros</td>
+<td>28</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2020-1-1</td>
+<td>Anish Singhani</td>
+<td>35</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>2017-2-1</td>
+<td>xiaowuc1</td>
+<td>36</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
 <p>The easiest puzzles are mostly on day 1. In 2019, the first star was obtained after just 23 seconds!</p>
 <div class="cell" data-execution_count="44">
 <div class="cell-output cell-output-display" data-execution_count="44">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>puzzle</th>
-      <th>lb full (seconds)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2021-1-1</td>
-      <td>65</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2019-1-1</td>
-      <td>84</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2018-1-1</td>
-      <td>92</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2021-2-1</td>
-      <td>98</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2021-7-1</td>
-      <td>112</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">puzzle</th>
+<th data-quarto-table-cell-role="th">lb full (seconds)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2021-1-1</td>
+<td>65</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2019-1-1</td>
+<td>84</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2018-1-1</td>
+<td>92</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2021-2-1</td>
+<td>98</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>2021-7-1</td>
+<td>112</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -943,173 +946,175 @@ ga('send', {
 <p><img src="aochardest.png" class="img-fluid"></p>
 <div class="cell" data-execution_count="45">
 <div class="cell-output cell-output-display" data-execution_count="45">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>puzzle</th>
-      <th>user</th>
-      <th>time (minutes)</th>
-      <th>title</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>349</th>
-      <td>2018-15-2</td>
-      <td>Simon Parent</td>
-      <td>36</td>
-      <td>Beverage Bandits</td>
-    </tr>
-    <tr>
-      <th>348</th>
-      <td>2018-17-2</td>
-      <td>Raven Black</td>
-      <td>33</td>
-      <td>Reservoir Research</td>
-    </tr>
-    <tr>
-      <th>345</th>
-      <td>2018-24-2</td>
-      <td>Simon Parent</td>
-      <td>28</td>
-      <td>Immune System Simulator 20XX</td>
-    </tr>
-    <tr>
-      <th>344</th>
-      <td>2020-20-2</td>
-      <td>xiaowuc1</td>
-      <td>25</td>
-      <td>Jurassic Jigsaw</td>
-    </tr>
-    <tr>
-      <th>342</th>
-      <td>2021-23-2</td>
-      <td>goffrie</td>
-      <td>23</td>
-      <td>Amphipod</td>
-    </tr>
-    <tr>
-      <th>341</th>
-      <td>2019-18-2</td>
-      <td>glguy</td>
-      <td>22</td>
-      <td>Many-Worlds Interpretation</td>
-    </tr>
-    <tr>
-      <th>340</th>
-      <td>2015-22-2</td>
-      <td>Paul Hankin</td>
-      <td>21</td>
-      <td>Wizard Simulator 20XX</td>
-    </tr>
-    <tr>
-      <th>339</th>
-      <td>2021-19-2</td>
-      <td>ecnerwala</td>
-      <td>21</td>
-      <td>Beacon Scanner</td>
-    </tr>
-    <tr>
-      <th>338</th>
-      <td>2019-16-2</td>
-      <td>bluepichu</td>
-      <td>19</td>
-      <td>Coprocessor Conflagration</td>
-    </tr>
-    <tr>
-      <th>336</th>
-      <td>2017-23-2</td>
-      <td>Lewin Gan</td>
-      <td>19</td>
-      <td>Flawed Frequency Transmission</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">puzzle</th>
+<th data-quarto-table-cell-role="th">user</th>
+<th data-quarto-table-cell-role="th">time (minutes)</th>
+<th data-quarto-table-cell-role="th">title</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">349</td>
+<td>2018-15-2</td>
+<td>Simon Parent</td>
+<td>36</td>
+<td>Beverage Bandits</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">348</td>
+<td>2018-17-2</td>
+<td>Raven Black</td>
+<td>33</td>
+<td>Reservoir Research</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">345</td>
+<td>2018-24-2</td>
+<td>Simon Parent</td>
+<td>28</td>
+<td>Immune System Simulator 20XX</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">344</td>
+<td>2020-20-2</td>
+<td>xiaowuc1</td>
+<td>25</td>
+<td>Jurassic Jigsaw</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">342</td>
+<td>2021-23-2</td>
+<td>goffrie</td>
+<td>23</td>
+<td>Amphipod</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">341</td>
+<td>2019-18-2</td>
+<td>glguy</td>
+<td>22</td>
+<td>Many-Worlds Interpretation</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">340</td>
+<td>2015-22-2</td>
+<td>Paul Hankin</td>
+<td>21</td>
+<td>Wizard Simulator 20XX</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">339</td>
+<td>2021-19-2</td>
+<td>ecnerwala</td>
+<td>21</td>
+<td>Beacon Scanner</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">338</td>
+<td>2019-16-2</td>
+<td>bluepichu</td>
+<td>19</td>
+<td>Coprocessor Conflagration</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">336</td>
+<td>2017-23-2</td>
+<td>Lewin Gan</td>
+<td>19</td>
+<td>Flawed Frequency Transmission</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
 <p>The longest 3 solve times were all in 2018! Shoutout to Simon Parent for solving 2 out of the top 3. This list mostly has puzzles that just take a long time to code, with <a href="https://adventofcode.com/2018/day/15">Beverage Bandits</a> as perfect example.</p>
 <div class="cell" data-execution_count="46">
 <div class="cell-output cell-output-display" data-execution_count="46">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>puzzle</th>
-      <th>lb full (minutes)</th>
-      <th>title</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>349</th>
-      <td>2015-19-2</td>
-      <td>232</td>
-      <td>Medicine for Rudolph</td>
-    </tr>
-    <tr>
-      <th>348</th>
-      <td>2015-1-2</td>
-      <td>186</td>
-      <td>Not Quite Lisp</td>
-    </tr>
-    <tr>
-      <th>347</th>
-      <td>2015-22-2</td>
-      <td>183</td>
-      <td>Wizard Simulator 20XX</td>
-    </tr>
-    <tr>
-      <th>346</th>
-      <td>2016-11-2</td>
-      <td>164</td>
-      <td>Radioisotope Thermoelectric Generators</td>
-    </tr>
-    <tr>
-      <th>343</th>
-      <td>2018-15-2</td>
-      <td>143</td>
-      <td>Beverage Bandits</td>
-    </tr>
-    <tr>
-      <th>342</th>
-      <td>2019-22-2</td>
-      <td>123</td>
-      <td>Slam Shuffle</td>
-    </tr>
-    <tr>
-      <th>340</th>
-      <td>2019-18-2</td>
-      <td>117</td>
-      <td>Many-Worlds Interpretation</td>
-    </tr>
-    <tr>
-      <th>338</th>
-      <td>2018-23-2</td>
-      <td>100</td>
-      <td>Experimental Emergency Teleportation</td>
-    </tr>
-    <tr>
-      <th>337</th>
-      <td>2016-22-2</td>
-      <td>88</td>
-      <td>Grid Computing</td>
-    </tr>
-    <tr>
-      <th>336</th>
-      <td>2018-24-2</td>
-      <td>87</td>
-      <td>Immune System Simulator 20XX</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">puzzle</th>
+<th data-quarto-table-cell-role="th">lb full (minutes)</th>
+<th data-quarto-table-cell-role="th">title</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">349</td>
+<td>2015-19-2</td>
+<td>232</td>
+<td>Medicine for Rudolph</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">348</td>
+<td>2015-1-2</td>
+<td>186</td>
+<td>Not Quite Lisp</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">347</td>
+<td>2015-22-2</td>
+<td>183</td>
+<td>Wizard Simulator 20XX</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">346</td>
+<td>2016-11-2</td>
+<td>164</td>
+<td>Radioisotope Thermoelectric Generators</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">343</td>
+<td>2018-15-2</td>
+<td>143</td>
+<td>Beverage Bandits</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">342</td>
+<td>2019-22-2</td>
+<td>123</td>
+<td>Slam Shuffle</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">340</td>
+<td>2019-18-2</td>
+<td>117</td>
+<td>Many-Worlds Interpretation</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">338</td>
+<td>2018-23-2</td>
+<td>100</td>
+<td>Experimental Emergency Teleportation</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">337</td>
+<td>2016-22-2</td>
+<td>88</td>
+<td>Grid Computing</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">336</td>
+<td>2018-24-2</td>
+<td>87</td>
+<td>Immune System Simulator 20XX</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1263,9 +1268,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1330,6 +1349,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
