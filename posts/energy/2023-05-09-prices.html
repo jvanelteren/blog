@@ -270,65 +270,6 @@ ga('send', {
 </section>
 <section id="which-days-are-most-expensive-or-cheap" class="level3">
 <h3 class="anchored" data-anchor-id="which-days-are-most-expensive-or-cheap">Which days are most expensive (or cheap)?</h3>
-<div id="cell-16" class="cell" data-execution_count="25">
-<div class="cell-output cell-output-display" data-execution_count="25">
-
-<div id="altair-viz-718039e7e05e4dcd93f94eef18a9bc13"></div>
-<script type="text/javascript">
-  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-718039e7e05e4dcd93f94eef18a9bc13") {
-      outputDiv = document.getElementById("altair-viz-718039e7e05e4dcd93f94eef18a9bc13");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.6.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
-    };
-
-    function maybeLoadScript(lib, version) {
-      var key = `${lib.replace("-", "")}_version`;
-      return (VEGA_DEBUG[key] == version) ?
-        Promise.resolve(paths[lib]) :
-        new Promise(function(resolve, reject) {
-          var s = document.createElement('script');
-          document.getElementsByTagName("head")[0].appendChild(s);
-          s.async = true;
-          s.onload = () => {
-            VEGA_DEBUG[key] = version;
-            return resolve(paths[lib]);
-          };
-          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-          s.src = paths[lib];
-        });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else {
-      maybeLoadScript("vega", "5")
-        .then(() => maybeLoadScript("vega-lite", "5.6.1"))
-        .then(() => maybeLoadScript("vega-embed", "6"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-a171c0147fd38da3d0601ce43167c0fa"}, "mark": {"type": "bar"}, "encoding": {"x": {"field": "weekday", "sort": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "title": null, "type": "nominal"}, "y": {"field": "mean", "title": "Average daily price [cents / kWh]", "type": "quantitative"}}, "title": "Prices per weekday (year = 2022 & 2023)", "$schema": "https://vega.github.io/schema/vega-lite/v5.6.1.json", "datasets": {"data-a171c0147fd38da3d0601ce43167c0fa": [{"weekday": "Fri", "mean": 221.04143069490897}, {"weekday": "Mon", "mean": 221.49908873198729}, {"weekday": "Sat", "mean": 182.43800162800162}, {"weekday": "Sun", "mean": 169.17307961554116}, {"weekday": "Thu", "mean": 225.0520054502663}, {"weekday": "Tue", "mean": 232.90970890623063}, {"weekday": "Wed", "mean": 227.07942028985508}]}}, {"mode": "vega-lite"});
-</script>
-</div>
-</div>
 <p>Prices are lowest on Sundays. Apparently a good day to do the laundry!</p>
 </section>
 <section id="which-hours-are-most-expensive-or-cheap" class="level3">
