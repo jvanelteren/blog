@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.4.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -218,14 +218,14 @@ ga('send', {
 <p><img src="redblacktree.PNG" class="img-fluid"></p>
 <p>After playing around with red-black trees for some time, I’ve grown to really like them, but also hate them at the same time! I’ll explain in this blog why. To understand what a red-black tree is, we’ll first have to touch upon the concept of a binary search tree. The binary search tree is a method of ordering items that can be compared to each other. The easiest example is of course numbers (1 &lt; 2), other object such as letters (a &lt; b) or words (short &lt; longerword) can also be compared.</p>
 <p>A binary tree is very simple and I had fun making one with my six year old daughter. She came up with a list of numbers and together we added them to the tree. The root of the tree is the first item you start with. Next, to add another item you simply check if the item is smaller or larger than the root. If it’s smaller it gets stored into the left branch, if it’s larger it goes to the right branch. A node in the tree can have only one branch on each side. Therefore the tree will have to get deeper when more nodes are added. As an example, a tree with 3 layers holds a maximum of 1+2+4 = 7 nodes. Below an example, where it takes three steps to reach 5,14 and 55 and four steps to reach 62 and 66. These nodes are the edge of the tree and are called leaves.</p>
-<div class="cell" data-outputid="4b422b4f-cc07-4f57-d5b4-70cc01fb0295" data-execution_count="19">
+<div id="cell-8" class="cell" data-outputid="4b422b4f-cc07-4f57-d5b4-70cc01fb0295" data-execution_count="19">
 <div class="cell-output cell-output-display">
 <p><img src="2020-09-12-redblacktree_files/figure-html/cell-7-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>The advantage of binary search trees is that the items are ordered. For example, you can easily lookup the minimum (just always go left from the root). But also finding an item can be very quick, which is expressed by the number of steps from the root. It makes sense, if you are interested in the left side of the tree, you no longer need to search the right side.</p>
 <p>But think about a scenario where you insert numbers in order, ascending. The tree would only have right branches! This effectively means you are just storing a list. Now for a small tree (as the one below), that is no problem, but if you are storing a million items this way, you would have to search a million items before inserting the next number. If the tree would have been balanced, it would only take about 20 steps from the root to any leaf (1 million log base 2).</p>
-<div class="cell" data-outputid="a617c56e-5bb0-4e50-f720-4c842f71ef4d" data-execution_count="20">
+<div id="cell-10" class="cell" data-outputid="a617c56e-5bb0-4e50-f720-4c842f71ef4d" data-execution_count="20">
 <div class="cell-output cell-output-display">
 <p><img src="2020-09-12-redblacktree_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
 </div>
@@ -237,14 +237,14 @@ ga('send', {
 <li>The amount of black items you pass while going to an end of the tree is the same for each leaf of the tree.</li>
 </ul>
 <p>To preserve these properties insertion and removal can require certain operations, such as recoloring certain items, or rotating part of the tree. And this is where my love and hate comes in. It’s awesome to see the different shapes the tree can take while balancing. Even the root of the tree can change in the process. A couple of examples:</p>
-<div class="cell" data-outputid="0460f6af-4558-43fc-c045-016b33f7012e" data-execution_count="21">
+<div id="cell-12" class="cell" data-outputid="0460f6af-4558-43fc-c045-016b33f7012e" data-execution_count="21">
 <div class="cell-output cell-output-display">
 <p><img src="2020-09-12-redblacktree_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>In the above figure, numbers 0 to 10 were inserted in order. The graph shows that the redblack tree has been rotated to now have 3 as root (no longer the 0 it started with initially). Also the paths from the root (3) to the leaves (0,2,4,6,8 and 9) all cross exactly 3 black nodes!</p>
 <p>If we insert 50 items in order, a nice balanced tree appears</p>
-<div class="cell" data-outputid="9c1a5e4e-b545-4d84-e17d-e570c8760f35" data-execution_count="22">
+<div id="cell-14" class="cell" data-outputid="9c1a5e4e-b545-4d84-e17d-e570c8760f35" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>to_insert <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">50</span>))</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>RBTree(to_insert,silent<span class="op">=</span><span class="va">True</span>).draw()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -252,22 +252,22 @@ ga('send', {
 </div>
 </div>
 <p>When we randomize the insertion order a completely different tree arises, but still it’s nicely balanced.</p>
-<div class="cell" data-outputid="7963064c-8184-45b1-d0c8-3fcbe1721986" data-execution_count="23">
+<div id="cell-16" class="cell" data-outputid="7963064c-8184-45b1-d0c8-3fcbe1721986" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>random.shuffle(to_insert)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>RBTree(to_insert,silent<span class="op">=</span><span class="va">True</span>).draw()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="2020-09-12-redblacktree_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<p>I think this looks elegant. However, it’s known that redblack trees can be difficult to implement and indeed it’s been an absolute pain to code the algorithms, with some difficult debugging to take care of all the edge cases to make sure the code runs correctly. More detailes of all the cases you can encounter at <a href="https://en.wikipedia.org/wiki/Red%E2%80%93black_tree#Operations">Wikipedia</a>. I’ve gained new appreciation for programming concepts such as unit testing, refactoring, and plain old careful reading of the specification. Seeing it work has made this project worth it!</p>
+<p>I think this looks elegant. However, it’s known that redblack trees can be difficult to implement and indeed it’s been an absolute pain to code the algorithms, with some difficult debugging to take care of all the edge cases to make sure the code runs correctly. More detailes of all the cases you can encounter at <a href="https://en.wikipedia.org/wiki/Red–black_tree#Operations">Wikipedia</a>. I’ve gained new appreciation for programming concepts such as unit testing, refactoring, and plain old careful reading of the specification. Seeing it work has made this project worth it!</p>
 <p>After some <a href="https://web.archive.org/web/20140327140251/http://www.cepis.org/upgrade/files/full-2004-V.pdf">reading</a>, I’ve also come across the treap (tree-heap), which is basically using random numbers to make the tree structure as if the items would have been inserted in random order. Which will make the tree balanced with a high probablility.</p>
 <p>To illustrate the randomness, I’ve twice made a treap with 50 items inserted in order. The resulting trees are different, which does not happen with red-black trees when the insertion order is the same. Treaps look much different then the red-black trees as well.</p>
-<div class="cell" data-outputid="80e6ebc0-7cb8-455e-b328-5e87ab6ed62b" data-execution_count="24">
+<div id="cell-18" class="cell" data-outputid="80e6ebc0-7cb8-455e-b328-5e87ab6ed62b" data-execution_count="24">
 <div class="cell-output cell-output-display">
 <p><img src="2020-09-12-redblacktree_files/figure-html/cell-12-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-outputid="d1856918-570a-488b-fae5-d8d0e3efb888" data-execution_count="25">
+<div id="cell-19" class="cell" data-outputid="d1856918-570a-488b-fae5-d8d0e3efb888" data-execution_count="25">
 <div class="cell-output cell-output-display">
 <p><img src="2020-09-12-redblacktree_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
 </div>
@@ -280,11 +280,11 @@ ga('send', {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="https://people.ksp.sk/~kuko/gnarley-trees/Redblack.html">This page</a> has a nice animation how red-black trees are build. Additionally, Wikipedia has more information about <a href="https://en.wikipedia.org/wiki/Binary_search_tree">binary search trees</a>, <a href="https://en.wikipedia.org/wiki/Red%E2%80%93black_tree">red black trees</a> and <a href="https://en.wikipedia.org/wiki/Treap">treaps</a></p>
+<p><a href="https://people.ksp.sk/~kuko/gnarley-trees/Redblack.html">This page</a> has a nice animation how red-black trees are build. Additionally, Wikipedia has more information about <a href="https://en.wikipedia.org/wiki/Binary_search_tree">binary search trees</a>, <a href="https://en.wikipedia.org/wiki/Red–black_tree">red black trees</a> and <a href="https://en.wikipedia.org/wiki/Treap">treaps</a></p>
 </div>
 </div>
 
@@ -332,6 +332,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -400,13 +427,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -512,6 +541,34 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, function() {
+      let href = xref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note !== null) {
+        if (id.startsWith('sec-')) {
+          // Special case sections, only their first couple elements
+          const container = document.createElement("div");
+          if (note.children && note.children.length > 2) {
+            for (let i = 0; i < 2; i++) {
+              container.appendChild(note.children[i].cloneNode(true));
+            }
+            return container.innerHTML
+          } else {
+            return note.innerHTML;
+          }
+        } else {
+          return note.innerHTML;
+        }
+      } else {
+        return "";
+      }
     });
   }
       let selectedAnnoteEl;

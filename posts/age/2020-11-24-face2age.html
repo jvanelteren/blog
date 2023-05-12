@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.4.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -201,26 +201,26 @@ ga('send', {
 <p>Below you can see it getting better over time. The horizontal axis displays how many times we feed the training set to the model. The left graph shows performance on the training set, the right graph on the test set. Initially, it’s off by about 11 years, and slowly converging to a MAE of 2 years. But taking the performance on the training dataset is cheating, we are interested in it’s performance on unseen images! The performance there converges to around 4.2.</p>
 <p><img src="age_training.png" class="img-fluid"></p>
 <p>Let’s check out predictions on some random images in the test set. In the title the actual age and the predicted age by the model.</p>
-<div class="cell" data-execution_count="65">
+<div id="cell-15" class="cell" data-execution_count="65">
 <div class="cell-output cell-output-display">
 <p><img src="2020-11-24-face2age_files/figure-html/cell-12-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>That looks pretty good! To take a more general approach, let’s plot the all the images from the test set in a graph.</p>
-<div class="cell" data-execution_count="66">
+<div id="cell-17" class="cell" data-execution_count="66">
 <div class="cell-output cell-output-display">
 <p><img src="2020-11-24-face2age_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>There are definitely some errors, but overall it seems reasonable. It’s also interesting to plot the faces where the error was largest.</p>
-<div class="cell" data-execution_count="67">
+<div id="cell-19" class="cell" data-execution_count="67">
 <div class="cell-output cell-output-display">
 <p><img src="2020-11-24-face2age_files/figure-html/cell-14-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>In most of the cases the model was simply off, but there are also faces which look much older or younger, or very blurry ones. Which highlights the importance of understanding the dataset and potentially removing outliers from it.</p>
 <p>Another approach is to visualize the average error by age.</p>
-<div class="cell" data-execution_count="73">
+<div id="cell-22" class="cell" data-execution_count="73">
 <div class="cell-output cell-output-display">
 <p><img src="2020-11-24-face2age_files/figure-html/cell-16-output-1.png" class="img-fluid"></p>
 </div>
@@ -235,7 +235,7 @@ ga('send', {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -287,6 +287,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -355,13 +382,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -467,6 +496,34 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, function() {
+      let href = xref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note !== null) {
+        if (id.startsWith('sec-')) {
+          // Special case sections, only their first couple elements
+          const container = document.createElement("div");
+          if (note.children && note.children.length > 2) {
+            for (let i = 0; i < 2; i++) {
+              container.appendChild(note.children[i].cloneNode(true));
+            }
+            return container.innerHTML
+          } else {
+            return note.innerHTML;
+          }
+        } else {
+          return note.innerHTML;
+        }
+      } else {
+        return "";
+      }
     });
   }
       let selectedAnnoteEl;

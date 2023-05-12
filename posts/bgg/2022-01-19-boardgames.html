@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.4.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -197,14 +197,14 @@ ga('send', {
 <p>Let’s dive in!</p>
 <section id="the-users-and-ratings" class="level3">
 <h3 class="anchored" data-anchor-id="the-users-and-ratings">The users and ratings</h3>
-<div class="cell" data-execution_count="4">
+<div id="cell-8" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <p><img src="2022-01-19-boardgames_files/figure-html/cell-5-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Users give ratings that are often rounded: they give a 7 instead of a 7.23, that’s why you see the spikes on the leftmost chart. Around 4 million reviews end up with a 7.</p>
 <p>Looking at the games, we see a nice normal distribution.</p>
-<div class="cell" data-execution_count="5">
+<div id="cell-10" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <p><img src="2022-01-19-boardgames_files/figure-html/cell-6-output-1.png" class="img-fluid"></p>
 </div>
@@ -215,7 +215,7 @@ ga('send', {
 <li>44% of <strong>games</strong> receive &lt;100 ratings. However, these ratings only account of 6% of all ratings.</li>
 <li>7% of games have &gt;2000 ratings. Together they account for 39% of all ratings.</li>
 </ul>
-<div class="cell" data-execution_count="8">
+<div id="cell-14" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <style type="text/css">
 </style>
@@ -312,19 +312,19 @@ ga('send', {
 </section>
 <section id="developments-over-the-years" class="level3">
 <h3 class="anchored" data-anchor-id="developments-over-the-years">Developments over the years</h3>
-<div class="cell" data-execution_count="9">
+<div id="cell-17" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <p><img src="2022-01-19-boardgames_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>There has been incredible growth in the amount of boardgames being released. It does appears to slow down, although many games are for some mysterious reason added a couple of years after they have been released. Therefore the steep drop after 2020 is a bit misleading.</p>
-<div class="cell" data-execution_count="10">
+<div id="cell-19" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <p><img src="2022-01-19-boardgames_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Are games being rated higher? After 2005 it seems so! Are games nowadays just better or is there a tendency to rate new games higher? Now luckily I’ve composed this dataset already twice in the past, we can make good use of this:</p>
-<div class="cell" data-execution_count="50">
+<div id="cell-21" class="cell" data-execution_count="50">
 <div class="cell-output cell-output-display">
 <p><img src="2022-01-19-boardgames_files/figure-html/cell-12-output-1.png" class="img-fluid"></p>
 </div>
@@ -334,14 +334,14 @@ ga('send', {
 </section>
 <section id="complexity-of-games" class="level3">
 <h3 class="anchored" data-anchor-id="complexity-of-games">Complexity of games</h3>
-<div class="cell" data-execution_count="12">
+<div id="cell-24" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <p><img src="2022-01-19-boardgames_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>BGG has a weight metric, which means how complex a game is. To get a feel what a number means, here some examples: * Monopoly: 1.3 * Catan: 2.3 * Chess: 3.7</p>
 <p>Most of the games have a fairly low weight.</p>
-<div class="cell" data-execution_count="37">
+<div id="cell-26" class="cell" data-execution_count="37">
 <div class="cell-output cell-output-display">
 <p><img src="2022-01-19-boardgames_files/figure-html/cell-14-output-1.png" class="img-fluid"></p>
 </div>
@@ -350,7 +350,7 @@ ga('send', {
 </section>
 <section id="are-active-users-more-critical" class="level3">
 <h3 class="anchored" data-anchor-id="are-active-users-more-critical">Are active users more critical?</h3>
-<div class="cell" data-execution_count="41">
+<div id="cell-31" class="cell" data-execution_count="41">
 <div class="cell-output cell-output-display">
 <p><img src="2022-01-19-boardgames_files/figure-html/cell-17-output-1.png" class="img-fluid"></p>
 </div>
@@ -366,7 +366,7 @@ ga('send', {
 <p>While doing this project so many ideas came to mind on how an alternative ranking could be defined: * Excluding ratings given by inactive users (I took &lt;=10 as threshold) * Excluding games that have received ‘few’ ratings (I took &lt;= 1000) * Accounting for the complexity bonus, so that lighter games end up higher.</p>
 <p>Other ideas: * Account for the release year. This approach I abandoned, since some new games are truly better. The only thing you want to account for is removing the ‘hype’ effect. I did this by excluding games after 2017 from the analysis. * Including ratings with a comment, since these people are more strongly opinionated. It did not differ much. * Training a model that takes the average user rating into account, to account for people consistently rating high or low.</p>
 <p>Let me show you some of the outcomes</p>
-<div class="cell" data-execution_count="23">
+<div id="cell-40" class="cell" data-execution_count="23">
 <div class="cell-output cell-output-display" data-execution_count="23">
 <div>
 
@@ -464,7 +464,7 @@ ga('send', {
 <section id="best-games-with-complexity-taken-into-account" class="level3">
 <h3 class="anchored" data-anchor-id="best-games-with-complexity-taken-into-account">Best games with complexity taken into account</h3>
 <p>I trained a model that tries to predict the rating of a game based on it’s complexity. What the model cannot explain by complexity (so-called residuals) is more or less the quality of the game without the complexity bias. I’ve taken 1000 reviews as a minimum for the game to be included. That is pretty harsh (only leaves ~15% of the games), but I wanted to be able to recognize some games. This results in the following top 10:</p>
-<div class="cell" data-execution_count="29">
+<div id="cell-49" class="cell" data-execution_count="29">
 <div class="cell-output cell-output-display" data-execution_count="29">
 <div>
 
@@ -568,7 +568,7 @@ ga('send', {
 </div>
 </div>
 <p>This list is ordered by residual, the part that the model could not explain. There are a lot of dexterity and party games in the top, which are of course light games. Pandemic Legacy scores high even while being fairly complex. I was a bit shaken by <a href="https://boardgamegeek.com/boardgame/30618/eat-poop-you-cat">Eat Poop You Cat</a>, but it seems a nice game you can play with pen and paper. If we filter out the easiest games we get the following list:</p>
-<div class="cell" data-execution_count="30">
+<div id="cell-51" class="cell" data-execution_count="30">
 <div class="cell-output cell-output-display" data-execution_count="30">
 <div>
 
@@ -676,13 +676,13 @@ ga('send', {
 <section id="wrapping-things-up-with-a-complete-model" class="level3">
 <h3 class="anchored" data-anchor-id="wrapping-things-up-with-a-complete-model">Wrapping things up with a complete model</h3>
 <p>Finally I’ve also trained a model on multiple variables, e.g.&nbsp;the type of game and the year of publication. This model is able to account for about 50% of the variation between average game scores. I think this is a pretty good result. Below you see the impact of the most important variables.</p>
-<div class="cell" data-execution_count="34">
+<div id="cell-58" class="cell" data-execution_count="34">
 <div class="cell-output cell-output-display">
 <p><img src="2022-01-19-boardgames_files/figure-html/cell-35-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>As expected the weight/complexity and year of publication have most impact on the rating of a game. Together they roughly impact the score by 0.5 for each game. In addition certain categories also have a small impact on the score. In more detail:</p>
-<div class="cell" data-execution_count="35">
+<div id="cell-60" class="cell" data-execution_count="35">
 <div class="cell-output cell-output-display">
 <p><img src="2022-01-19-boardgames_files/figure-html/cell-36-output-1.png" class="img-fluid"></p>
 </div>
@@ -691,7 +691,7 @@ ga('send', {
 <p>What works best is saying it out loud: ‘if averageweight is high (red), then the impact is positive and the game will receive higher ratings. For ’AdminBetterDescriptionNeeded’ that means that if the game description is lacking, the game will receive lower ratings.</p>
 <p>So if you want to receive high ratings with your game, just make sure to make it complex, two players simulated wargame that can be played solitaire with miniatures and online as well. You already get the hype effect for free 😋</p>
 <p>We can also inspect how to model came to it’s prediction for a single game. Below I took Chess as an example:</p>
-<div class="cell" data-execution_count="36">
+<div id="cell-62" class="cell" data-execution_count="36">
 <div class="cell-output cell-output-display">
 <p><img src="2022-01-19-boardgames_files/figure-html/cell-37-output-1.png" class="img-fluid"></p>
 </div>
@@ -705,7 +705,7 @@ ga('send', {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -718,7 +718,7 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -771,6 +771,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -839,13 +866,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -951,6 +980,34 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, function() {
+      let href = xref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note !== null) {
+        if (id.startsWith('sec-')) {
+          // Special case sections, only their first couple elements
+          const container = document.createElement("div");
+          if (note.children && note.children.length > 2) {
+            for (let i = 0; i < 2; i++) {
+              container.appendChild(note.children[i].cloneNode(true));
+            }
+            return container.innerHTML
+          } else {
+            return note.innerHTML;
+          }
+        } else {
+          return note.innerHTML;
+        }
+      } else {
+        return "";
+      }
     });
   }
       let selectedAnnoteEl;

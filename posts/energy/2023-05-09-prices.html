@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.4.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -191,7 +191,7 @@ ga('send', {
 <p>In this blog post, I will show you how electricity prices have changed over time and calculate the potential of shifting your demand.</p>
 <section id="historical-prices" class="level3">
 <h3 class="anchored" data-anchor-id="historical-prices">Historical prices</h3>
-<div class="cell" data-execution_count="27">
+<div id="cell-9" class="cell" data-execution_count="27">
 <div class="cell-output cell-output-display" data-execution_count="27">
 
 <div id="altair-viz-d71bee25fd574ee6a907fe0b581486b3"></div>
@@ -255,7 +255,7 @@ ga('send', {
 </section>
 <section id="which-days-are-most-expensive-or-cheap" class="level3">
 <h3 class="anchored" data-anchor-id="which-days-are-most-expensive-or-cheap">Which days are most expensive (or cheap)?</h3>
-<div class="cell" data-execution_count="25">
+<div id="cell-14" class="cell" data-execution_count="25">
 <div class="cell-output cell-output-display" data-execution_count="25">
 
 <div id="altair-viz-718039e7e05e4dcd93f94eef18a9bc13"></div>
@@ -318,7 +318,7 @@ ga('send', {
 </section>
 <section id="which-hours-are-most-expensive-or-cheap" class="level3">
 <h3 class="anchored" data-anchor-id="which-hours-are-most-expensive-or-cheap">Which hours are most expensive (or cheap)?</h3>
-<div class="cell" data-execution_count="28">
+<div id="cell-17" class="cell" data-execution_count="28">
 <div class="cell-output cell-output-display" data-execution_count="28">
 
 <div id="altair-viz-fb831cae7e1e4d4bb8f4cfa18d2752c8"></div>
@@ -378,7 +378,7 @@ ga('send', {
 </div>
 </div>
 <p>On average, the prices are highest at 8:00 and 19:00, and lowest at 3:00 and 13:00. I <a href="http://www.matteodefelice.name/post/netherlands-is-that-a-duck/">learned here</a> this is called a <a href="https://en.wikipedia.org/wiki/Duck_curve">duck curve</a>.</p>
-<div class="cell" data-execution_count="15">
+<div id="cell-22" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display" data-execution_count="15">
 
 <div id="altair-viz-ff47b506f3304a3fad135972f6e2aa19"></div>
@@ -440,7 +440,7 @@ ga('send', {
 <p>This graph is another way of looking at it. The line shows that <strong><em>on average</em></strong> the price at 13:00 is about 20% of the maximum price that day. And on average the price at 19:00 is 80% of the maximum price that day.</p>
 <p>The heatmap shows this 80% at 19:00 is a result of it often being the most expensive price of the day (the dark blue square). But not always, otherwise it would be 100%.</p>
 <p>As my former manager used to say: <em>‘A person that only looks at averages, is just that: an average person’</em>. So I felt obliged to put the heatmap in here 😁</p>
-<div class="cell" data-execution_count="17">
+<div id="cell-25" class="cell" data-execution_count="17">
 <div class="cell-output cell-output-display" data-execution_count="17">
 
 <div id="altair-viz-4431376255dd4008850d82674ac0bb12"></div>
@@ -528,7 +528,7 @@ ga('send', {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -545,7 +545,7 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -561,7 +561,7 @@ Warning
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -617,6 +617,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -685,13 +712,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -797,6 +826,34 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, function() {
+      let href = xref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note !== null) {
+        if (id.startsWith('sec-')) {
+          // Special case sections, only their first couple elements
+          const container = document.createElement("div");
+          if (note.children && note.children.length > 2) {
+            for (let i = 0; i < 2; i++) {
+              container.appendChild(note.children[i].cloneNode(true));
+            }
+            return container.innerHTML
+          } else {
+            return note.innerHTML;
+          }
+        } else {
+          return note.innerHTML;
+        }
+      } else {
+        return "";
+      }
     });
   }
       let selectedAnnoteEl;

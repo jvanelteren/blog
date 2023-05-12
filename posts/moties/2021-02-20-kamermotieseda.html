@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.4.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -189,7 +189,7 @@ ga('send', {
 <p>De verkiezingen komen er weer aan, en de Tweede Kamer heeft een <a href="https://opendata.tweedekamer.nl/">open data portaal</a>. Daar heb ik eens fijn gebruik van gemaakt en alle moties vanaf 2009 gedownload. Het zijn er om precies te zijn 29514 en in dit blog kijk ik of er interessante inzichten uit te halen zijn.</p>
 <section id="ontwikkeling-van-het-aantal-moties" class="level2">
 <h2 class="anchored" data-anchor-id="ontwikkeling-van-het-aantal-moties">Ontwikkeling van het aantal moties</h2>
-<div class="cell" data-execution_count="9">
+<div id="cell-12" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display" data-execution_count="9">
 
 <div id="altair-viz-db2c339276e1449db0d73ffce892042e"></div>
@@ -244,7 +244,7 @@ ga('send', {
 </div>
 </div>
 <p>Het aantal moties stijgt, met name het aantal aangenomen moties. In verkiezingsjaren (2010, 2012 en 2017) ligt het aantal moties duidelijk lager.</p>
-<div class="cell" data-execution_count="10">
+<div id="cell-14" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display" data-execution_count="10">
 
 <div id="altair-viz-6dbb5c49a33f483cb2ea56487725775e"></div>
@@ -299,13 +299,13 @@ ga('send', {
 </div>
 </div>
 <p>Moties die worden aangenomen halen meestal rond de 120 stemmen. Moties die het niet halen blijven meestal rond de 50 stemmen hangen. Eigenlijk zegt zo’n gemiddelde niet zoveel en kan je beter naar de verdeling van het aantal stemmen voor kijken, dat doen we nu met een histogram per kabinetsperiode.</p>
-<div class="cell" data-execution_count="44">
+<div id="cell-16" class="cell" data-execution_count="44">
 <div class="cell-output cell-output-display">
 <p><img src="2021-02-20-kamermotiesEDA_files/figure-html/cell-12-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>In de histogrammen gaat het vooral om de verdeling van de moties tijdens de kamerperiodes. * Balkenende IV: een piekje van moties die nauwelijks stemmen krijgen (waarschijnlijk protestmoties), een grote piek met moties die rond de 35 stemmen blijven hangen en een piek met unaniem aangenomen moties * Rutte I: relatief veel moties die het nipt wel of juist niet haalden * Rutte II: veel afgewezen moties * Rutte III: hele grote piek in het aantal unaniem aangenomen moties. Dit lijken er ook steeds meer te worden (500 in 2018, 700 in 2019 en 900 in 2020)</p>
-<div class="cell" data-execution_count="12">
+<div id="cell-18" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display" data-execution_count="12">
 
 <div id="altair-viz-038ffa596d904203a8349e21222f603d"></div>
@@ -368,7 +368,7 @@ ga('send', {
 </section>
 <section id="welke-partij-is-de-tegenpartij" class="level2">
 <h2 class="anchored" data-anchor-id="welke-partij-is-de-tegenpartij">Welke partij is de ‘tegenpartij’?</h2>
-<div class="cell" data-execution_count="64">
+<div id="cell-25" class="cell" data-execution_count="64">
 <div class="cell-output cell-output-display" data-execution_count="64">
 
 <div id="altair-viz-8cd6181d7d574056b0dce56d83737d5f"></div>
@@ -426,7 +426,7 @@ ga('send', {
 </section>
 <section id="welke-partijen-dienen-het-meeste-moties-in-en-hoe-succesvol-zijn-ze" class="level2">
 <h2 class="anchored" data-anchor-id="welke-partijen-dienen-het-meeste-moties-in-en-hoe-succesvol-zijn-ze">Welke partijen dienen het meeste moties in en hoe succesvol zijn ze?</h2>
-<div class="cell" data-execution_count="103">
+<div id="cell-31" class="cell" data-execution_count="103">
 <div class="cell-output cell-output-display" data-execution_count="103">
 
 <div id="altair-viz-1754140d5a334819bcd84ed9c589b3bf"></div>
@@ -481,7 +481,7 @@ ga('send', {
 </div>
 </div>
 <p>In bovenstaande grafiek zijn de partijen op elkaar gestapeld en is te zien dat het aantal succesvolle moties onder Rutte III sterk is gestegen. De stijging komt vooral door VVD, CDA en Groenlinks.</p>
-<div class="cell" data-execution_count="100">
+<div id="cell-33" class="cell" data-execution_count="100">
 <div class="cell-output cell-output-display" data-execution_count="100">
 
 <div id="altair-viz-2afee677b7454960ac5da9f1e3814e79"></div>
@@ -536,7 +536,7 @@ ga('send', {
 </div>
 </div>
 <p>Deze visualisatie geeft weer hoe succesvol partijen zijn geweest tijdens de verschillende kamerperiodes. Je ziet bijvoorbeeld de PVV, PvdD en SP als partijen met veel moties, maar weinig succesvolle. Ook worden de moties van regeringspartijen vaker aangenomen. Dit komt natuurlijk doordat ze met de regeringspartijen een meerderheid hebben in de TK. Laten we nu eens kijken hoe deze grafiek eruit ziet per zetel, om een ‘productiviteit’ te meten.</p>
-<div class="cell" data-execution_count="101">
+<div id="cell-35" class="cell" data-execution_count="101">
 <div class="cell-output cell-output-display" data-execution_count="101">
 
 <div id="altair-viz-2a4e6976c99849e5baf87e76b02609a4"></div>
@@ -598,7 +598,7 @@ ga('send', {
 </section>
 <section id="welke-partijen-werken-samen" class="level2">
 <h2 class="anchored" data-anchor-id="welke-partijen-werken-samen">Welke partijen werken samen?</h2>
-<div class="cell" data-execution_count="113">
+<div id="cell-45" class="cell" data-execution_count="113">
 <div class="cell-output cell-output-display" data-execution_count="113">
 
 <div id="altair-viz-5d9b7e4dcdf54f69baa9382c1496fd47"></div>
@@ -658,7 +658,7 @@ ga('send', {
 <section id="hide-1" class="level1">
 <h1>hide</h1>
 <p>Hier zijn weer heel mooi de effecten te zien van in de regering zitten. Het tijdelijke pact tussen PvdA en VVD, en de huidige steun van de regeringspartijen aan elkaar. Andere opvallende zaken: - SGP diende vroeger vaak met CDA en CU moties in, dit is de afgelopen jaren een stuk minder geworden - Groenlinks en PvdA zijn vaak medeindiener bij elkaars moties - Denk, FvD en PVV hebben vrijwel nooit medeindieners - Bij moties van de ChristenUnie zijn de afgelopen jaren de regeringspartijen vaak medeindiener</p>
-<div class="cell" data-execution_count="126">
+<div id="cell-50" class="cell" data-execution_count="126">
 <div class="cell-output cell-output-display" data-execution_count="126">
 
 <div id="altair-viz-15dea64019924b70965c1d01c9c132f0"></div>
@@ -715,7 +715,7 @@ ga('send', {
 <p>Au! Dat doet pijn bij FvD! Als we kijken naar het stemgedrag stemmen bijna alle partijen tegen FvD, behalve PVV en Groep Krol. Van de oppositiepartijen krijgen alleen SGP, PvdA en Groenlinks regelmatig steun van de regeringspartijen.</p>
 <section id="welke-partijen-lijken-het-meeste-op-elkaar-qua-stemgedrag" class="level2">
 <h2 class="anchored" data-anchor-id="welke-partijen-lijken-het-meeste-op-elkaar-qua-stemgedrag">Welke partijen lijken het meeste op elkaar qua stemgedrag?</h2>
-<div class="cell" data-execution_count="35">
+<div id="cell-55" class="cell" data-execution_count="35">
 <div class="cell-output cell-output-display" data-execution_count="35">
 
 <div id="altair-viz-0cd00b4f43fa4c4ab955b766eabc15dc"></div>
@@ -771,7 +771,7 @@ ga('send', {
 </div>
 <p>In bovenstaande grafiek is het stemgedrag van alle partijen platgeslagen op één as met een Principal Component Analaysis. Deze as verklaart 40% van het stemgedrag. Of de bar positief of negatief is maakt niet uit, het gaat erom dat vergelijkbare partijen bij elkaar in de buurt liggen. Kennelijk liggen VVD en PvdD het meest van elkaar verwijderd.</p>
 <p>Hieronder visualiseren we het stemgedrag op twee assen. Op deze manier kunnen zo’n 60% van het stemgedrag beschrijven (niet 100%!). Als twee partijen vlak bij elkaar liggen wil dus niet zeggen dat ze altijd hetzelfde stemmen. De horizontale as is groter omdat deze meer van het stemgedrag verklaart.</p>
-<div class="cell" data-execution_count="40">
+<div id="cell-61" class="cell" data-execution_count="40">
 <div class="cell-output cell-output-display" data-execution_count="40">
 
 <div id="altair-viz-17ac97671e2b4566b01cb9338c9222b3"></div>
@@ -835,7 +835,7 @@ ga('send', {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -889,6 +889,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -957,13 +984,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1069,6 +1098,34 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, function() {
+      let href = xref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note !== null) {
+        if (id.startsWith('sec-')) {
+          // Special case sections, only their first couple elements
+          const container = document.createElement("div");
+          if (note.children && note.children.length > 2) {
+            for (let i = 0; i < 2; i++) {
+              container.appendChild(note.children[i].cloneNode(true));
+            }
+            return container.innerHTML
+          } else {
+            return note.innerHTML;
+          }
+        } else {
+          return note.innerHTML;
+        }
+      } else {
+        return "";
+      }
     });
   }
       let selectedAnnoteEl;
