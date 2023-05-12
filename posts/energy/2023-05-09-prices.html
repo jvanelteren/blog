@@ -333,65 +333,6 @@ ga('send', {
 </section>
 <section id="which-hours-are-most-expensive-or-cheap" class="level3">
 <h3 class="anchored" data-anchor-id="which-hours-are-most-expensive-or-cheap">Which hours are most expensive (or cheap)?</h3>
-<div id="cell-19" class="cell" data-execution_count="28">
-<div class="cell-output cell-output-display" data-execution_count="28">
-
-<div id="altair-viz-fb831cae7e1e4d4bb8f4cfa18d2752c8"></div>
-<script type="text/javascript">
-  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-fb831cae7e1e4d4bb8f4cfa18d2752c8") {
-      outputDiv = document.getElementById("altair-viz-fb831cae7e1e4d4bb8f4cfa18d2752c8");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.6.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
-    };
-
-    function maybeLoadScript(lib, version) {
-      var key = `${lib.replace("-", "")}_version`;
-      return (VEGA_DEBUG[key] == version) ?
-        Promise.resolve(paths[lib]) :
-        new Promise(function(resolve, reject) {
-          var s = document.createElement('script');
-          document.getElementsByTagName("head")[0].appendChild(s);
-          s.async = true;
-          s.onload = () => {
-            VEGA_DEBUG[key] = version;
-            return resolve(paths[lib]);
-          };
-          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-          s.src = paths[lib];
-        });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else {
-      maybeLoadScript("vega", "5")
-        .then(() => maybeLoadScript("vega-lite", "5.6.1"))
-        .then(() => maybeLoadScript("vega-embed", "6"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-a63ad4468fe55dd6a7630b3c76410d70"}, "mark": {"type": "bar"}, "encoding": {"x": {"field": "hour", "sort": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "title": "Hour of the day", "type": "nominal"}, "y": {"field": "price", "title": "Average daily price", "type": "quantitative"}}, "title": "Hourly prices during the day (year = 2022 & 2023)", "$schema": "https://vega.github.io/schema/vega-lite/v5.6.1.json", "datasets": {"data-a63ad4468fe55dd6a7630b3c76410d70": [{"hour": 0, "price": 202.7013195876289}, {"hour": 1, "price": 187.51538144329896}, {"hour": 2, "price": 181.49278467908903}, {"hour": 3, "price": 174.38729896907216}, {"hour": 4, "price": 174.059175257732}, {"hour": 5, "price": 184.54092783505155}, {"hour": 6, "price": 215.63061855670105}, {"hour": 7, "price": 244.66731958762887}, {"hour": 8, "price": 254.05676288659794}, {"hour": 9, "price": 235.29127835051548}, {"hour": 10, "price": 208.5176288659794}, {"hour": 11, "price": 190.34459793814435}, {"hour": 12, "price": 171.34228865979384}, {"hour": 13, "price": 161.1825979381443}, {"hour": 14, "price": 163.85235051546388}, {"hour": 15, "price": 176.893793814433}, {"hour": 16, "price": 195.44049484536083}, {"hour": 17, "price": 237.74360824742266}, {"hour": 18, "price": 264.7020412371134}, {"hour": 19, "price": 278.037587628866}, {"hour": 20, "price": 267.0988453608247}, {"hour": 21, "price": 245.7861649484536}, {"hour": 22, "price": 233.2277731958763}, {"hour": 23, "price": 208.3639587628866}]}}, {"mode": "vega-lite"});
-</script>
-</div>
-</div>
 <p>On average, the prices are highest at 8:00 and 19:00, and lowest at 3:00 and 13:00. I <a href="http://www.matteodefelice.name/post/netherlands-is-that-a-duck/">learned here</a> this is called a <a href="https://en.wikipedia.org/wiki/Duck_curve">duck curve</a>.</p>
 <p>This graph is another way of looking at it. The line shows that <strong><em>on average</em></strong> the price at 13:00 is about 20% of the maximum price that day. And on average the price at 19:00 is 80% of the maximum price that day.</p>
 <p>The heatmap shows this 80% at 19:00 is a result of it often being the most expensive price of the day (the dark blue square). But not always, otherwise it would be 100%.</p>
