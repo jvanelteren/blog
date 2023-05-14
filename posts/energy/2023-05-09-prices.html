@@ -191,16 +191,16 @@ ga('send', {
 <p>In this blog post, I will show you how electricity prices have changed over time and calculate the potential of shifting your demand.</p>
 <section id="historical-prices" class="level3">
 <h3 class="anchored" data-anchor-id="historical-prices">Historical prices</h3>
-<div id="cell-11" class="cell" data-execution_count="39">
-<div class="cell-output cell-output-display" data-execution_count="39">
+<div id="cell-11" class="cell" data-execution_count="63">
+<div class="cell-output cell-output-display" data-execution_count="63">
 
-<div id="altair-viz-ae7b596aeb7c4bdeae7e5338da7843bb"></div>
+<div id="altair-viz-08c0199d8f304a009bc6596d5aa88cb5"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-ae7b596aeb7c4bdeae7e5338da7843bb") {
-      outputDiv = document.getElementById("altair-viz-ae7b596aeb7c4bdeae7e5338da7843bb");
+    if (outputDiv.id !== "altair-viz-08c0199d8f304a009bc6596d5aa88cb5") {
+      outputDiv = document.getElementById("altair-viz-08c0199d8f304a009bc6596d5aa88cb5");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -250,12 +250,13 @@ ga('send', {
 </script>
 </div>
 </div>
+<p><img src="hourlyspreads.png" class="img-fluid"></p>
 <p>From 2021 onwards things have been ‘interesting’! There are huge swings in the prices, both between the days, but also within the days. In 2023 so far prices have dropped.</p>
 <p>The highest spread was at August 28th 2022, with a minimum price at 15:00 of -37 cents per kiloWatt-hour (kWh). At 20:00 the price was 699 cents/kWh!</p>
 </section>
 <section id="which-days-are-most-expensive-or-cheap" class="level3">
 <h3 class="anchored" data-anchor-id="which-days-are-most-expensive-or-cheap">Which days are most expensive (or cheap)?</h3>
-<div id="cell-16" class="cell" data-execution_count="42">
+<div id="cell-17" class="cell" data-execution_count="42">
 <div class="cell-output cell-output-display" data-execution_count="42">
 
 <div id="altair-viz-0278f8a1c8214cc8812a2b72e2fc2caf"></div>
@@ -318,7 +319,7 @@ ga('send', {
 </section>
 <section id="which-hours-are-most-expensive-or-cheap" class="level3">
 <h3 class="anchored" data-anchor-id="which-hours-are-most-expensive-or-cheap">Which hours are most expensive (or cheap)?</h3>
-<div id="cell-19" class="cell" data-execution_count="43">
+<div id="cell-20" class="cell" data-execution_count="43">
 <div class="cell-output cell-output-display" data-execution_count="43">
 
 <div id="altair-viz-4148875a9d5b49fca0d1f54a47e3d418"></div>
@@ -378,7 +379,7 @@ ga('send', {
 </div>
 </div>
 <p>On average, the prices are highest at 8:00 and 19:00, and lowest at 3:00 and 13:00. I <a href="http://www.matteodefelice.name/post/netherlands-is-that-a-duck/">learned here</a> this is called a <a href="https://en.wikipedia.org/wiki/Duck_curve">duck curve</a>.</p>
-<div id="cell-24" class="cell" data-execution_count="47">
+<div id="cell-25" class="cell" data-execution_count="47">
 <div class="cell-output cell-output-display" data-execution_count="47">
 
 <div id="altair-viz-e6747ca0ceb346cba4ef251cae946e7f"></div>
@@ -440,7 +441,7 @@ ga('send', {
 <p>This graph is another way of looking at it. The line shows that <strong><em>on average</em></strong> the price at 13:00 is about 20% of the maximum price that day. And on average the price at 19:00 is 80% of the maximum price that day.</p>
 <p>The heatmap shows this 80% at 19:00 is a result of it often being the most expensive price of the day (the dark blue square). But not always, otherwise it would be 100%.</p>
 <p>As my former manager used to say: <em>‘A person that only looks at averages, is just that: an average person’</em>. So I felt obliged to put the heatmap in here 😁</p>
-<div id="cell-27" class="cell" data-execution_count="49">
+<div id="cell-28" class="cell" data-execution_count="49">
 <div class="cell-output cell-output-display" data-execution_count="49">
 
 <div id="altair-viz-1d114987be614d6fa9a9efa7a9b9acf8"></div>
