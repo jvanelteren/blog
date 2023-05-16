@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jesse van Elteren">
 <meta name="dcterms.date" content="2023-05-22">
-<meta name="description" content="Can you profit?">
+<meta name="description" content="What is happening and can you profit?">
 
 <title>Blog Jesse van Elteren - Variation in electricity prices</title>
 <style>
@@ -84,13 +84,13 @@ ga('send', {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Blog Jesse van Elteren - Variation in electricity prices">
-<meta property="og:description" content="Can you profit?">
+<meta property="og:description" content="What is happening and can you profit?">
 <meta property="og:image" content="https://jvanelteren.github.io/blog/posts/energy/futurecrop.png">
 <meta property="og:site-name" content="Blog Jesse van Elteren">
 <meta property="og:image:height" content="1122">
 <meta property="og:image:width" content="2044">
 <meta name="twitter:title" content="Blog Jesse van Elteren - Variation in electricity prices">
-<meta name="twitter:description" content="Can you profit?">
+<meta name="twitter:description" content="What is happening and can you profit?">
 <meta name="twitter:image" content="https://jvanelteren.github.io/blog/posts/energy/futurecrop.png">
 <meta name="twitter:image-height" content="1122">
 <meta name="twitter:image-width" content="2044">
@@ -148,7 +148,7 @@ ga('send', {
       <h1 class="title">Variation in electricity prices</h1>
                   <div>
         <div class="description">
-          Can you profit?
+          What is happening and can you profit?
         </div>
       </div>
                           <div class="quarto-categories">
@@ -191,7 +191,7 @@ ga('send', {
 
 
 <p><img src="futurecrop.png" class="img-fluid"></p>
-<p>Electricity prices are not fixed. They depend on the amount of power generation capacity and demand. In the Netherlands we have an hourly price, which is determined one day in advance. Some power suppliers offer so called ‘dynamic’ contracts, where these hourly prices are used for billing, instead of a fixed price. I like it: you become more aware of your consumption, learn something about prices patterns of electricity and save (a little) on costs.</p>
+<p>Electricity prices are not fixed. They depend on the amount of power generation capacity and demand. In the Netherlands we have a hourly price, which is determined one day in advance. Some power suppliers offer so called ‘dynamic’ contracts, where these hourly prices are used for billing, instead of a fixed price. I like it: you become more aware of your consumption, learn something about prices patterns of electricity and save (a little) on costs.</p>
 <p>In this blog post, I will show you how electricity prices have changed over time and calculate the potential of shifting your demand.</p>
 <section id="historical-prices" class="level3">
 <h3 class="anchored" data-anchor-id="historical-prices">Historical prices</h3>
@@ -204,13 +204,13 @@ ga('send', {
 <div id="cell-18" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display" data-execution_count="12">
 
-<div id="altair-viz-b7f3500ce81b4c36965f90c25ae61968"></div>
+<div id="altair-viz-581f03c45d8b4e2d93ed31a4e11b22bf"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b7f3500ce81b4c36965f90c25ae61968") {
-      outputDiv = document.getElementById("altair-viz-b7f3500ce81b4c36965f90c25ae61968");
+    if (outputDiv.id !== "altair-viz-581f03c45d8b4e2d93ed31a4e11b22bf") {
+      outputDiv = document.getElementById("altair-viz-581f03c45d8b4e2d93ed31a4e11b22bf");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -267,13 +267,13 @@ ga('send', {
 <div id="cell-21" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display" data-execution_count="13">
 
-<div id="altair-viz-1bfe8c9de33d4bf992f66dc6d6bb9fbd"></div>
+<div id="altair-viz-460d62650c8c42e2a60bdeb3449083c4"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-1bfe8c9de33d4bf992f66dc6d6bb9fbd") {
-      outputDiv = document.getElementById("altair-viz-1bfe8c9de33d4bf992f66dc6d6bb9fbd");
+    if (outputDiv.id !== "altair-viz-460d62650c8c42e2a60bdeb3449083c4") {
+      outputDiv = document.getElementById("altair-viz-460d62650c8c42e2a60bdeb3449083c4");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -323,17 +323,17 @@ ga('send', {
 </script>
 </div>
 </div>
-<p>On average, the prices are highest at 8:00 and 19:00, and lowest at 3:00 and 13:00. I <a href="http://www.matteodefelice.name/post/netherlands-is-that-a-duck/">learned here</a> this is called a <a href="https://en.wikipedia.org/wiki/Duck_curve">duck curve</a>.</p>
+<p>On average, the prices are highest at 8:00 and 19:00, and lowest at 3:00 and 13:00. I <a href="http://www.matteodefelice.name/post/netherlands-is-that-a-duck/">learned</a> this is called a <a href="https://en.wikipedia.org/wiki/Duck_curve">duck curve</a>.</p>
 <div id="cell-26" class="cell" data-execution_count="17">
 <div class="cell-output cell-output-display" data-execution_count="17">
 
-<div id="altair-viz-45304f37fc7f406cb72a2ea1584359a2"></div>
+<div id="altair-viz-39e6dff9592141aca87960c2045366b9"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-45304f37fc7f406cb72a2ea1584359a2") {
-      outputDiv = document.getElementById("altair-viz-45304f37fc7f406cb72a2ea1584359a2");
+    if (outputDiv.id !== "altair-viz-39e6dff9592141aca87960c2045366b9") {
+      outputDiv = document.getElementById("altair-viz-39e6dff9592141aca87960c2045366b9");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -389,13 +389,13 @@ ga('send', {
 <div id="cell-29" class="cell" data-execution_count="19">
 <div class="cell-output cell-output-display" data-execution_count="19">
 
-<div id="altair-viz-19d3d87f7e564ede9784f3499b517fc9"></div>
+<div id="altair-viz-ec7f211dfb854a5e933711df64535cab"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-19d3d87f7e564ede9784f3499b517fc9") {
-      outputDiv = document.getElementById("altair-viz-19d3d87f7e564ede9784f3499b517fc9");
+    if (outputDiv.id !== "altair-viz-ec7f211dfb854a5e933711df64535cab") {
+      outputDiv = document.getElementById("altair-viz-ec7f211dfb854a5e933711df64535cab");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -457,16 +457,73 @@ ga('send', {
 <li>An electric car (dependent on battery)</li>
 </ul>
 <p>Let’s say we can shift 1 kWh daily. Let’s also assume you currently are using that 1 kWh somewhere randomly between 9:00-20:00.</p>
-<p>If you would have shifted this demand to the lowest price of the day, you would have saved ~€360 in 2022 (2021: ~€140).</p>
-<p>You could also do it simpler, by always shifting demand to 13:00. In that case you would have saved ~€230 in 2022 (2021: ~€65).</p>
-<p>This is a very rough estimation and these savings are highly dependent on the actual prices and how much you can shift from which hour.</p>
+<div id="cell-33" class="cell" data-execution_count="47">
+<div class="cell-output cell-output-display" data-execution_count="47">
+
+<div id="altair-viz-6a8380a1b37d4167ba9f0d77e397e67b"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-6a8380a1b37d4167ba9f0d77e397e67b") {
+      outputDiv = document.getElementById("altair-viz-6a8380a1b37d4167ba9f0d77e397e67b");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.6.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.6.1"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-da9ba8de9fcfa5710f74e6d975eda52c"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Strategy", "type": "nominal"}, "column": {"field": "Strategy", "header": null, "type": "nominal"}, "x": {"field": "Year", "type": "ordinal"}, "y": {"field": "Savings", "title": "Savings [\u20ac]", "type": "quantitative"}}, "$schema": "https://vega.github.io/schema/vega-lite/v5.6.1.json", "datasets": {"data-da9ba8de9fcfa5710f74e6d975eda52c": [{"Year": "2020", "Strategy": "Shift demand optimal", "Savings": 50}, {"Year": "2020", "Strategy": "Shift demand to 13:00", "Savings": 22}, {"Year": "2021", "Strategy": "Shift demand optimal", "Savings": 140}, {"Year": "2021", "Strategy": "Shift demand to 13:00", "Savings": 65}, {"Year": "2022", "Strategy": "Shift demand optimal", "Savings": 360}, {"Year": "2022", "Strategy": "Shift demand to 13:00", "Savings": 230}, {"Year": "2023YTD", "Strategy": "Shift demand optimal", "Savings": 131}, {"Year": "2023YTD", "Strategy": "Shift demand to 13:00", "Savings": 39}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p>If you would have shifted this demand optimally to the lowest point in the day you would have saved ~€360 in 2022. You could also do it simpler, by always shifting your 1kWh demand to 13:00. This strategy is bringing in ~50% of the optimal strategy. These savings are highly dependent on the actual prices and how much you can shift from which hour.</p>
 </section>
 <section id="takeaways" class="level3">
 <h3 class="anchored" data-anchor-id="takeaways">Takeaways</h3>
 <ol type="1">
 <li>Shift your flexible demand as much as possible to 13:00, preferably in the weekend. Electricity is cheapest and CO2 emissions are much lower due to solar production.</li>
-<li>This simple rule of thumb is already bringing in ~60% of your savings potential.</li>
-<li>Get a dynamic energy contract to actually save this potential yourself. You do run the risk of increasing prices with these type of contracts, and with solar panels and ‘salderen’ it works differently</li>
+<li>This simple rule of thumb is already bringing in ~50% of your savings potential.</li>
+<li>Get a dynamic energy contract to actually save this potential yourself. If you have solar panels it works differently with ‘salderen’. Also you do run the risk of paying more when prices increase.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -485,22 +542,6 @@ ga('send', {
 </ul>
 </div>
 </div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Prices can change rapidly, so this historic analysis is not necessarily a good predictor of the future.</li>
-<li>Views on this blog are my personal opinion.</li>
-</ul>
-</div>
-</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -514,6 +555,22 @@ ga('send', {
 <ul>
 <li>Source electricity data obtained from <a href="https://transparency.entsoe.eu/dashboard/show">ENTSO-E</a></li>
 <li>Source notebook at <a href="https://github.com/jvanelteren/blog/blob/main/posts/energy/2023-03-30-eprices.ipynb">GitHub</a></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Prices can change rapidly, so this historic analysis is not necessarily a good predictor of the future.</li>
+<li>Views on this blog are my personal opinion.</li>
 </ul>
 </div>
 </div>
