@@ -7,6 +7,7 @@ website:
   description: "Data science posts"
   google-analytics: "UA-1302238-4"
   twitter-card: true
+  open-graph: true
   navbar:
     right:
       - about.qmd
@@ -19,9 +20,6 @@ website:
 format:
   html:
     theme:
-      light: united
-      # united
+      light: cosmo
       dark: darkly
     css: styles.css
-
-
