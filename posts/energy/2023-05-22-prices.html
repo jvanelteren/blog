@@ -23,6 +23,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -201,16 +235,16 @@ ga('send', {
 </section>
 <section id="which-days-are-most-expensive-or-cheap" class="level3">
 <h3 class="anchored" data-anchor-id="which-days-are-most-expensive-or-cheap">Which days are most expensive (or cheap)?</h3>
-<div id="cell-18" class="cell" data-execution_count="13">
-<div class="cell-output cell-output-display" data-execution_count="13">
+<div id="cell-18" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="12">
 
-<div id="altair-viz-0f0bb20ce6db4c7c9e7e6aead5139276"></div>
+<div id="altair-viz-ba0433411cbf4e938554e8e8a39f20ba"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0f0bb20ce6db4c7c9e7e6aead5139276") {
-      outputDiv = document.getElementById("altair-viz-0f0bb20ce6db4c7c9e7e6aead5139276");
+    if (outputDiv.id !== "altair-viz-ba0433411cbf4e938554e8e8a39f20ba") {
+      outputDiv = document.getElementById("altair-viz-ba0433411cbf4e938554e8e8a39f20ba");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -256,7 +290,7 @@ ga('send', {
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-c7c7bbe7bbb3e663ade2453f21aed03a"}, "mark": {"type": "bar"}, "encoding": {"x": {"field": "weekday", "sort": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "title": null, "type": "nominal"}, "y": {"field": "mean", "title": "Average daily price [cents / kWhhhh]", "type": "quantitative"}}, "title": "Prices per weekday (year = 2022 & 2023)", "$schema": "https://vega.github.io/schema/vega-lite/v5.6.1.json", "datasets": {"data-c7c7bbe7bbb3e663ade2453f21aed03a": [{"weekday": "Fri", "mean": 215.72160968660967}, {"weekday": "Mon", "mean": 216.37125672681228}, {"weekday": "Sat", "mean": 177.59071810482772}, {"weekday": "Sun", "mean": 166.62876923685684}, {"weekday": "Thu", "mean": 219.7133598448876}, {"weekday": "Tue", "mean": 227.2016037511871}, {"weekday": "Wed", "mean": 221.4892932890155}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-9bcdace969c052eb1281af00de81898d"}, "mark": {"type": "bar"}, "encoding": {"x": {"field": "weekday", "sort": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "title": null, "type": "nominal"}, "y": {"field": "mean", "title": "Average daily price [cents / kWhhhh]", "type": "quantitative"}}, "title": "Prices per weekday (year = 2022 & 2023)", "$schema": "https://vega.github.io/schema/vega-lite/v5.6.1.json", "datasets": {"data-9bcdace969c052eb1281af00de81898d": [{"weekday": "Fri", "mean": 213.56791359325607}, {"weekday": "Mon", "mean": 211.7851821051821}, {"weekday": "Sat", "mean": 175.77653615153616}, {"weekday": "Sun", "mean": 162.29579603271912}, {"weekday": "Thu", "mean": 217.67737228271474}, {"weekday": "Tue", "mean": 223.03088588588588}, {"weekday": "Wed", "mean": 217.66158273658272}]}}, {"mode": "vega-lite"});
 </script>
 </div>
 </div>
@@ -264,16 +298,16 @@ ga('send', {
 </section>
 <section id="which-hours-are-most-expensive-or-cheap" class="level3">
 <h3 class="anchored" data-anchor-id="which-hours-are-most-expensive-or-cheap">Which hours are most expensive (or cheap)?</h3>
-<div id="cell-21" class="cell" data-execution_count="14">
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div id="cell-21" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="13">
 
-<div id="altair-viz-f44ba95703db44dd83677ce80e1239b7"></div>
+<div id="altair-viz-3c74376ee2934230b450fe0e305b860b"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-f44ba95703db44dd83677ce80e1239b7") {
-      outputDiv = document.getElementById("altair-viz-f44ba95703db44dd83677ce80e1239b7");
+    if (outputDiv.id !== "altair-viz-3c74376ee2934230b450fe0e305b860b") {
+      outputDiv = document.getElementById("altair-viz-3c74376ee2934230b450fe0e305b860b");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -319,21 +353,150 @@ ga('send', {
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-d2da6c669aa17789d9db9d6536485af6"}, "mark": {"type": "bar"}, "encoding": {"x": {"field": "hour", "sort": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "title": "Hour of the day", "type": "nominal"}, "y": {"field": "price", "title": "Average daily price", "type": "quantitative"}}, "title": "Hourly prices during the day (year = 2022 & 2023)", "$schema": "https://vega.github.io/schema/vega-lite/v5.6.1.json", "datasets": {"data-d2da6c669aa17789d9db9d6536485af6": [{"hour": 0, "price": 198.66400000000002}, {"hour": 1, "price": 183.75633663366338}, {"hour": 2, "price": 177.8267296222664}, {"hour": 3, "price": 170.87946534653466}, {"hour": 4, "price": 170.58057425742575}, {"hour": 5, "price": 180.91726732673268}, {"hour": 6, "price": 211.08756435643565}, {"hour": 7, "price": 239.33699009900988}, {"hour": 8, "price": 248.3508118811881}, {"hour": 9, "price": 229.80261386138613}, {"hour": 10, "price": 203.51287128712872}, {"hour": 11, "price": 185.56475247524753}, {"hour": 12, "price": 166.89596039603958}, {"hour": 13, "price": 156.71914851485147}, {"hour": 14, "price": 159.21766336633667}, {"hour": 15, "price": 171.9369108910891}, {"hour": 16, "price": 190.36342574257426}, {"hour": 17, "price": 231.7802772277228}, {"hour": 18, "price": 258.2957821782178}, {"hour": 19, "price": 271.7021188118812}, {"hour": 20, "price": 261.4673069306931}, {"hour": 21, "price": 240.74427722772276}, {"hour": 22, "price": 228.37714851485146}, {"hour": 23, "price": 204.1051485148515}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-dc9659dd7b4ee4ee33ca973981b4a26f"}, "mark": {"type": "bar"}, "encoding": {"x": {"field": "hour", "sort": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "title": "Hour of the day", "type": "nominal"}, "y": {"field": "price", "title": "Average daily price", "type": "quantitative"}}, "title": "Hourly prices during the day (year = 2022 & 2023)", "$schema": "https://vega.github.io/schema/vega-lite/v5.6.1.json", "datasets": {"data-dc9659dd7b4ee4ee33ca973981b4a26f": [{"hour": 0, "price": 234.4871506849315}, {"hour": 1, "price": 216.7567671232877}, {"hour": 2, "price": 209.67207417582415}, {"hour": 3, "price": 201.7742739726027}, {"hour": 4, "price": 201.51208219178082}, {"hour": 5, "price": 213.55838356164384}, {"hour": 6, "price": 248.75654794520548}, {"hour": 7, "price": 280.8095890410959}, {"hour": 8, "price": 289.3558082191781}, {"hour": 9, "price": 267.6542739726027}, {"hour": 10, "price": 237.83849315068494}, {"hour": 11, "price": 217.61871232876712}, {"hour": 12, "price": 195.55191780821917}, {"hour": 13, "price": 184.27435616438356}, {"hour": 14, "price": 187.19038356164384}, {"hour": 15, "price": 202.2375890410959}, {"hour": 16, "price": 223.32115068493147}, {"hour": 17, "price": 271.6797534246575}, {"hour": 18, "price": 302.15101369863015}, {"hour": 19, "price": 319.780301369863}, {"hour": 20, "price": 308.0209863013699}, {"hour": 21, "price": 283.1844657534246}, {"hour": 22, "price": 269.28616438356164}, {"hour": 23, "price": 240.013698630137}]}}, {"mode": "vega-lite"});
 </script>
 </div>
 </div>
-<p>On average, the prices are highest at 8:00 and 19:00, and lowest at 3:00 and 13:00. I <a href="http://www.matteodefelice.name/post/netherlands-is-that-a-duck/">learned</a> this is called a <a href="https://en.wikipedia.org/wiki/Duck_curve">duck curve</a>.</p>
-<div id="cell-26" class="cell" data-execution_count="18">
-<div class="cell-output cell-output-display" data-execution_count="18">
+<div id="cell-22" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-25" class="cell" data-execution_count="14">
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\Gebruiker\AppData\Local\Temp\ipykernel_13176\3753049483.py:2: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+  test = df[df['year']==2022].groupby('month').mean()['price'].reset_index()</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="14">
 
-<div id="altair-viz-ed413a3d817446768435362ff3449c29"></div>
+<div id="altair-viz-1505cdcdf0204662bac72d63c462e704"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-ed413a3d817446768435362ff3449c29") {
-      outputDiv = document.getElementById("altair-viz-ed413a3d817446768435362ff3449c29");
+    if (outputDiv.id !== "altair-viz-1505cdcdf0204662bac72d63c462e704") {
+      outputDiv = document.getElementById("altair-viz-1505cdcdf0204662bac72d63c462e704");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.6.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.6.1"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-5f772857f6586cfb6fc702bc4f3e728f"}, "mark": {"type": "bar"}, "encoding": {"facet": {"columns": 4, "field": "month", "title": null, "type": "ordinal"}, "x": {"field": "hour", "sort": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "title": "Hour of the day", "type": "nominal"}, "y": {"field": "value", "title": "Avg price [ct/kW]", "type": "quantitative"}}, "height": 100, "title": "Hourly prices per month 2022, 1 = jan", "width": 200, "$schema": "https://vega.github.io/schema/vega-lite/v5.6.1.json", "datasets": {"data-5f772857f6586cfb6fc702bc4f3e728f": [{"month": 1, "hour": 0, "value": 165.7990322580645}, {"month": 2, "hour": 0, "value": 155.0375}, {"month": 3, "hour": 0, "value": 253.0651612903226}, {"month": 4, "hour": 0, "value": 203.59866666666667}, {"month": 5, "hour": 0, "value": 201.47451612903225}, {"month": 6, "hour": 0, "value": 222.76433333333335}, {"month": 7, "hour": 0, "value": 348.2532258064516}, {"month": 8, "hour": 0, "value": 458.78354838709674}, {"month": 9, "hour": 0, "value": 315.658}, {"month": 10, "hour": 0, "value": 136.0616129032258}, {"month": 11, "hour": 0, "value": 131.20766666666665}, {"month": 12, "hour": 0, "value": 212.36612903225807}, {"month": 1, "hour": 1, "value": 152.18903225806451}, {"month": 2, "hour": 1, "value": 145.3675}, {"month": 3, "hour": 1, "value": 247.8922580645161}, {"month": 4, "hour": 1, "value": 187.13333333333333}, {"month": 5, "hour": 1, "value": 183.86516129032256}, {"month": 6, "hour": 1, "value": 206.40533333333332}, {"month": 7, "hour": 1, "value": 312.3970967741935}, {"month": 8, "hour": 1, "value": 427.82516129032257}, {"month": 9, "hour": 1, "value": 286.68}, {"month": 10, "hour": 1, "value": 124.49967741935485}, {"month": 11, "hour": 1, "value": 118.105}, {"month": 12, "hour": 1, "value": 199.59677419354838}, {"month": 1, "hour": 2, "value": 146.96225806451613}, {"month": 2, "hour": 2, "value": 139.19964285714286}, {"month": 3, "hour": 2, "value": 246.09633333333335}, {"month": 4, "hour": 2, "value": 184.6}, {"month": 5, "hour": 2, "value": 176.77129032258065}, {"month": 6, "hour": 2, "value": 199.025}, {"month": 7, "hour": 2, "value": 292.7903225806452}, {"month": 8, "hour": 2, "value": 418.46806451612906}, {"month": 9, "hour": 2, "value": 276.50600000000003}, {"month": 10, "hour": 2, "value": 123.84790322580646}, {"month": 11, "hour": 2, "value": 113.57833333333333}, {"month": 12, "hour": 2, "value": 190.47870967741935}, {"month": 1, "hour": 3, "value": 138.94870967741934}, {"month": 2, "hour": 3, "value": 127.9682142857143}, {"month": 3, "hour": 3, "value": 241.29322580645163}, {"month": 4, "hour": 3, "value": 181.75233333333333}, {"month": 5, "hour": 3, "value": 174.84451612903226}, {"month": 6, "hour": 3, "value": 191.283}, {"month": 7, "hour": 3, "value": 284.4854838709677}, {"month": 8, "hour": 3, "value": 401.30129032258066}, {"month": 9, "hour": 3, "value": 267.621}, {"month": 10, "hour": 3, "value": 114.9683870967742}, {"month": 11, "hour": 3, "value": 107.301}, {"month": 12, "hour": 3, "value": 180.47387096774196}, {"month": 1, "hour": 4, "value": 136.29064516129034}, {"month": 2, "hour": 4, "value": 126.3442857142857}, {"month": 3, "hour": 4, "value": 242.32999999999998}, {"month": 4, "hour": 4, "value": 178.33666666666667}, {"month": 5, "hour": 4, "value": 173.7825806451613}, {"month": 6, "hour": 4, "value": 189.62233333333333}, {"month": 7, "hour": 4, "value": 285.6003225806452}, {"month": 8, "hour": 4, "value": 398.42064516129034}, {"month": 9, "hour": 4, "value": 271.1906666666667}, {"month": 10, "hour": 4, "value": 117.3458064516129}, {"month": 11, "hour": 4, "value": 107.514}, {"month": 12, "hour": 4, "value": 182.17709677419353}, {"month": 1, "hour": 5, "value": 141.7774193548387}, {"month": 2, "hour": 5, "value": 132.96107142857142}, {"month": 3, "hour": 5, "value": 252.69870967741934}, {"month": 4, "hour": 5, "value": 191.71166666666667}, {"month": 5, "hour": 5, "value": 184.57999999999998}, {"month": 6, "hour": 5, "value": 195.21266666666668}, {"month": 7, "hour": 5, "value": 297.2683870967742}, {"month": 8, "hour": 5, "value": 422.13354838709677}, {"month": 9, "hour": 5, "value": 300.1396666666667}, {"month": 10, "hour": 5, "value": 122.0425806451613}, {"month": 11, "hour": 5, "value": 120.96933333333332}, {"month": 12, "hour": 5, "value": 191.91548387096773}, {"month": 1, "hour": 6, "value": 159.7635483870968}, {"month": 2, "hour": 6, "value": 161.0614285714286}, {"month": 3, "hour": 6, "value": 288.8106451612903}, {"month": 4, "hour": 6, "value": 215.00933333333333}, {"month": 5, "hour": 6, "value": 205.3641935483871}, {"month": 6, "hour": 6, "value": 226.85766666666666}, {"month": 7, "hour": 6, "value": 349.5422580645161}, {"month": 8, "hour": 6, "value": 482.69129032258064}, {"month": 9, "hour": 6, "value": 371.95700000000005}, {"month": 10, "hour": 6, "value": 144.43032258064517}, {"month": 11, "hour": 6, "value": 153.91066666666666}, {"month": 12, "hour": 6, "value": 216.3132258064516}, {"month": 1, "hour": 7, "value": 186.25129032258064}, {"month": 2, "hour": 7, "value": 193.28892857142858}, {"month": 3, "hour": 7, "value": 318.67967741935485}, {"month": 4, "hour": 7, "value": 237.0703333333333}, {"month": 5, "hour": 7, "value": 220.20580645161291}, {"month": 6, "hour": 7, "value": 242.828}, {"month": 7, "hour": 7, "value": 368.10870967741937}, {"month": 8, "hour": 7, "value": 508.728064516129}, {"month": 9, "hour": 7, "value": 432.8573333333333}, {"month": 10, "hour": 7, "value": 191.93612903225807}, {"month": 11, "hour": 7, "value": 196.73100000000002}, {"month": 12, "hour": 7, "value": 264.11645161290323}, {"month": 1, "hour": 8, "value": 220.60096774193548}, {"month": 2, "hour": 8, "value": 208.7575}, {"month": 3, "hour": 8, "value": 313.54290322580647}, {"month": 4, "hour": 8, "value": 243.31866666666667}, {"month": 5, "hour": 8, "value": 213.2474193548387}, {"month": 6, "hour": 8, "value": 233.99466666666666}, {"month": 7, "hour": 8, "value": 351.2758064516129}, {"month": 8, "hour": 8, "value": 515.36}, {"month": 9, "hour": 8, "value": 434.61466666666666}, {"month": 10, "hour": 8, "value": 214.10000000000002}, {"month": 11, "hour": 8, "value": 218.28699999999998}, {"month": 12, "hour": 8, "value": 296.4925806451613}, {"month": 1, "hour": 9, "value": 232.8316129032258}, {"month": 2, "hour": 9, "value": 202.81178571428572}, {"month": 3, "hour": 9, "value": 262.1135483870968}, {"month": 4, "hour": 9, "value": 219.97666666666666}, {"month": 5, "hour": 9, "value": 186.34677419354838}, {"month": 6, "hour": 9, "value": 210.71233333333333}, {"month": 7, "hour": 9, "value": 317.79870967741937}, {"month": 8, "hour": 9, "value": 478.41161290322583}, {"month": 9, "hour": 9, "value": 380.9963333333333}, {"month": 10, "hour": 9, "value": 194.18903225806451}, {"month": 11, "hour": 9, "value": 208.40766666666664}, {"month": 12, "hour": 9, "value": 309.3503225806452}, {"month": 1, "hour": 10, "value": 219.45935483870966}, {"month": 2, "hour": 10, "value": 166.165}, {"month": 3, "hour": 10, "value": 219.54129032258064}, {"month": 4, "hour": 10, "value": 188.50799999999998}, {"month": 5, "hour": 10, "value": 161.74903225806452}, {"month": 6, "hour": 10, "value": 185.37966666666668}, {"month": 7, "hour": 10, "value": 279.3058064516129}, {"month": 8, "hour": 10, "value": 425.1777419354839}, {"month": 9, "hour": 10, "value": 340.33033333333333}, {"month": 10, "hour": 10, "value": 160.72548387096774}, {"month": 11, "hour": 10, "value": 196.17533333333333}, {"month": 12, "hour": 10, "value": 303.28741935483873}, {"month": 1, "hour": 11, "value": 206.93032258064517}, {"month": 2, "hour": 11, "value": 155.45499999999998}, {"month": 3, "hour": 11, "value": 202.7232258064516}, {"month": 4, "hour": 11, "value": 160.19233333333332}, {"month": 5, "hour": 11, "value": 145.3174193548387}, {"month": 6, "hour": 11, "value": 172.346}, {"month": 7, "hour": 11, "value": 249.68032258064517}, {"month": 8, "hour": 11, "value": 389.3003225806452}, {"month": 9, "hour": 11, "value": 304.69033333333334}, {"month": 10, "hour": 11, "value": 135.85451612903225}, {"month": 11, "hour": 11, "value": 189.70533333333333}, {"month": 12, "hour": 11, "value": 291.8090322580645}, {"month": 1, "hour": 12, "value": 196.52225806451614}, {"month": 2, "hour": 12, "value": 145.19071428571428}, {"month": 3, "hour": 12, "value": 175.61870967741936}, {"month": 4, "hour": 12, "value": 140.87966666666668}, {"month": 5, "hour": 12, "value": 131.19838709677418}, {"month": 6, "hour": 12, "value": 163.45066666666668}, {"month": 7, "hour": 12, "value": 214.58612903225807}, {"month": 8, "hour": 12, "value": 329.58161290322585}, {"month": 9, "hour": 12, "value": 264.99466666666666}, {"month": 10, "hour": 12, "value": 119.29548387096774}, {"month": 11, "hour": 12, "value": 182.40933333333334}, {"month": 12, "hour": 12, "value": 277.0387096774194}, {"month": 1, "hour": 13, "value": 190.35870967741934}, {"month": 2, "hour": 13, "value": 137.30964285714285}, {"month": 3, "hour": 13, "value": 174.88096774193548}, {"month": 4, "hour": 13, "value": 126.843}, {"month": 5, "hour": 13, "value": 114.69387096774193}, {"month": 6, "hour": 13, "value": 144.399}, {"month": 7, "hour": 13, "value": 187.08677419354837}, {"month": 8, "hour": 13, "value": 311.94387096774193}, {"month": 9, "hour": 13, "value": 247.39166666666668}, {"month": 10, "hour": 13, "value": 111.82677419354839}, {"month": 11, "hour": 13, "value": 187.05200000000002}, {"month": 12, "hour": 13, "value": 271.94774193548386}, {"month": 1, "hour": 14, "value": 196.61967741935484}, {"month": 2, "hour": 14, "value": 138.04}, {"month": 3, "hour": 14, "value": 190.87774193548387}, {"month": 4, "hour": 14, "value": 121.04466666666667}, {"month": 5, "hour": 14, "value": 107.73387096774194}, {"month": 6, "hour": 14, "value": 142.369}, {"month": 7, "hour": 14, "value": 176.74645161290323}, {"month": 8, "hour": 14, "value": 314.75}, {"month": 9, "hour": 14, "value": 248.486}, {"month": 10, "hour": 14, "value": 109.68387096774192}, {"month": 11, "hour": 14, "value": 200.33866666666665}, {"month": 12, "hour": 14, "value": 293.65999999999997}, {"month": 1, "hour": 15, "value": 207.41387096774193}, {"month": 2, "hour": 15, "value": 155.07142857142858}, {"month": 3, "hour": 15, "value": 223.18290322580646}, {"month": 4, "hour": 15, "value": 128.49466666666666}, {"month": 5, "hour": 15, "value": 119.38741935483871}, {"month": 6, "hour": 15, "value": 146.52333333333334}, {"month": 7, "hour": 15, "value": 193.29774193548386}, {"month": 8, "hour": 15, "value": 341.6422580645161}, {"month": 9, "hour": 15, "value": 266.5006666666667}, {"month": 10, "hour": 15, "value": 121.90193548387097}, {"month": 11, "hour": 15, "value": 215.66333333333333}, {"month": 12, "hour": 15, "value": 301.5370967741935}, {"month": 1, "hour": 16, "value": 205.90645161290323}, {"month": 2, "hour": 16, "value": 174.52714285714288}, {"month": 3, "hour": 16, "value": 252.89129032258066}, {"month": 4, "hour": 16, "value": 150.767}, {"month": 5, "hour": 16, "value": 136.92580645161289}, {"month": 6, "hour": 16, "value": 166.91733333333335}, {"month": 7, "hour": 16, "value": 219.83354838709678}, {"month": 8, "hour": 16, "value": 382.731935483871}, {"month": 9, "hour": 16, "value": 307.174}, {"month": 10, "hour": 16, "value": 144.60999999999999}, {"month": 11, "hour": 16, "value": 220.73466666666667}, {"month": 12, "hour": 16, "value": 310.5741935483871}, {"month": 1, "hour": 17, "value": 245.53967741935483}, {"month": 2, "hour": 17, "value": 200.88035714285712}, {"month": 3, "hour": 17, "value": 301.5854838709677}, {"month": 4, "hour": 17, "value": 189.26600000000002}, {"month": 5, "hour": 17, "value": 174.8358064516129}, {"month": 6, "hour": 17, "value": 208.61933333333334}, {"month": 7, "hour": 17, "value": 281.8093548387097}, {"month": 8, "hour": 17, "value": 465.8612903225806}, {"month": 9, "hour": 17, "value": 389.43733333333336}, {"month": 10, "hour": 17, "value": 189.59806451612903}, {"month": 11, "hour": 17, "value": 257.85333333333335}, {"month": 12, "hour": 17, "value": 346.6793548387097}, {"month": 1, "hour": 18, "value": 241.32129032258064}, {"month": 2, "hour": 18, "value": 239.75571428571428}, {"month": 3, "hour": 18, "value": 339.6190322580645}, {"month": 4, "hour": 18, "value": 225.32000000000002}, {"month": 5, "hour": 18, "value": 208.28419354838712}, {"month": 6, "hour": 18, "value": 243.47299999999998}, {"month": 7, "hour": 18, "value": 345.27870967741933}, {"month": 8, "hour": 18, "value": 523.6238709677419}, {"month": 9, "hour": 18, "value": 447.54833333333335}, {"month": 10, "hour": 18, "value": 226.0267741935484}, {"month": 11, "hour": 18, "value": 255.58333333333334}, {"month": 12, "hour": 18, "value": 322.7564516129033}, {"month": 1, "hour": 19, "value": 216.63709677419354}, {"month": 2, "hour": 19, "value": 228.6867857142857}, {"month": 3, "hour": 19, "value": 373.36290322580646}, {"month": 4, "hour": 19, "value": 253.12066666666666}, {"month": 5, "hour": 19, "value": 231.44354838709677}, {"month": 6, "hour": 19, "value": 278.7823333333333}, {"month": 7, "hour": 19, "value": 397.94774193548386}, {"month": 8, "hour": 19, "value": 580.5103225806452}, {"month": 9, "hour": 19, "value": 494.72333333333336}, {"month": 10, "hour": 19, "value": 246.33354838709678}, {"month": 11, "hour": 19, "value": 225.81733333333332}, {"month": 12, "hour": 19, "value": 300.32193548387096}, {"month": 1, "hour": 20, "value": 204.8809677419355}, {"month": 2, "hour": 20, "value": 198.0614285714286}, {"month": 3, "hour": 20, "value": 325.98483870967743}, {"month": 4, "hour": 20, "value": 261.69966666666664}, {"month": 5, "hour": 20, "value": 241.72096774193548}, {"month": 6, "hour": 20, "value": 295.5706666666667}, {"month": 7, "hour": 20, "value": 422.9761290322581}, {"month": 8, "hour": 20, "value": 591.7809677419355}, {"month": 9, "hour": 20, "value": 466.8726666666667}, {"month": 10, "hour": 20, "value": 200.99548387096772}, {"month": 11, "hour": 20, "value": 199.89733333333334}, {"month": 12, "hour": 20, "value": 274.90999999999997}, {"month": 1, "hour": 21, "value": 184.42225806451614}, {"month": 2, "hour": 21, "value": 178.5525}, {"month": 3, "hour": 21, "value": 288.7864516129032}, {"month": 4, "hour": 21, "value": 251.78799999999998}, {"month": 5, "hour": 21, "value": 233.9958064516129}, {"month": 6, "hour": 21, "value": 282.966}, {"month": 7, "hour": 21, "value": 413.7648387096774}, {"month": 8, "hour": 21, "value": 557.3429032258065}, {"month": 9, "hour": 21, "value": 402.88033333333334}, {"month": 10, "hour": 21, "value": 172.8877419354839}, {"month": 11, "hour": 21, "value": 179.407}, {"month": 12, "hour": 21, "value": 240.78774193548387}, {"month": 1, "hour": 22, "value": 179.97709677419354}, {"month": 2, "hour": 22, "value": 176.60464285714286}, {"month": 3, "hour": 22, "value": 277.4603225806452}, {"month": 4, "hour": 22, "value": 236.4}, {"month": 5, "hour": 22, "value": 224.73096774193547}, {"month": 6, "hour": 22, "value": 271.721}, {"month": 7, "hour": 22, "value": 404.9687096774194}, {"month": 8, "hour": 22, "value": 528.1845161290322}, {"month": 9, "hour": 22, "value": 360.9886666666667}, {"month": 10, "hour": 22, "value": 163.0332258064516}, {"month": 11, "hour": 22, "value": 170.46599999999998}, {"month": 12, "hour": 22, "value": 226.71774193548387}, {"month": 1, "hour": 23, "value": 161.0116129032258}, {"month": 2, "hour": 23, "value": 153.7317857142857}, {"month": 3, "hour": 23, "value": 254.76290322580644}, {"month": 4, "hour": 23, "value": 207.99533333333332}, {"month": 5, "hour": 23, "value": 200.34387096774194}, {"month": 6, "hour": 23, "value": 232.04166666666666}, {"month": 7, "hour": 23, "value": 363.6967741935484}, {"month": 8, "hour": 23, "value": 474.81548387096774}, {"month": 9, "hour": 23, "value": 324.85999999999996}, {"month": 10, "hour": 23, "value": 145.3441935483871}, {"month": 11, "hour": 23, "value": 143.54799999999997}, {"month": 12, "hour": 23, "value": 207.998064516129}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<div id="cell-26" class="cell" data-execution_count="15">
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\Gebruiker\AppData\Local\Temp\ipykernel_13176\302183373.py:2: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+  test = df[df['year']==2023].groupby('month').mean()['price'].reset_index()</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+
+<div id="altair-viz-5aef56f7b90a46dc897e156caf7fe357"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-5aef56f7b90a46dc897e156caf7fe357") {
+      outputDiv = document.getElementById("altair-viz-5aef56f7b90a46dc897e156caf7fe357");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.6.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.6.1"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-f5abbb9b38b65c0a450c17af64663de6"}, "mark": {"type": "bar"}, "encoding": {"facet": {"columns": 4, "field": "month", "title": null, "type": "ordinal"}, "x": {"field": "hour", "sort": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "title": "Hour of the day", "type": "nominal"}, "y": {"field": "value", "title": "Avg price [ct/kW]", "type": "quantitative"}}, "height": 100, "title": "Hourly prices per month 2023, 1 = jan", "width": 200, "$schema": "https://vega.github.io/schema/vega-lite/v5.6.1.json", "datasets": {"data-f5abbb9b38b65c0a450c17af64663de6": [{"month": 1, "hour": 0, "value": 97.62677419354839}, {"month": 2, "hour": 0, "value": 124.855}, {"month": 3, "hour": 0, "value": 98.77516129032259}, {"month": 4, "hour": 0, "value": 104.59766666666665}, {"month": 5, "hour": 0, "value": 94.09677419354838}, {"month": 1, "hour": 1, "value": 87.47870967741936}, {"month": 2, "hour": 1, "value": 120.39928571428571}, {"month": 3, "hour": 1, "value": 92.28451612903227}, {"month": 4, "hour": 1, "value": 96.16333333333334}, {"month": 5, "hour": 1, "value": 85.99483870967742}, {"month": 1, "hour": 2, "value": 82.80645161290323}, {"month": 2, "hour": 2, "value": 115.07178571428571}, {"month": 3, "hour": 2, "value": 90.49966666666666}, {"month": 4, "hour": 2, "value": 94.546}, {"month": 5, "hour": 2, "value": 82.81516129032258}, {"month": 1, "hour": 3, "value": 75.7709677419355}, {"month": 2, "hour": 3, "value": 112.1525}, {"month": 3, "hour": 3, "value": 86.78774193548388}, {"month": 4, "hour": 3, "value": 91.688}, {"month": 5, "hour": 3, "value": 80.22290322580645}, {"month": 1, "hour": 4, "value": 76.32709677419355}, {"month": 2, "hour": 4, "value": 109.74071428571428}, {"month": 3, "hour": 4, "value": 86.70903225806451}, {"month": 4, "hour": 4, "value": 91.33099999999999}, {"month": 5, "hour": 4, "value": 80.99258064516128}, {"month": 1, "hour": 5, "value": 83.32225806451612}, {"month": 2, "hour": 5, "value": 114.02892857142857}, {"month": 3, "hour": 5, "value": 90.92129032258065}, {"month": 4, "hour": 5, "value": 98.63933333333333}, {"month": 5, "hour": 5, "value": 87.61419354838709}, {"month": 1, "hour": 6, "value": 107.52}, {"month": 2, "hour": 6, "value": 130.9925}, {"month": 3, "hour": 6, "value": 108.53774193548388}, {"month": 4, "hour": 6, "value": 113.971}, {"month": 5, "hour": 6, "value": 95.68096774193549}, {"month": 1, "hour": 7, "value": 131.93032258064517}, {"month": 2, "hour": 7, "value": 153.10750000000002}, {"month": 3, "hour": 7, "value": 126.95709677419354}, {"month": 4, "hour": 7, "value": 128.52100000000002}, {"month": 5, "hour": 7, "value": 103.98032258064515}, {"month": 1, "hour": 8, "value": 157.88677419354838}, {"month": 2, "hour": 8, "value": 165.68178571428572}, {"month": 3, "hour": 8, "value": 132.16258064516128}, {"month": 4, "hour": 8, "value": 132.40133333333333}, {"month": 5, "hour": 8, "value": 98.92290322580645}, {"month": 1, "hour": 9, "value": 163.0374193548387}, {"month": 2, "hour": 9, "value": 154.2925}, {"month": 3, "hour": 9, "value": 117.98709677419355}, {"month": 4, "hour": 9, "value": 113.01700000000001}, {"month": 5, "hour": 9, "value": 84.38645161290323}, {"month": 1, "hour": 10, "value": 148.31032258064516}, {"month": 2, "hour": 10, "value": 134.52178571428573}, {"month": 3, "hour": 10, "value": 101.53677419354838}, {"month": 4, "hour": 10, "value": 93.60433333333334}, {"month": 5, "hour": 10, "value": 69.20935483870967}, {"month": 1, "hour": 11, "value": 139.47387096774193}, {"month": 2, "hour": 11, "value": 122.20178571428572}, {"month": 3, "hour": 11, "value": 92.51}, {"month": 4, "hour": 11, "value": 75.77166666666668}, {"month": 5, "hour": 11, "value": 53.832580645161286}, {"month": 1, "hour": 12, "value": 131.91258064516128}, {"month": 2, "hour": 12, "value": 117.47607142857143}, {"month": 3, "hour": 12, "value": 82.15129032258065}, {"month": 4, "hour": 12, "value": 59.975}, {"month": 5, "hour": 12, "value": 37.1216129032258}, {"month": 1, "hour": 13, "value": 127.69451612903227}, {"month": 2, "hour": 13, "value": 111.67428571428572}, {"month": 3, "hour": 13, "value": 77.23483870967742}, {"month": 4, "hour": 13, "value": 47.791000000000004}, {"month": 5, "hour": 13, "value": 21.520967741935483}, {"month": 1, "hour": 14, "value": 131.8958064516129}, {"month": 2, "hour": 14, "value": 115.98107142857143}, {"month": 3, "hour": 14, "value": 76.82935483870968}, {"month": 4, "hour": 14, "value": 47.531666666666666}, {"month": 5, "hour": 14, "value": 13.55774193548387}, {"month": 1, "hour": 15, "value": 139.09774193548387}, {"month": 2, "hour": 15, "value": 124.69214285714285}, {"month": 3, "hour": 15, "value": 80.3474193548387}, {"month": 4, "hour": 15, "value": 56.08633333333333}, {"month": 5, "hour": 15, "value": 22.82967741935484}, {"month": 1, "hour": 16, "value": 146.26967741935482}, {"month": 2, "hour": 16, "value": 136.26535714285714}, {"month": 3, "hour": 16, "value": 90.12645161290322}, {"month": 4, "hour": 16, "value": 71.09033333333333}, {"month": 5, "hour": 16, "value": 49.21774193548387}, {"month": 1, "hour": 17, "value": 167.1993548387097}, {"month": 2, "hour": 17, "value": 159.82142857142858}, {"month": 3, "hour": 17, "value": 117.79483870967742}, {"month": 4, "hour": 17, "value": 94.42399999999999}, {"month": 5, "hour": 17, "value": 72.38935483870968}, {"month": 1, "hour": 18, "value": 169.06709677419354}, {"month": 2, "hour": 18, "value": 179.9857142857143}, {"month": 3, "hour": 18, "value": 139.31709677419354}, {"month": 4, "hour": 18, "value": 116.52866666666667}, {"month": 5, "hour": 18, "value": 92.07000000000001}, {"month": 1, "hour": 19, "value": 153.50612903225806}, {"month": 2, "hour": 19, "value": 167.84285714285716}, {"month": 3, "hour": 19, "value": 148.0541935483871}, {"month": 4, "hour": 19, "value": 136.01500000000001}, {"month": 5, "hour": 19, "value": 110.24096774193548}, {"month": 1, "hour": 20, "value": 143.5541935483871}, {"month": 2, "hour": 20, "value": 154.28392857142856}, {"month": 3, "hour": 20, "value": 133.49483870967742}, {"month": 4, "hour": 20, "value": 140.227}, {"month": 5, "hour": 20, "value": 119.17612903225806}, {"month": 1, "hour": 21, "value": 131.33354838709678}, {"month": 2, "hour": 21, "value": 145.1}, {"month": 3, "hour": 21, "value": 120.85806451612903}, {"month": 4, "hour": 21, "value": 132.10733333333332}, {"month": 5, "hour": 21, "value": 113.39483870967742}, {"month": 1, "hour": 22, "value": 122.99290322580646}, {"month": 2, "hour": 22, "value": 138.905}, {"month": 3, "hour": 22, "value": 112.75774193548388}, {"month": 4, "hour": 22, "value": 120.94699999999999}, {"month": 5, "hour": 22, "value": 105.48225806451612}, {"month": 1, "hour": 23, "value": 108.19709677419355}, {"month": 2, "hour": 23, "value": 127.33678571428571}, {"month": 3, "hour": 23, "value": 104.28580645161291}, {"month": 4, "hour": 23, "value": 109.97066666666666}, {"month": 5, "hour": 23, "value": 95.95806451612903}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p>On average, the prices are highest at 8:00 and 19:00, and lowest at 3:00 and 13:00. I <a href="http://www.matteodefelice.name/post/netherlands-is-that-a-duck/">learned</a> this is called a <a href="https://en.wikipedia.org/wiki/Duck_curve">duck curve</a>.</p>
+<div id="cell-31" class="cell" data-execution_count="19">
+<div class="cell-output cell-output-display" data-execution_count="19">
+
+<div id="altair-viz-d005f484270b4d7c94a2f459c9274e74"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-d005f484270b4d7c94a2f459c9274e74") {
+      outputDiv = document.getElementById("altair-viz-d005f484270b4d7c94a2f459c9274e74");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -385,16 +548,16 @@ ga('send', {
 </div>
 <p>This graph is another way of looking at it. The line shows that <strong><em>on average</em></strong> the price at 19:00 is 80% of the maximum price that day.</p>
 <p>The heatmap shows this 80% at 19:00 is a result of it often being the most expensive price of the day (the dark blue square). But not always, otherwise it would be 100%.</p>
-<div id="cell-29" class="cell" data-execution_count="20">
-<div class="cell-output cell-output-display" data-execution_count="20">
+<div id="cell-34" class="cell" data-execution_count="21">
+<div class="cell-output cell-output-display" data-execution_count="21">
 
-<div id="altair-viz-9993ddf001f346de90f7fdce55c29994"></div>
+<div id="altair-viz-6e9e87af3122411b9f5ec1707b2fc8e8"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-9993ddf001f346de90f7fdce55c29994") {
-      outputDiv = document.getElementById("altair-viz-9993ddf001f346de90f7fdce55c29994");
+    if (outputDiv.id !== "altair-viz-6e9e87af3122411b9f5ec1707b2fc8e8") {
+      outputDiv = document.getElementById("altair-viz-6e9e87af3122411b9f5ec1707b2fc8e8");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -456,16 +619,16 @@ ga('send', {
 <li>An electric car (dependent on battery)</li>
 </ul>
 <p>Let’s say we can shift 1 kWh daily. Let’s also assume you currently are using that 1 kWh somewhere randomly between 9:00-20:00.</p>
-<div id="cell-33" class="cell" data-execution_count="30">
-<div class="cell-output cell-output-display" data-execution_count="30">
+<div id="cell-39" class="cell" data-execution_count="22">
+<div class="cell-output cell-output-display" data-execution_count="22">
 
-<div id="altair-viz-b656a56d980e483d96145238f619b6a5"></div>
+<div id="altair-viz-529aa9f519184209b31c28ef0b471334"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b656a56d980e483d96145238f619b6a5") {
-      outputDiv = document.getElementById("altair-viz-b656a56d980e483d96145238f619b6a5");
+    if (outputDiv.id !== "altair-viz-529aa9f519184209b31c28ef0b471334") {
+      outputDiv = document.getElementById("altair-viz-529aa9f519184209b31c28ef0b471334");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
