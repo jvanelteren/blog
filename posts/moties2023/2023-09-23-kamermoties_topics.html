@@ -193,35 +193,35 @@ ga('send', {
 <p><img src="cat_glass.png" class="img-fluid"></p>
 <p>Deel 2 van het motie-onderzoek!</p>
 <p>We kijken naar de onderwerpen waar de ingediende moties van afgelopen Kamerperiode over gaan. <a href="https://github.com/ddangelov/Top2Vec">Top2Vec</a> is een algoritme dat de moties kan clusteren naar onderwerp. Uiteindelijk zijn alle moties aan 82 onderwerpen toegewezen. Voor deze blog heb ik deze onderwerpen weer verder gegroepeerd naar 14 hoofdonderwerpen.</p>
-<section id="meest-actieve-partijen-per-onderwerp" class="level2">
-<h2 class="anchored" data-anchor-id="meest-actieve-partijen-per-onderwerp">Meest actieve partijen per onderwerp</h2>
-<p>We onderzoeken welke partijen het meest actief en succesvol zijn door op drie manieren naar de data te kijken:</p>
+<p>We onderzoeken de partijen en onderwerpen door op drie manieren naar de data te kijken:</p>
 <ol type="1">
-<li>Aantal ingediende moties</li>
-<li>Aantal succesvolle moties</li>
-<li>Aantal succesvolle moties per zetel</li>
+<li>Welke partijen dienen het meeste moties in per onderwerp?</li>
+<li>Welke partijen hebben het meeste aangenomen moties per onderwerp?</li>
+<li>Welke partijen hebben het meeste aangenomen moties per onderwerp per zetel?</li>
+<li>Welke onderwerpen zijn speerpunten voor de partijen?</li>
 </ol>
+<p>Onderstaande figuur geeft aan welke partijen het meeste moties indienen per onderwerp:</p>
 <div id="cell-9" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display" data-execution_count="6">
 
 <style>
-  #altair-viz-90b3d8a169a64a2987d8611d600a05e7.vega-embed {
+  #altair-viz-c80ac423e92c48d580aa0e54331990db.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-90b3d8a169a64a2987d8611d600a05e7.vega-embed details,
-  #altair-viz-90b3d8a169a64a2987d8611d600a05e7.vega-embed details summary {
+  #altair-viz-c80ac423e92c48d580aa0e54331990db.vega-embed details,
+  #altair-viz-c80ac423e92c48d580aa0e54331990db.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-90b3d8a169a64a2987d8611d600a05e7"></div>
+<div id="altair-viz-c80ac423e92c48d580aa0e54331990db"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-90b3d8a169a64a2987d8611d600a05e7") {
-      outputDiv = document.getElementById("altair-viz-90b3d8a169a64a2987d8611d600a05e7");
+    if (outputDiv.id !== "altair-viz-c80ac423e92c48d580aa0e54331990db") {
+      outputDiv = document.getElementById("altair-viz-c80ac423e92c48d580aa0e54331990db");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -271,29 +271,29 @@ ga('send', {
 </script>
 </div>
 </div>
-<p>In bovenstaande grafiek zien we bijvoorbeeld dat op de PvdD de meeste moties indient op Landbouw &amp; Milieu, gevolgd door BBB, D66 en GroenLinks. De standpunten van de partijen kunnen natuurlijk verschillen!</p>
+<p>We zien bijvoorbeeld op Landbouw &amp; milieu de PvdD de meeste moties indient, gevolgd door BBB, D66 en GroenLinks. De standpunten van de partijen kunnen natuurlijk verschillen!</p>
 <p>Verder zien we bijvoorbeeld dat de PVV duidelijk het meeste moties heeft ingediend op asiel. Terwijl de SP bij maar liefst vier onderwerpen het meeste moties heeft ingediend. Maar ingediend is niet hetzelfde als aangenomen, dat laat de volgende figuur zien:</p>
 <div id="cell-11" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display" data-execution_count="7">
 
 <style>
-  #altair-viz-6292d70d36be4403bfdfc204ed0cfaf0.vega-embed {
+  #altair-viz-ded452cf757343809dd0bb6e11a73770.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-6292d70d36be4403bfdfc204ed0cfaf0.vega-embed details,
-  #altair-viz-6292d70d36be4403bfdfc204ed0cfaf0.vega-embed details summary {
+  #altair-viz-ded452cf757343809dd0bb6e11a73770.vega-embed details,
+  #altair-viz-ded452cf757343809dd0bb6e11a73770.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-6292d70d36be4403bfdfc204ed0cfaf0"></div>
+<div id="altair-viz-ded452cf757343809dd0bb6e11a73770"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-6292d70d36be4403bfdfc204ed0cfaf0") {
-      outputDiv = document.getElementById("altair-viz-6292d70d36be4403bfdfc204ed0cfaf0");
+    if (outputDiv.id !== "altair-viz-ded452cf757343809dd0bb6e11a73770") {
+      outputDiv = document.getElementById("altair-viz-ded452cf757343809dd0bb6e11a73770");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -348,23 +348,23 @@ ga('send', {
 <div class="cell-output cell-output-display" data-execution_count="9">
 
 <style>
-  #altair-viz-b106a5f7c7c6412c8a9604f6cfe24d70.vega-embed {
+  #altair-viz-8d5c388a14b64ccfa8637961143c5b6e.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-b106a5f7c7c6412c8a9604f6cfe24d70.vega-embed details,
-  #altair-viz-b106a5f7c7c6412c8a9604f6cfe24d70.vega-embed details summary {
+  #altair-viz-8d5c388a14b64ccfa8637961143c5b6e.vega-embed details,
+  #altair-viz-8d5c388a14b64ccfa8637961143c5b6e.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-b106a5f7c7c6412c8a9604f6cfe24d70"></div>
+<div id="altair-viz-8d5c388a14b64ccfa8637961143c5b6e"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b106a5f7c7c6412c8a9604f6cfe24d70") {
-      outputDiv = document.getElementById("altair-viz-b106a5f7c7c6412c8a9604f6cfe24d70");
+    if (outputDiv.id !== "altair-viz-8d5c388a14b64ccfa8637961143c5b6e") {
+      outputDiv = document.getElementById("altair-viz-8d5c388a14b64ccfa8637961143c5b6e");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -415,7 +415,6 @@ ga('send', {
 </div>
 </div>
 <p>Dit overzicht geeft weer hoeveel moties van een partij worden aangenomen per onderwerp per zetel. Het is weer een heel ander beeld: partijen als BBB, CU en DENK doen het goed. Dit zijn natuurlijk ook partijen met weinig zetels.</p>
-</section>
 <section id="waar-richten-de-partijen-zich-op" class="level2">
 <h2 class="anchored" data-anchor-id="waar-richten-de-partijen-zich-op">Waar richten de partijen zich op?</h2>
 <p>In bovenstaande grafieken hebben we de partijen onderling vergeleken. Nu kijken we <strong>per partij</strong> op welk vlak ze het meest actief zijn</p>
@@ -423,23 +422,23 @@ ga('send', {
 <div class="cell-output cell-output-display" data-execution_count="12">
 
 <style>
-  #altair-viz-f509732980ab40c7b33e99c1d2c5f100.vega-embed {
+  #altair-viz-e805bab423ec433ba4b38cb05617f4ac.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-f509732980ab40c7b33e99c1d2c5f100.vega-embed details,
-  #altair-viz-f509732980ab40c7b33e99c1d2c5f100.vega-embed details summary {
+  #altair-viz-e805bab423ec433ba4b38cb05617f4ac.vega-embed details,
+  #altair-viz-e805bab423ec433ba4b38cb05617f4ac.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-f509732980ab40c7b33e99c1d2c5f100"></div>
+<div id="altair-viz-e805bab423ec433ba4b38cb05617f4ac"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-f509732980ab40c7b33e99c1d2c5f100") {
-      outputDiv = document.getElementById("altair-viz-f509732980ab40c7b33e99c1d2c5f100");
+    if (outputDiv.id !== "altair-viz-e805bab423ec433ba4b38cb05617f4ac") {
+      outputDiv = document.getElementById("altair-viz-e805bab423ec433ba4b38cb05617f4ac");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -485,11 +484,11 @@ ga('send', {
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "circle"}, "encoding": {"color": {"field": "Indienende_partij", "scale": {"domain": ["GroenLinks", "PvdA", "Volt", "PvdD", "BIJ1", "SP", "DENK", "D66", "ChristenUnie", "Omtzigt", "CDA", "VVD", "BBB", "SGP", "JA21", "PVV", "Groep Van Haga", "FVD"], "range": ["#48a641", "#df111a", "#502379", "#006b2d", "#b5b40a", "#e3001b", "#17becf", "#04a438", "#00a5e8", "#4f7cd1", "#5cb957", "#ff7f0e", "#93c01f", "#d86120", "#202e76", "#002759", "brown", "#800000"]}, "type": "nominal"}, "size": {"field": "Percentage", "scale": {"range": [0, 500]}, "type": "quantitative"}, "x": {"field": "Topic", "type": "nominal"}, "y": {"field": "Indienende_partij", "type": "nominal"}}}, {"mark": {"type": "text", "baseline": "middle", "color": "black"}, "encoding": {"text": {"field": "Rank", "type": "nominal"}, "x": {"field": "Topic", "title": null, "type": "nominal"}, "y": {"field": "Indienende_partij", "title": null, "type": "nominal"}}}], "data": {"name": "data-73ec7f5232076918ad471e4d29a1e2f6"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-73ec7f5232076918ad471e4d29a1e2f6": [{"Indienende_partij": "BBB", "Topic": "Gezondheidszorg", "Percentage": 0.14285714285714285, "Rank": 2.0}, {"Indienende_partij": "BBB", "Topic": "Landbouw & milieu", "Percentage": 0.27634660421545665, "Rank": 1.0}, {"Indienende_partij": "BBB", "Topic": "Veiligheid", "Percentage": 0.10304449648711944, "Rank": 3.0}, {"Indienende_partij": "BIJ1", "Topic": "Arbeid", "Percentage": 0.144, "Rank": 3.0}, {"Indienende_partij": "BIJ1", "Topic": "Migratie", "Percentage": 0.168, "Rank": 2.0}, {"Indienende_partij": "BIJ1", "Topic": "Veiligheid", "Percentage": 0.2, "Rank": 1.0}, {"Indienende_partij": "CDA", "Topic": "Gezondheidszorg", "Percentage": 0.13949843260188088, "Rank": 1.0}, {"Indienende_partij": "CDA", "Topic": "Onderwijs", "Percentage": 0.10344827586206896, "Rank": 2.0}, {"Indienende_partij": "CDA", "Topic": "Veiligheid", "Percentage": 0.09717868338557993, "Rank": 3.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Financien", "Percentage": 0.11157894736842106, "Rank": 1.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Infrastructuur & water", "Percentage": 0.1031578947368421, "Rank": 2.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Veiligheid", "Percentage": 0.10105263157894737, "Rank": 3.0}, {"Indienende_partij": "D66", "Topic": "Europa", "Percentage": 0.10846560846560846, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Gezondheidszorg", "Percentage": 0.09656084656084656, "Rank": 3.0}, {"Indienende_partij": "D66", "Topic": "Veiligheid", "Percentage": 0.13227513227513227, "Rank": 1.0}, {"Indienende_partij": "DENK", "Topic": "Europa", "Percentage": 0.08481262327416174, "Rank": 3.0}, {"Indienende_partij": "DENK", "Topic": "Migratie", "Percentage": 0.11045364891518737, "Rank": 2.0}, {"Indienende_partij": "DENK", "Topic": "Veiligheid", "Percentage": 0.23668639053254437, "Rank": 1.0}, {"Indienende_partij": "FVD", "Topic": "Asiel", "Percentage": 0.16363636363636364, "Rank": 1.0}, {"Indienende_partij": "FVD", "Topic": "Europa", "Percentage": 0.12727272727272726, "Rank": 3.0}, {"Indienende_partij": "FVD", "Topic": "Gezondheidszorg", "Percentage": 0.15454545454545454, "Rank": 2.0}, {"Indienende_partij": "GroenLinks", "Topic": "Gezondheidszorg", "Percentage": 0.11010558069381599, "Rank": 2.0}, {"Indienende_partij": "GroenLinks", "Topic": "Infrastructuur & water", "Percentage": 0.09653092006033183, "Rank": 3.0}, {"Indienende_partij": "GroenLinks", "Topic": "Klimaat", "Percentage": 0.18099547511312217, "Rank": 1.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Arbeid", "Percentage": 0.082, "Rank": 3.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Asiel", "Percentage": 0.236, "Rank": 1.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Klimaat", "Percentage": 0.152, "Rank": 2.0}, {"Indienende_partij": "JA21", "Topic": "Europa", "Percentage": 0.09813084112149532, "Rank": 3.0}, {"Indienende_partij": "JA21", "Topic": "Klimaat", "Percentage": 0.12149532710280374, "Rank": 2.0}, {"Indienende_partij": "JA21", "Topic": "Migratie", "Percentage": 0.1308411214953271, "Rank": 1.0}, {"Indienende_partij": "Omtzigt", "Topic": "Asiel", "Percentage": 0.08917197452229299, "Rank": 3.0}, {"Indienende_partij": "Omtzigt", "Topic": "Belasting", "Percentage": 0.21656050955414013, "Rank": 1.0}, {"Indienende_partij": "Omtzigt", "Topic": "Klimaat", "Percentage": 0.08917197452229299, "Rank": 3.0}, {"Indienende_partij": "Omtzigt", "Topic": "Veiligheid", "Percentage": 0.10828025477707007, "Rank": 2.0}, {"Indienende_partij": "PVV", "Topic": "Arbeid", "Percentage": 0.0936374549819928, "Rank": 3.0}, {"Indienende_partij": "PVV", "Topic": "Asiel", "Percentage": 0.25570228091236497, "Rank": 1.0}, {"Indienende_partij": "PVV", "Topic": "Gezondheidszorg", "Percentage": 0.11884753901560624, "Rank": 2.0}, {"Indienende_partij": "PvdA", "Topic": "Arbeid", "Percentage": 0.10277324632952692, "Rank": 3.0}, {"Indienende_partij": "PvdA", "Topic": "Klimaat", "Percentage": 0.10440456769983687, "Rank": 2.0}, {"Indienende_partij": "PvdA", "Topic": "Onderwijs", "Percentage": 0.11092985318107668, "Rank": 1.0}, {"Indienende_partij": "PvdD", "Topic": "Infrastructuur & water", "Percentage": 0.1302170283806344, "Rank": 3.0}, {"Indienende_partij": "PvdD", "Topic": "Klimaat", "Percentage": 0.2904841402337229, "Rank": 2.0}, {"Indienende_partij": "PvdD", "Topic": "Landbouw & milieu", "Percentage": 0.29716193656093487, "Rank": 1.0}, {"Indienende_partij": "SGP", "Topic": "Financien", "Percentage": 0.12903225806451613, "Rank": 2.0}, {"Indienende_partij": "SGP", "Topic": "Landbouw & milieu", "Percentage": 0.15770609318996415, "Rank": 1.0}, {"Indienende_partij": "SGP", "Topic": "Veiligheid", "Percentage": 0.0967741935483871, "Rank": 3.0}, {"Indienende_partij": "SP", "Topic": "Arbeid", "Percentage": 0.07982740021574973, "Rank": 3.0}, {"Indienende_partij": "SP", "Topic": "Gezondheidszorg", "Percentage": 0.12297734627831715, "Rank": 2.0}, {"Indienende_partij": "SP", "Topic": "Veiligheid", "Percentage": 0.15426105717367852, "Rank": 1.0}, {"Indienende_partij": "VVD", "Topic": "Europa", "Percentage": 0.10187667560321716, "Rank": 2.0}, {"Indienende_partij": "VVD", "Topic": "Infrastructuur & water", "Percentage": 0.10187667560321716, "Rank": 2.0}, {"Indienende_partij": "VVD", "Topic": "Veiligheid", "Percentage": 0.16353887399463807, "Rank": 1.0}, {"Indienende_partij": "Volt", "Topic": "Europa", "Percentage": 0.3699421965317919, "Rank": 1.0}, {"Indienende_partij": "Volt", "Topic": "Gezondheidszorg", "Percentage": 0.09248554913294797, "Rank": 3.0}, {"Indienende_partij": "Volt", "Topic": "Klimaat", "Percentage": 0.10982658959537572, "Rank": 2.0}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "circle"}, "encoding": {"color": {"field": "Indienende_partij", "scale": {"domain": ["GroenLinks", "PvdA", "Volt", "PvdD", "BIJ1", "SP", "DENK", "D66", "ChristenUnie", "Omtzigt", "CDA", "VVD", "BBB", "SGP", "JA21", "PVV", "Groep Van Haga", "FVD"], "range": ["#48a641", "#df111a", "#502379", "#006b2d", "#b5b40a", "#e3001b", "#17becf", "#04a438", "#00a5e8", "#4f7cd1", "#5cb957", "#ff7f0e", "#93c01f", "#d86120", "#202e76", "#002759", "brown", "#800000"]}, "title": "Partij", "type": "nominal"}, "size": {"field": "Percentage", "scale": {"range": [0, 500]}, "type": "quantitative"}, "x": {"field": "Topic", "type": "nominal"}, "y": {"field": "Indienende_partij", "type": "nominal"}}}, {"mark": {"type": "text", "baseline": "middle", "color": "black"}, "encoding": {"text": {"field": "Rank", "type": "nominal"}, "x": {"field": "Topic", "title": null, "type": "nominal"}, "y": {"field": "Indienende_partij", "title": null, "type": "nominal"}}}], "data": {"name": "data-73ec7f5232076918ad471e4d29a1e2f6"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-73ec7f5232076918ad471e4d29a1e2f6": [{"Indienende_partij": "BBB", "Topic": "Gezondheidszorg", "Percentage": 0.14285714285714285, "Rank": 2.0}, {"Indienende_partij": "BBB", "Topic": "Landbouw & milieu", "Percentage": 0.27634660421545665, "Rank": 1.0}, {"Indienende_partij": "BBB", "Topic": "Veiligheid", "Percentage": 0.10304449648711944, "Rank": 3.0}, {"Indienende_partij": "BIJ1", "Topic": "Arbeid", "Percentage": 0.144, "Rank": 3.0}, {"Indienende_partij": "BIJ1", "Topic": "Migratie", "Percentage": 0.168, "Rank": 2.0}, {"Indienende_partij": "BIJ1", "Topic": "Veiligheid", "Percentage": 0.2, "Rank": 1.0}, {"Indienende_partij": "CDA", "Topic": "Gezondheidszorg", "Percentage": 0.13949843260188088, "Rank": 1.0}, {"Indienende_partij": "CDA", "Topic": "Onderwijs", "Percentage": 0.10344827586206896, "Rank": 2.0}, {"Indienende_partij": "CDA", "Topic": "Veiligheid", "Percentage": 0.09717868338557993, "Rank": 3.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Financien", "Percentage": 0.11157894736842106, "Rank": 1.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Infrastructuur & water", "Percentage": 0.1031578947368421, "Rank": 2.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Veiligheid", "Percentage": 0.10105263157894737, "Rank": 3.0}, {"Indienende_partij": "D66", "Topic": "Europa", "Percentage": 0.10846560846560846, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Gezondheidszorg", "Percentage": 0.09656084656084656, "Rank": 3.0}, {"Indienende_partij": "D66", "Topic": "Veiligheid", "Percentage": 0.13227513227513227, "Rank": 1.0}, {"Indienende_partij": "DENK", "Topic": "Europa", "Percentage": 0.08481262327416174, "Rank": 3.0}, {"Indienende_partij": "DENK", "Topic": "Migratie", "Percentage": 0.11045364891518737, "Rank": 2.0}, {"Indienende_partij": "DENK", "Topic": "Veiligheid", "Percentage": 0.23668639053254437, "Rank": 1.0}, {"Indienende_partij": "FVD", "Topic": "Asiel", "Percentage": 0.16363636363636364, "Rank": 1.0}, {"Indienende_partij": "FVD", "Topic": "Europa", "Percentage": 0.12727272727272726, "Rank": 3.0}, {"Indienende_partij": "FVD", "Topic": "Gezondheidszorg", "Percentage": 0.15454545454545454, "Rank": 2.0}, {"Indienende_partij": "GroenLinks", "Topic": "Gezondheidszorg", "Percentage": 0.11010558069381599, "Rank": 2.0}, {"Indienende_partij": "GroenLinks", "Topic": "Infrastructuur & water", "Percentage": 0.09653092006033183, "Rank": 3.0}, {"Indienende_partij": "GroenLinks", "Topic": "Klimaat", "Percentage": 0.18099547511312217, "Rank": 1.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Arbeid", "Percentage": 0.082, "Rank": 3.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Asiel", "Percentage": 0.236, "Rank": 1.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Klimaat", "Percentage": 0.152, "Rank": 2.0}, {"Indienende_partij": "JA21", "Topic": "Europa", "Percentage": 0.09813084112149532, "Rank": 3.0}, {"Indienende_partij": "JA21", "Topic": "Klimaat", "Percentage": 0.12149532710280374, "Rank": 2.0}, {"Indienende_partij": "JA21", "Topic": "Migratie", "Percentage": 0.1308411214953271, "Rank": 1.0}, {"Indienende_partij": "Omtzigt", "Topic": "Asiel", "Percentage": 0.08917197452229299, "Rank": 3.0}, {"Indienende_partij": "Omtzigt", "Topic": "Belasting", "Percentage": 0.21656050955414013, "Rank": 1.0}, {"Indienende_partij": "Omtzigt", "Topic": "Klimaat", "Percentage": 0.08917197452229299, "Rank": 3.0}, {"Indienende_partij": "Omtzigt", "Topic": "Veiligheid", "Percentage": 0.10828025477707007, "Rank": 2.0}, {"Indienende_partij": "PVV", "Topic": "Arbeid", "Percentage": 0.0936374549819928, "Rank": 3.0}, {"Indienende_partij": "PVV", "Topic": "Asiel", "Percentage": 0.25570228091236497, "Rank": 1.0}, {"Indienende_partij": "PVV", "Topic": "Gezondheidszorg", "Percentage": 0.11884753901560624, "Rank": 2.0}, {"Indienende_partij": "PvdA", "Topic": "Arbeid", "Percentage": 0.10277324632952692, "Rank": 3.0}, {"Indienende_partij": "PvdA", "Topic": "Klimaat", "Percentage": 0.10440456769983687, "Rank": 2.0}, {"Indienende_partij": "PvdA", "Topic": "Onderwijs", "Percentage": 0.11092985318107668, "Rank": 1.0}, {"Indienende_partij": "PvdD", "Topic": "Infrastructuur & water", "Percentage": 0.1302170283806344, "Rank": 3.0}, {"Indienende_partij": "PvdD", "Topic": "Klimaat", "Percentage": 0.2904841402337229, "Rank": 2.0}, {"Indienende_partij": "PvdD", "Topic": "Landbouw & milieu", "Percentage": 0.29716193656093487, "Rank": 1.0}, {"Indienende_partij": "SGP", "Topic": "Financien", "Percentage": 0.12903225806451613, "Rank": 2.0}, {"Indienende_partij": "SGP", "Topic": "Landbouw & milieu", "Percentage": 0.15770609318996415, "Rank": 1.0}, {"Indienende_partij": "SGP", "Topic": "Veiligheid", "Percentage": 0.0967741935483871, "Rank": 3.0}, {"Indienende_partij": "SP", "Topic": "Arbeid", "Percentage": 0.07982740021574973, "Rank": 3.0}, {"Indienende_partij": "SP", "Topic": "Gezondheidszorg", "Percentage": 0.12297734627831715, "Rank": 2.0}, {"Indienende_partij": "SP", "Topic": "Veiligheid", "Percentage": 0.15426105717367852, "Rank": 1.0}, {"Indienende_partij": "VVD", "Topic": "Europa", "Percentage": 0.10187667560321716, "Rank": 2.0}, {"Indienende_partij": "VVD", "Topic": "Infrastructuur & water", "Percentage": 0.10187667560321716, "Rank": 2.0}, {"Indienende_partij": "VVD", "Topic": "Veiligheid", "Percentage": 0.16353887399463807, "Rank": 1.0}, {"Indienende_partij": "Volt", "Topic": "Europa", "Percentage": 0.3699421965317919, "Rank": 1.0}, {"Indienende_partij": "Volt", "Topic": "Gezondheidszorg", "Percentage": 0.09248554913294797, "Rank": 3.0}, {"Indienende_partij": "Volt", "Topic": "Klimaat", "Percentage": 0.10982658959537572, "Rank": 2.0}]}}, {"mode": "vega-lite"});
 </script>
 </div>
 </div>
-<p>Als een partij een hele grote bol heeft betekent dit dat de partij zich heel erg richt op dit onderwerp. Zoals bijvoorbeeld Volt op Europa. Zijn er geen grote bollen binnen een partij is de inzet meer over de onderwerpen verspreid.</p>
+<p>Als een partij een hele grote bol heeft betekent dit dat de partij zich heel erg richt op dit onderwerp. Zoals bijvoorbeeld Volt op Europa. Als een partij grote bollen heeft dan is er geen duidelijk speerpunt en zijn de moties meer verspreid.</p>
 </section>
 <section id="stemgedrag-op-klimaat" class="level2">
 <h2 class="anchored" data-anchor-id="stemgedrag-op-klimaat">Stemgedrag op klimaat</h2>
@@ -498,23 +497,23 @@ ga('send', {
 <div class="cell-output cell-output-display" data-execution_count="20">
 
 <style>
-  #altair-viz-05fa74dfc1484cbda4adb0822e4749f8.vega-embed {
+  #altair-viz-9d9f4495ee494769ac1f66aae8c2add5.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-05fa74dfc1484cbda4adb0822e4749f8.vega-embed details,
-  #altair-viz-05fa74dfc1484cbda4adb0822e4749f8.vega-embed details summary {
+  #altair-viz-9d9f4495ee494769ac1f66aae8c2add5.vega-embed details,
+  #altair-viz-9d9f4495ee494769ac1f66aae8c2add5.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-05fa74dfc1484cbda4adb0822e4749f8"></div>
+<div id="altair-viz-9d9f4495ee494769ac1f66aae8c2add5"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-05fa74dfc1484cbda4adb0822e4749f8") {
-      outputDiv = document.getElementById("altair-viz-05fa74dfc1484cbda4adb0822e4749f8");
+    if (outputDiv.id !== "altair-viz-9d9f4495ee494769ac1f66aae8c2add5") {
+      outputDiv = document.getElementById("altair-viz-9d9f4495ee494769ac1f66aae8c2add5");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -560,7 +559,7 @@ ga('send', {
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-0b6236e250a027b0bdf833b038bb57bc"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "partij", "legend": null, "scale": {"domain": ["GroenLinks", "PvdA", "Volt", "PvdD", "BIJ1", "SP", "DENK", "D66", "ChristenUnie", "Omtzigt", "CDA", "VVD", "BBB", "SGP", "JA21", "PVV", "Groep Van Haga", "FVD"], "range": ["#48a641", "#df111a", "#502379", "#006b2d", "#b5b40a", "#e3001b", "#17becf", "#04a438", "#00a5e8", "#4f7cd1", "#5cb957", "#ff7f0e", "#93c01f", "#d86120", "#202e76", "#002759", "brown", "#800000"]}, "type": "nominal"}, "x": {"field": "partij", "sort": {"field": "x", "order": "descending"}, "title": "Klimaat n=925 41%", "type": "nominal"}, "y": {"axis": null, "field": "x", "type": "quantitative"}}, "height": 75.0, "width": 300.0, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-0b6236e250a027b0bdf833b038bb57bc": [{"x": -10.801375597180263, "partij": "FVD"}, {"x": -9.290601332803151, "partij": "Groep Van Haga"}, {"x": -9.070611668727265, "partij": "JA21"}, {"x": -8.968012646026027, "partij": "PVV"}, {"x": -0.742805178734729, "partij": "BBB"}, {"x": -0.5231884985572934, "partij": "SGP"}, {"x": -0.089659833823728, "partij": "VVD"}, {"x": 0.9094516343111789, "partij": "CDA"}, {"x": 2.492911808822868, "partij": "Omtzigt"}, {"x": 3.9572280143614624, "partij": "ChristenUnie"}, {"x": 4.950098307261476, "partij": "D66"}, {"x": 9.509766927999713, "partij": "DENK"}, {"x": 10.65893544096697, "partij": "SP"}, {"x": 11.5403073716771, "partij": "BIJ1"}, {"x": 12.846943778102217, "partij": "Volt"}, {"x": 13.27350732377852, "partij": "PvdD"}, {"x": 14.052693810093897, "partij": "PvdA"}, {"x": 14.066491200633394, "partij": "GroenLinks"}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-cf37365415c76b427792db168952f7b3"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "partij", "legend": null, "scale": {"domain": ["GroenLinks", "PvdA", "Volt", "PvdD", "BIJ1", "SP", "DENK", "D66", "ChristenUnie", "Omtzigt", "CDA", "VVD", "BBB", "SGP", "JA21", "PVV", "Groep Van Haga", "FVD"], "range": ["#48a641", "#df111a", "#502379", "#006b2d", "#b5b40a", "#e3001b", "#17becf", "#04a438", "#00a5e8", "#4f7cd1", "#5cb957", "#ff7f0e", "#93c01f", "#d86120", "#202e76", "#002759", "brown", "#800000"]}, "type": "nominal"}, "x": {"field": "partij", "sort": {"field": "x", "order": "descending"}, "title": "Klimaat n=925 41%", "type": "nominal"}, "y": {"axis": null, "field": "x", "type": "quantitative"}}, "height": 75.0, "width": 300.0, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-cf37365415c76b427792db168952f7b3": [{"x": -10.801375597378286, "partij": "FVD"}, {"x": -9.290601331397259, "partij": "Groep Van Haga"}, {"x": -9.07061166731926, "partij": "JA21"}, {"x": -8.968012643649585, "partij": "PVV"}, {"x": -0.7428051777171332, "partij": "BBB"}, {"x": -0.5231884960124935, "partij": "SGP"}, {"x": -0.08965983378145514, "partij": "VVD"}, {"x": 0.9094516347518216, "partij": "CDA"}, {"x": 2.492911808827276, "partij": "Omtzigt"}, {"x": 3.9572280163158173, "partij": "ChristenUnie"}, {"x": 4.950098309569457, "partij": "D66"}, {"x": 9.509766928297271, "partij": "DENK"}, {"x": 10.658935442966595, "partij": "SP"}, {"x": 11.540307371890655, "partij": "BIJ1"}, {"x": 12.84694377909964, "partij": "Volt"}, {"x": 13.27350732520899, "partij": "PvdD"}, {"x": 14.0526938113919, "partij": "PvdA"}, {"x": 14.066491201992537, "partij": "GroenLinks"}]}}, {"mode": "vega-lite"});
 </script>
 </div>
 </div>
@@ -569,23 +568,23 @@ ga('send', {
 <div class="cell-output cell-output-display" data-execution_count="21">
 
 <style>
-  #altair-viz-702bf833f6214653a6949a76d388312e.vega-embed {
+  #altair-viz-71aea34f71724a43924a32c5583a4055.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-702bf833f6214653a6949a76d388312e.vega-embed details,
-  #altair-viz-702bf833f6214653a6949a76d388312e.vega-embed details summary {
+  #altair-viz-71aea34f71724a43924a32c5583a4055.vega-embed details,
+  #altair-viz-71aea34f71724a43924a32c5583a4055.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-702bf833f6214653a6949a76d388312e"></div>
+<div id="altair-viz-71aea34f71724a43924a32c5583a4055"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-702bf833f6214653a6949a76d388312e") {
-      outputDiv = document.getElementById("altair-viz-702bf833f6214653a6949a76d388312e");
+    if (outputDiv.id !== "altair-viz-71aea34f71724a43924a32c5583a4055") {
+      outputDiv = document.getElementById("altair-viz-71aea34f71724a43924a32c5583a4055");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -631,7 +630,7 @@ ga('send', {
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 1}, "axis": {"grid": false}}, "layer": [{"mark": {"type": "point"}, "encoding": {"color": {"field": "partij", "legend": null, "scale": {"domain": ["GroenLinks", "PvdA", "Volt", "PvdD", "BIJ1", "SP", "DENK", "D66", "ChristenUnie", "Omtzigt", "CDA", "VVD", "BBB", "SGP", "JA21", "PVV", "Groep Van Haga", "FVD"], "range": ["#48a641", "#df111a", "#502379", "#006b2d", "#b5b40a", "#e3001b", "#17becf", "#04a438", "#00a5e8", "#4f7cd1", "#5cb957", "#ff7f0e", "#93c01f", "#d86120", "#202e76", "#002759", "brown", "#800000"]}, "type": "nominal"}, "tooltip": [{"field": "partij", "type": "nominal"}], "x": {"axis": null, "field": "x", "type": "quantitative"}, "y": {"axis": null, "field": "y", "type": "quantitative"}}}, {"mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 9.716282900974015, "dy": 6.540062700876691}, "encoding": {"color": {"field": "partij", "legend": null, "scale": {"domain": ["GroenLinks", "PvdA", "Volt", "PvdD", "BIJ1", "SP", "DENK", "D66", "ChristenUnie", "Omtzigt", "CDA", "VVD", "BBB", "SGP", "JA21", "PVV", "Groep Van Haga", "FVD"], "range": ["#48a641", "#df111a", "#502379", "#006b2d", "#b5b40a", "#e3001b", "#17becf", "#04a438", "#00a5e8", "#4f7cd1", "#5cb957", "#ff7f0e", "#93c01f", "#d86120", "#202e76", "#002759", "brown", "#800000"]}, "type": "nominal"}, "text": {"field": "partij", "type": "nominal"}, "tooltip": [{"field": "partij", "type": "nominal"}], "x": {"axis": null, "field": "x", "type": "quantitative"}, "y": {"axis": null, "field": "y", "type": "quantitative"}}, "title": "Welke partijen lijken op elkaar"}], "data": {"name": "data-1eefa98a2e90bf51d30f8846e6c2ddd9"}, "height": 183.8065780641854, "width": 369.9316639107236, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-1eefa98a2e90bf51d30f8846e6c2ddd9": [{"x": -10.801375661017767, "y": -5.349931148030139, "partij": "FVD"}, {"x": -9.29060185834324, "y": -3.051461794816561, "partij": "Groep Van Haga"}, {"x": -9.07061199303959, "y": -4.523133308587184, "partij": "JA21"}, {"x": -8.968013596689246, "y": -6.15322770349237, "partij": "PVV"}, {"x": -0.742805825462832, "y": -4.181319175120674, "partij": "BBB"}, {"x": -0.5231897713949332, "y": 4.040394630241051, "partij": "SGP"}, {"x": -0.08965935982656159, "y": 10.502935842864417, "partij": "VVD"}, {"x": 0.9094518026389018, "y": 10.837148694805379, "partij": "CDA"}, {"x": 2.492912168266595, "y": 1.3318678037622864, "partij": "Omtzigt"}, {"x": 3.957226840867648, "y": 9.752542406938119, "partij": "ChristenUnie"}, {"x": 4.950096859097281, "y": 9.911575288905205, "partij": "D66"}, {"x": 9.509766708031275, "y": -1.7506568767773514, "partij": "DENK"}, {"x": 10.65893458441325, "y": -5.6157395895184035, "partij": "SP"}, {"x": 11.54030755231111, "y": -3.2212269202392356, "partij": "BIJ1"}, {"x": 12.846943585901656, "y": -2.0121832988812263, "partij": "Volt"}, {"x": 13.273506427605108, "y": -5.312023475649058, "partij": "PvdD"}, {"x": 14.052693456673918, "y": -2.507778315883181, "partij": "PvdA"}, {"x": 14.066490812844258, "y": -2.6977830605210755, "partij": "GroenLinks"}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 1}, "axis": {"grid": false}}, "layer": [{"mark": {"type": "point"}, "encoding": {"color": {"field": "partij", "legend": null, "scale": {"domain": ["GroenLinks", "PvdA", "Volt", "PvdD", "BIJ1", "SP", "DENK", "D66", "ChristenUnie", "Omtzigt", "CDA", "VVD", "BBB", "SGP", "JA21", "PVV", "Groep Van Haga", "FVD"], "range": ["#48a641", "#df111a", "#502379", "#006b2d", "#b5b40a", "#e3001b", "#17becf", "#04a438", "#00a5e8", "#4f7cd1", "#5cb957", "#ff7f0e", "#93c01f", "#d86120", "#202e76", "#002759", "brown", "#800000"]}, "type": "nominal"}, "tooltip": [{"field": "partij", "type": "nominal"}], "x": {"axis": null, "field": "x", "type": "quantitative"}, "y": {"axis": null, "field": "y", "type": "quantitative"}}}, {"mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 4.018255752854129, "dy": 6.673974116828624}, "encoding": {"color": {"field": "partij", "legend": null, "scale": {"domain": ["GroenLinks", "PvdA", "Volt", "PvdD", "BIJ1", "SP", "DENK", "D66", "ChristenUnie", "Omtzigt", "CDA", "VVD", "BBB", "SGP", "JA21", "PVV", "Groep Van Haga", "FVD"], "range": ["#48a641", "#df111a", "#502379", "#006b2d", "#b5b40a", "#e3001b", "#17becf", "#04a438", "#00a5e8", "#4f7cd1", "#5cb957", "#ff7f0e", "#93c01f", "#d86120", "#202e76", "#002759", "brown", "#800000"]}, "type": "nominal"}, "text": {"field": "partij", "type": "nominal"}, "tooltip": [{"field": "partij", "type": "nominal"}], "x": {"axis": null, "field": "x", "type": "quantitative"}, "y": {"axis": null, "field": "y", "type": "quantitative"}}, "title": "Welke partijen lijken op elkaar"}], "data": {"name": "data-f1dffbf18d8af016ad45e2bef89097bd"}, "height": 183.8065780651514, "width": 369.9316639106346, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-f1dffbf18d8af016ad45e2bef89097bd": [{"x": -10.80137602246758, "y": -5.349934302625432, "partij": "FVD"}, {"x": -9.290602070191934, "y": -3.051462296126677, "partij": "Groep Van Haga"}, {"x": -9.070611345895953, "y": -4.523133635508918, "partij": "JA21"}, {"x": -8.968013125681349, "y": -6.153224255249117, "partij": "PVV"}, {"x": -0.7428056317339582, "y": -4.18131775679586, "partij": "BBB"}, {"x": -0.5231891114305327, "y": 4.040399800460176, "partij": "SGP"}, {"x": -0.08965906587044081, "y": 10.50293377667704, "partij": "VVD"}, {"x": 0.9094524095675078, "y": 10.837146204558525, "partij": "CDA"}, {"x": 2.4929115573297835, "y": 1.33186517079927, "partij": "Omtzigt"}, {"x": 3.9572288739809345, "y": 9.752543287130358, "partij": "ChristenUnie"}, {"x": 4.9500948505122455, "y": 9.911579211235937, "partij": "D66"}, {"x": 9.509766707995606, "y": -1.750659193792512, "partij": "DENK"}, {"x": 10.658934989379748, "y": -5.615737867965304, "partij": "SP"}, {"x": 11.540307085499606, "y": -3.221231842004716, "partij": "BIJ1"}, {"x": 12.846942648903628, "y": -2.01219585944618, "partij": "Volt"}, {"x": 13.273507446617831, "y": -5.312020899612276, "partij": "PvdD"}, {"x": 14.052694123039709, "y": -2.5077719807228807, "partij": "PvdA"}, {"x": 14.066491336704193, "y": -2.6977775610114336, "partij": "GroenLinks"}]}}, {"mode": "vega-lite"});
 </script>
 </div>
 </div>
