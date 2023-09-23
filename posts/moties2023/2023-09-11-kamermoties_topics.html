@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.54">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jesse van Elteren">
+<meta name="dcterms.date" content="2023-09-23">
+<meta name="description" content="Wie zet wat op de agenda?">
+
+<title>Blog Jesse van Elteren - Tekst analyse van Tweede Kamer moties</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-1302238-4', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Blog Jesse van Elteren - Tekst analyse van Tweede Kamer moties">
+<meta property="og:description" content="Wie zet wat op de agenda?">
+<meta property="og:image" content="https://jvanelteren.github.io/blog/posts/moties2023/moties_glass.png">
+<meta property="og:site-name" content="Blog Jesse van Elteren">
+<meta name="twitter:title" content="Blog Jesse van Elteren - Tekst analyse van Tweede Kamer moties">
+<meta name="twitter:description" content="Wie zet wat op de agenda?">
+<meta name="twitter:image" content="https://jvanelteren.github.io/blog/posts/moties2023/moties_glass.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Blog Jesse van Elteren</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Tekst analyse van Tweede Kamer moties</h1>
+                  <div>
+        <div class="description">
+          Wie zet wat op de agenda?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">visualisation</div>
+                <div class="quarto-category">app</div>
+                <div class="quarto-category">ai</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Jesse van Elteren </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 23, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p><img src="cat_glass.png" class="img-fluid"></p>
+<p>Deel 2 van het motie-onderzoek! We kijken naar de onderwerpen waar de ingediende moties van afgelopen Kamerperiode over gaan. <a href="https://github.com/ddangelov/Top2Vec">Top2Vec</a> is een algoritme dat de moties kan clusteren naar onderwerp. Voor deze post heb ik uiteindelijk 14 onderwerpen gebruikt.</p>
+<section id="meest-actieve-partijen-per-onderwerp" class="level2">
+<h2 class="anchored" data-anchor-id="meest-actieve-partijen-per-onderwerp">Meest actieve partijen per onderwerp</h2>
+<p>We onderzoeken welke partijen het meest actief en succesvol zijn door op drie manieren naar de data te kijken:</p>
+<ol type="1">
+<li>Aantal ingediende moties (per partij per onderwerp)</li>
+<li>Aantal succesvolle moties</li>
+<li>Aantal succesvolle moties per zetel</li>
+</ol>
+<div id="cell-9" class="cell" data-execution_count="62">
+<div class="cell-output cell-output-display" data-execution_count="62">
+
+<style>
+  #altair-viz-73504d512a9747b691b38f76f1c84e54.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-73504d512a9747b691b38f76f1c84e54.vega-embed details,
+  #altair-viz-73504d512a9747b691b38f76f1c84e54.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-73504d512a9747b691b38f76f1c84e54"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-73504d512a9747b691b38f76f1c84e54") {
+      outputDiv = document.getElementById("altair-viz-73504d512a9747b691b38f76f1c84e54");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "rect"}, "encoding": {"color": {"field": "Aantal", "scale": {"scheme": "greens"}, "type": "quantitative"}, "x": {"field": "Indienende_partij", "title": null, "type": "nominal"}, "y": {"field": "Topic", "title": "Onderwerp", "type": "nominal"}}}, {"mark": {"type": "text", "baseline": "middle", "color": "black"}, "encoding": {"text": {"field": "Rank", "type": "nominal"}, "x": {"field": "Indienende_partij", "type": "nominal"}, "y": {"field": "Topic", "type": "nominal"}}}], "data": {"name": "data-7a1d6e2954c600fe69c502a3185cd9e5"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-7a1d6e2954c600fe69c502a3185cd9e5": [{"Indienende_partij": "BBB", "Topic": "Arbeid", "Aantal": 18, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Asiel", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Belasting", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Europa", "Aantal": 38, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Financien", "Aantal": 11, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Gezondheidszorg", "Aantal": 61, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Infrastructuur & water", "Aantal": 33, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Jeugdzorg", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Klimaat", "Aantal": 30, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Landbouw & milieu", "Aantal": 118, "Rank": 2.0}, {"Indienende_partij": "BBB", "Topic": "Migratie", "Aantal": 18, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Onderwijs", "Aantal": 25, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Veiligheid", "Aantal": 44, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Wonen", "Aantal": 16, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Arbeid", "Aantal": 18, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Belasting", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Europa", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Financien", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Gezondheidszorg", "Aantal": 16, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Infrastructuur & water", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Jeugdzorg", "Aantal": 15, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Klimaat", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Migratie", "Aantal": 21, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Onderwijs", "Aantal": 12, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Veiligheid", "Aantal": 25, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Wonen", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Arbeid", "Aantal": 28, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Asiel", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Belasting", "Aantal": 19, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Europa", "Aantal": 59, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Financien", "Aantal": 58, "Rank": 4.0}, {"Indienende_partij": "CDA", "Topic": "Gezondheidszorg", "Aantal": 89, "Rank": 3.0}, {"Indienende_partij": "CDA", "Topic": "Infrastructuur & water", "Aantal": 61, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Jeugdzorg", "Aantal": 58, "Rank": 1.0}, {"Indienende_partij": "CDA", "Topic": "Klimaat", "Aantal": 48, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Landbouw & milieu", "Aantal": 44, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Migratie", "Aantal": 24, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Onderwijs", "Aantal": 66, "Rank": 2.0}, {"Indienende_partij": "CDA", "Topic": "Veiligheid", "Aantal": 62, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Wonen", "Aantal": 21, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Arbeid", "Aantal": 32, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Asiel", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Belasting", "Aantal": 17, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Europa", "Aantal": 39, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Financien", "Aantal": 53, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Gezondheidszorg", "Aantal": 28, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Infrastructuur & water", "Aantal": 49, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Jeugdzorg", "Aantal": 43, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Klimaat", "Aantal": 42, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Landbouw & milieu", "Aantal": 34, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Migratie", "Aantal": 27, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Onderwijs", "Aantal": 20, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Veiligheid", "Aantal": 48, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Wonen", "Aantal": 42, "Rank": 3.0}, {"Indienende_partij": "D66", "Topic": "Arbeid", "Aantal": 40, "Rank": ""}, {"Indienende_partij": "D66", "Topic": "Asiel", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "D66", "Topic": "Belasting", "Aantal": 26, "Rank": ""}, {"Indienende_partij": "D66", "Topic": "Europa", "Aantal": 82, "Rank": 1.0}, {"Indienende_partij": "D66", "Topic": "Financien", "Aantal": 62, "Rank": 3.0}, {"Indienende_partij": "D66", "Topic": "Gezondheidszorg", "Aantal": 73, "Rank": 4.0}, {"Indienende_partij": "D66", "Topic": "Infrastructuur & water", "Aantal": 65, "Rank": 3.0}, {"Indienende_partij": "D66", "Topic": "Jeugdzorg", "Aantal": 54, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Klimaat", "Aantal": 70, "Rank": ""}, {"Indienende_partij": "D66", "Topic": "Landbouw & milieu", "Aantal": 56, "Rank": 3.0}, {"Indienende_partij": "D66", "Topic": "Migratie", "Aantal": 40, "Rank": ""}, {"Indienende_partij": "D66", "Topic": "Onderwijs", "Aantal": 57, "Rank": ""}, {"Indienende_partij": "D66", "Topic": "Veiligheid", "Aantal": 100, "Rank": 4.0}, {"Indienende_partij": "D66", "Topic": "Wonen", "Aantal": 29, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Arbeid", "Aantal": 31, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Asiel", "Aantal": 41, "Rank": 3.0}, {"Indienende_partij": "DENK", "Topic": "Belasting", "Aantal": 42, "Rank": 3.0}, {"Indienende_partij": "DENK", "Topic": "Europa", "Aantal": 43, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Financien", "Aantal": 37, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Gezondheidszorg", "Aantal": 41, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Infrastructuur & water", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Jeugdzorg", "Aantal": 28, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Klimaat", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Landbouw & milieu", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Migratie", "Aantal": 56, "Rank": 3.0}, {"Indienende_partij": "DENK", "Topic": "Onderwijs", "Aantal": 37, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Veiligheid", "Aantal": 120, "Rank": 3.0}, {"Indienende_partij": "DENK", "Topic": "Wonen", "Aantal": 21, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Arbeid", "Aantal": 11, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Asiel", "Aantal": 36, "Rank": 4.0}, {"Indienende_partij": "FVD", "Topic": "Belasting", "Aantal": 9, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Europa", "Aantal": 28, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Financien", "Aantal": 13, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Gezondheidszorg", "Aantal": 34, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Infrastructuur & water", "Aantal": 7, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Jeugdzorg", "Aantal": 8, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Klimaat", "Aantal": 14, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Landbouw & milieu", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Migratie", "Aantal": 20, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Onderwijs", "Aantal": 7, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Veiligheid", "Aantal": 17, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Wonen", "Aantal": 11, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Arbeid", "Aantal": 37, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Asiel", "Aantal": 8, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Belasting", "Aantal": 18, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Europa", "Aantal": 53, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Financien", "Aantal": 39, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Gezondheidszorg", "Aantal": 73, "Rank": 4.0}, {"Indienende_partij": "GroenLinks", "Topic": "Infrastructuur & water", "Aantal": 64, "Rank": 4.0}, {"Indienende_partij": "GroenLinks", "Topic": "Jeugdzorg", "Aantal": 42, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Klimaat", "Aantal": 120, "Rank": 2.0}, {"Indienende_partij": "GroenLinks", "Topic": "Landbouw & milieu", "Aantal": 54, "Rank": 4.0}, {"Indienende_partij": "GroenLinks", "Topic": "Migratie", "Aantal": 24, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Onderwijs", "Aantal": 63, "Rank": 3.0}, {"Indienende_partij": "GroenLinks", "Topic": "Veiligheid", "Aantal": 44, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Wonen", "Aantal": 24, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Arbeid", "Aantal": 41, "Rank": 4.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Asiel", "Aantal": 118, "Rank": 2.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Belasting", "Aantal": 22, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Europa", "Aantal": 33, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Financien", "Aantal": 18, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Gezondheidszorg", "Aantal": 36, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Infrastructuur & water", "Aantal": 30, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Jeugdzorg", "Aantal": 20, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Klimaat", "Aantal": 76, "Rank": 3.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Landbouw & milieu", "Aantal": 33, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Migratie", "Aantal": 24, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Onderwijs", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Veiligheid", "Aantal": 22, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Wonen", "Aantal": 21, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Arbeid", "Aantal": 17, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Asiel", "Aantal": 17, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Belasting", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Europa", "Aantal": 21, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Financien", "Aantal": 15, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Gezondheidszorg", "Aantal": 19, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Infrastructuur & water", "Aantal": 8, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Jeugdzorg", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Klimaat", "Aantal": 26, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Landbouw & milieu", "Aantal": 16, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Migratie", "Aantal": 28, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Onderwijs", "Aantal": 8, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Veiligheid", "Aantal": 19, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Wonen", "Aantal": 11, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Arbeid", "Aantal": 13, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Asiel", "Aantal": 14, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Belasting", "Aantal": 34, "Rank": 4.0}, {"Indienende_partij": "Omtzigt", "Topic": "Europa", "Aantal": 13, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Financien", "Aantal": 12, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Gezondheidszorg", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Infrastructuur & water", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Jeugdzorg", "Aantal": 11, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Klimaat", "Aantal": 14, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Landbouw & milieu", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Migratie", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Onderwijs", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Veiligheid", "Aantal": 17, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Wonen", "Aantal": 8, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Arbeid", "Aantal": 78, "Rank": 1.0}, {"Indienende_partij": "PVV", "Topic": "Asiel", "Aantal": 213, "Rank": 1.0}, {"Indienende_partij": "PVV", "Topic": "Belasting", "Aantal": 46, "Rank": 2.0}, {"Indienende_partij": "PVV", "Topic": "Europa", "Aantal": 55, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Financien", "Aantal": 21, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Gezondheidszorg", "Aantal": 99, "Rank": 2.0}, {"Indienende_partij": "PVV", "Topic": "Infrastructuur & water", "Aantal": 40, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Jeugdzorg", "Aantal": 20, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Klimaat", "Aantal": 69, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Landbouw & milieu", "Aantal": 34, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Migratie", "Aantal": 65, "Rank": 1.0}, {"Indienende_partij": "PVV", "Topic": "Onderwijs", "Aantal": 34, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Veiligheid", "Aantal": 34, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Wonen", "Aantal": 25, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Arbeid", "Aantal": 63, "Rank": 3.0}, {"Indienende_partij": "PvdA", "Topic": "Asiel", "Aantal": 8, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Belasting", "Aantal": 27, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Europa", "Aantal": 49, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Financien", "Aantal": 48, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Gezondheidszorg", "Aantal": 56, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Infrastructuur & water", "Aantal": 34, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Jeugdzorg", "Aantal": 52, "Rank": 3.0}, {"Indienende_partij": "PvdA", "Topic": "Klimaat", "Aantal": 64, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Landbouw & milieu", "Aantal": 31, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Migratie", "Aantal": 28, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Onderwijs", "Aantal": 68, "Rank": 1.0}, {"Indienende_partij": "PvdA", "Topic": "Veiligheid", "Aantal": 48, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Wonen", "Aantal": 37, "Rank": 4.0}, {"Indienende_partij": "PvdD", "Topic": "Arbeid", "Aantal": 10, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Asiel", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Belasting", "Aantal": 20, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Europa", "Aantal": 33, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Financien", "Aantal": 29, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Gezondheidszorg", "Aantal": 22, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Infrastructuur & water", "Aantal": 78, "Rank": 1.0}, {"Indienende_partij": "PvdD", "Topic": "Jeugdzorg", "Aantal": 9, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Klimaat", "Aantal": 174, "Rank": 1.0}, {"Indienende_partij": "PvdD", "Topic": "Landbouw & milieu", "Aantal": 178, "Rank": 1.0}, {"Indienende_partij": "PvdD", "Topic": "Migratie", "Aantal": 9, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Onderwijs", "Aantal": 16, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Veiligheid", "Aantal": 13, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Wonen", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Arbeid", "Aantal": 21, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Asiel", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Belasting", "Aantal": 18, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Europa", "Aantal": 14, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Financien", "Aantal": 36, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Gezondheidszorg", "Aantal": 15, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Infrastructuur & water", "Aantal": 22, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Jeugdzorg", "Aantal": 7, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Klimaat", "Aantal": 17, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Landbouw & milieu", "Aantal": 44, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Migratie", "Aantal": 23, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Onderwijs", "Aantal": 19, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Veiligheid", "Aantal": 27, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Wonen", "Aantal": 10, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Arbeid", "Aantal": 74, "Rank": 2.0}, {"Indienende_partij": "SP", "Topic": "Asiel", "Aantal": 17, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Belasting", "Aantal": 65, "Rank": 1.0}, {"Indienende_partij": "SP", "Topic": "Europa", "Aantal": 62, "Rank": 4.0}, {"Indienende_partij": "SP", "Topic": "Financien", "Aantal": 68, "Rank": 1.0}, {"Indienende_partij": "SP", "Topic": "Gezondheidszorg", "Aantal": 114, "Rank": 1.0}, {"Indienende_partij": "SP", "Topic": "Infrastructuur & water", "Aantal": 58, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Jeugdzorg", "Aantal": 49, "Rank": 4.0}, {"Indienende_partij": "SP", "Topic": "Klimaat", "Aantal": 63, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Landbouw & milieu", "Aantal": 27, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Migratie", "Aantal": 57, "Rank": 2.0}, {"Indienende_partij": "SP", "Topic": "Onderwijs", "Aantal": 58, "Rank": 4.0}, {"Indienende_partij": "SP", "Topic": "Veiligheid", "Aantal": 143, "Rank": 1.0}, {"Indienende_partij": "SP", "Topic": "Wonen", "Aantal": 72, "Rank": 1.0}, {"Indienende_partij": "VVD", "Topic": "Arbeid", "Aantal": 38, "Rank": ""}, {"Indienende_partij": "VVD", "Topic": "Asiel", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "VVD", "Topic": "Belasting", "Aantal": 22, "Rank": ""}, {"Indienende_partij": "VVD", "Topic": "Europa", "Aantal": 76, "Rank": 2.0}, {"Indienende_partij": "VVD", "Topic": "Financien", "Aantal": 65, "Rank": 2.0}, {"Indienende_partij": "VVD", "Topic": "Gezondheidszorg", "Aantal": 64, "Rank": ""}, {"Indienende_partij": "VVD", "Topic": "Infrastructuur & water", "Aantal": 76, "Rank": 2.0}, {"Indienende_partij": "VVD", "Topic": "Jeugdzorg", "Aantal": 22, "Rank": ""}, {"Indienende_partij": "VVD", "Topic": "Klimaat", "Aantal": 71, "Rank": 4.0}, {"Indienende_partij": "VVD", "Topic": "Landbouw & milieu", "Aantal": 37, "Rank": ""}, {"Indienende_partij": "VVD", "Topic": "Migratie", "Aantal": 56, "Rank": 3.0}, {"Indienende_partij": "VVD", "Topic": "Onderwijs", "Aantal": 50, "Rank": ""}, {"Indienende_partij": "VVD", "Topic": "Veiligheid", "Aantal": 122, "Rank": 2.0}, {"Indienende_partij": "VVD", "Topic": "Wonen", "Aantal": 46, "Rank": 2.0}, {"Indienende_partij": "Volt", "Topic": "Arbeid", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Asiel", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Belasting", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Europa", "Aantal": 64, "Rank": 3.0}, {"Indienende_partij": "Volt", "Topic": "Financien", "Aantal": 9, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Gezondheidszorg", "Aantal": 16, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Infrastructuur & water", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Jeugdzorg", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Klimaat", "Aantal": 19, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Landbouw & milieu", "Aantal": 9, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Migratie", "Aantal": 12, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Onderwijs", "Aantal": 15, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Veiligheid", "Aantal": 12, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Wonen", "Aantal": 2, "Rank": ""}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p>In bovenstaande grafiek zien we bijvoorbeeld dat op de PvdD de meeste moties indient op Landbouw &amp; Milieu, gevolgd door BBB, D66 en GroenLinks. De standpunten van de partijen kunnen natuurlijk verschillen!</p>
+<p>PVV dient veel moties in op het gebied van asiel. Terwijl de SP op meerdere onderwerpen op 1 staat. Maar ingediend is niet hetzelfde als aangenomen:</p>
+<div id="cell-11" class="cell" data-execution_count="66">
+<div class="cell-output cell-output-display" data-execution_count="66">
+
+<style>
+  #altair-viz-b98af6b8103e42e8bc366b661ac8ecb3.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-b98af6b8103e42e8bc366b661ac8ecb3.vega-embed details,
+  #altair-viz-b98af6b8103e42e8bc366b661ac8ecb3.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-b98af6b8103e42e8bc366b661ac8ecb3"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-b98af6b8103e42e8bc366b661ac8ecb3") {
+      outputDiv = document.getElementById("altair-viz-b98af6b8103e42e8bc366b661ac8ecb3");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "rect"}, "encoding": {"color": {"field": "Aantal", "scale": {"scheme": "greens"}, "title": "Aantal succesvol", "type": "quantitative"}, "x": {"field": "Indienende_partij", "title": null, "type": "nominal"}, "y": {"field": "Topic", "title": "Onderwerp", "type": "nominal"}}}, {"mark": {"type": "text", "baseline": "middle", "color": "black"}, "encoding": {"text": {"field": "Rank", "type": "nominal"}, "x": {"field": "Indienende_partij", "type": "nominal"}, "y": {"field": "Topic", "type": "nominal"}}}], "data": {"name": "data-02a7ab5df5c12a851ae79ed296c1bd41"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-02a7ab5df5c12a851ae79ed296c1bd41": [{"Indienende_partij": "BBB", "Topic": "Arbeid", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Asiel", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Belasting", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Europa", "Aantal": 11, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Financien", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Gezondheidszorg", "Aantal": 20, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Infrastructuur & water", "Aantal": 20, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Klimaat", "Aantal": 11, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Landbouw & milieu", "Aantal": 40, "Rank": 3.0}, {"Indienende_partij": "BBB", "Topic": "Migratie", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Onderwijs", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Veiligheid", "Aantal": 22, "Rank": ""}, {"Indienende_partij": "BBB", "Topic": "Wonen", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Arbeid", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Financien", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Gezondheidszorg", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Jeugdzorg", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Klimaat", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Migratie", "Aantal": 7, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Onderwijs", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "BIJ1", "Topic": "Veiligheid", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Arbeid", "Aantal": 28, "Rank": 4.0}, {"Indienende_partij": "CDA", "Topic": "Asiel", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Belasting", "Aantal": 18, "Rank": ""}, {"Indienende_partij": "CDA", "Topic": "Europa", "Aantal": 57, "Rank": 3.0}, {"Indienende_partij": "CDA", "Topic": "Financien", "Aantal": 58, "Rank": 2.0}, {"Indienende_partij": "CDA", "Topic": "Gezondheidszorg", "Aantal": 86, "Rank": 1.0}, {"Indienende_partij": "CDA", "Topic": "Infrastructuur & water", "Aantal": 59, "Rank": 3.0}, {"Indienende_partij": "CDA", "Topic": "Jeugdzorg", "Aantal": 55, "Rank": 1.0}, {"Indienende_partij": "CDA", "Topic": "Klimaat", "Aantal": 46, "Rank": 4.0}, {"Indienende_partij": "CDA", "Topic": "Landbouw & milieu", "Aantal": 40, "Rank": 3.0}, {"Indienende_partij": "CDA", "Topic": "Migratie", "Aantal": 21, "Rank": 4.0}, {"Indienende_partij": "CDA", "Topic": "Onderwijs", "Aantal": 63, "Rank": 1.0}, {"Indienende_partij": "CDA", "Topic": "Veiligheid", "Aantal": 56, "Rank": 4.0}, {"Indienende_partij": "CDA", "Topic": "Wonen", "Aantal": 21, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Arbeid", "Aantal": 32, "Rank": 3.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Belasting", "Aantal": 17, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Europa", "Aantal": 37, "Rank": 4.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Financien", "Aantal": 48, "Rank": 4.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Gezondheidszorg", "Aantal": 24, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Infrastructuur & water", "Aantal": 48, "Rank": 4.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Jeugdzorg", "Aantal": 41, "Rank": 3.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Klimaat", "Aantal": 42, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Landbouw & milieu", "Aantal": 33, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Migratie", "Aantal": 27, "Rank": 3.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Onderwijs", "Aantal": 20, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Veiligheid", "Aantal": 45, "Rank": ""}, {"Indienende_partij": "ChristenUnie", "Topic": "Wonen", "Aantal": 42, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Arbeid", "Aantal": 38, "Rank": 1.0}, {"Indienende_partij": "D66", "Topic": "Asiel", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "D66", "Topic": "Belasting", "Aantal": 26, "Rank": 1.0}, {"Indienende_partij": "D66", "Topic": "Europa", "Aantal": 64, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Financien", "Aantal": 56, "Rank": 3.0}, {"Indienende_partij": "D66", "Topic": "Gezondheidszorg", "Aantal": 71, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Infrastructuur & water", "Aantal": 60, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Jeugdzorg", "Aantal": 52, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Klimaat", "Aantal": 62, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Landbouw & milieu", "Aantal": 53, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Migratie", "Aantal": 36, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Onderwijs", "Aantal": 53, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Veiligheid", "Aantal": 96, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Wonen", "Aantal": 27, "Rank": 4.0}, {"Indienende_partij": "DENK", "Topic": "Arbeid", "Aantal": 18, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Asiel", "Aantal": 16, "Rank": 3.0}, {"Indienende_partij": "DENK", "Topic": "Belasting", "Aantal": 25, "Rank": 2.0}, {"Indienende_partij": "DENK", "Topic": "Europa", "Aantal": 26, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Financien", "Aantal": 17, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Gezondheidszorg", "Aantal": 13, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Infrastructuur & water", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Jeugdzorg", "Aantal": 14, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Klimaat", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Landbouw & milieu", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Migratie", "Aantal": 20, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Onderwijs", "Aantal": 24, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Veiligheid", "Aantal": 48, "Rank": ""}, {"Indienende_partij": "DENK", "Topic": "Wonen", "Aantal": 12, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Asiel", "Aantal": 5, "Rank": 4.0}, {"Indienende_partij": "FVD", "Topic": "Europa", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Financien", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Gezondheidszorg", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Veiligheid", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "FVD", "Topic": "Wonen", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Arbeid", "Aantal": 13, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Asiel", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Belasting", "Aantal": 10, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Europa", "Aantal": 32, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Financien", "Aantal": 23, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Gezondheidszorg", "Aantal": 46, "Rank": 4.0}, {"Indienende_partij": "GroenLinks", "Topic": "Infrastructuur & water", "Aantal": 22, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Jeugdzorg", "Aantal": 24, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Klimaat", "Aantal": 62, "Rank": 2.0}, {"Indienende_partij": "GroenLinks", "Topic": "Landbouw & milieu", "Aantal": 23, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Migratie", "Aantal": 9, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Onderwijs", "Aantal": 41, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Veiligheid", "Aantal": 28, "Rank": ""}, {"Indienende_partij": "GroenLinks", "Topic": "Wonen", "Aantal": 13, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Arbeid", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Asiel", "Aantal": 25, "Rank": 2.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Belasting", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Europa", "Aantal": 7, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Financien", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Gezondheidszorg", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Infrastructuur & water", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Jeugdzorg", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Klimaat", "Aantal": 15, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Landbouw & milieu", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Migratie", "Aantal": 10, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Onderwijs", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Veiligheid", "Aantal": 10, "Rank": ""}, {"Indienende_partij": "Groep Van Haga", "Topic": "Wonen", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Arbeid", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Asiel", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Belasting", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Europa", "Aantal": 9, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Financien", "Aantal": 7, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Gezondheidszorg", "Aantal": 14, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Infrastructuur & water", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Jeugdzorg", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Klimaat", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Landbouw & milieu", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Migratie", "Aantal": 7, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Onderwijs", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Veiligheid", "Aantal": 12, "Rank": ""}, {"Indienende_partij": "JA21", "Topic": "Wonen", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Arbeid", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Asiel", "Aantal": 5, "Rank": 4.0}, {"Indienende_partij": "Omtzigt", "Topic": "Belasting", "Aantal": 8, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Europa", "Aantal": 7, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Financien", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Gezondheidszorg", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Jeugdzorg", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Klimaat", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Landbouw & milieu", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Migratie", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Onderwijs", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Veiligheid", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "Omtzigt", "Topic": "Wonen", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Arbeid", "Aantal": 10, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Asiel", "Aantal": 31, "Rank": 1.0}, {"Indienende_partij": "PVV", "Topic": "Belasting", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Europa", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Financien", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Gezondheidszorg", "Aantal": 22, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Infrastructuur & water", "Aantal": 9, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Jeugdzorg", "Aantal": 7, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Klimaat", "Aantal": 8, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Landbouw & milieu", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Migratie", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Onderwijs", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Veiligheid", "Aantal": 14, "Rank": ""}, {"Indienende_partij": "PVV", "Topic": "Wonen", "Aantal": 7, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Arbeid", "Aantal": 19, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Asiel", "Aantal": 5, "Rank": 4.0}, {"Indienende_partij": "PvdA", "Topic": "Belasting", "Aantal": 14, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Europa", "Aantal": 31, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Financien", "Aantal": 30, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Gezondheidszorg", "Aantal": 29, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Infrastructuur & water", "Aantal": 21, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Jeugdzorg", "Aantal": 36, "Rank": 4.0}, {"Indienende_partij": "PvdA", "Topic": "Klimaat", "Aantal": 25, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Landbouw & milieu", "Aantal": 12, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Migratie", "Aantal": 19, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Onderwijs", "Aantal": 47, "Rank": 4.0}, {"Indienende_partij": "PvdA", "Topic": "Veiligheid", "Aantal": 40, "Rank": ""}, {"Indienende_partij": "PvdA", "Topic": "Wonen", "Aantal": 19, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Arbeid", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Asiel", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Belasting", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Europa", "Aantal": 13, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Financien", "Aantal": 12, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Gezondheidszorg", "Aantal": 10, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Infrastructuur & water", "Aantal": 16, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Jeugdzorg", "Aantal": 6, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Klimaat", "Aantal": 21, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Landbouw & milieu", "Aantal": 62, "Rank": 1.0}, {"Indienende_partij": "PvdD", "Topic": "Migratie", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Onderwijs", "Aantal": 8, "Rank": ""}, {"Indienende_partij": "PvdD", "Topic": "Veiligheid", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Arbeid", "Aantal": 11, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Asiel", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Belasting", "Aantal": 12, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Europa", "Aantal": 7, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Financien", "Aantal": 18, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Gezondheidszorg", "Aantal": 11, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Infrastructuur & water", "Aantal": 16, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Jeugdzorg", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Klimaat", "Aantal": 9, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Landbouw & milieu", "Aantal": 19, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Migratie", "Aantal": 11, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Onderwijs", "Aantal": 9, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Veiligheid", "Aantal": 21, "Rank": ""}, {"Indienende_partij": "SGP", "Topic": "Wonen", "Aantal": 9, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Arbeid", "Aantal": 19, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Asiel", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Belasting", "Aantal": 21, "Rank": 3.0}, {"Indienende_partij": "SP", "Topic": "Europa", "Aantal": 29, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Financien", "Aantal": 33, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Gezondheidszorg", "Aantal": 40, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Infrastructuur & water", "Aantal": 30, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Jeugdzorg", "Aantal": 22, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Klimaat", "Aantal": 18, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Landbouw & milieu", "Aantal": 14, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Migratie", "Aantal": 20, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Onderwijs", "Aantal": 35, "Rank": ""}, {"Indienende_partij": "SP", "Topic": "Veiligheid", "Aantal": 70, "Rank": 3.0}, {"Indienende_partij": "SP", "Topic": "Wonen", "Aantal": 32, "Rank": 3.0}, {"Indienende_partij": "VVD", "Topic": "Arbeid", "Aantal": 38, "Rank": 1.0}, {"Indienende_partij": "VVD", "Topic": "Asiel", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "VVD", "Topic": "Belasting", "Aantal": 21, "Rank": 3.0}, {"Indienende_partij": "VVD", "Topic": "Europa", "Aantal": 74, "Rank": 1.0}, {"Indienende_partij": "VVD", "Topic": "Financien", "Aantal": 62, "Rank": 1.0}, {"Indienende_partij": "VVD", "Topic": "Gezondheidszorg", "Aantal": 64, "Rank": 3.0}, {"Indienende_partij": "VVD", "Topic": "Infrastructuur & water", "Aantal": 73, "Rank": 1.0}, {"Indienende_partij": "VVD", "Topic": "Jeugdzorg", "Aantal": 22, "Rank": ""}, {"Indienende_partij": "VVD", "Topic": "Klimaat", "Aantal": 69, "Rank": 1.0}, {"Indienende_partij": "VVD", "Topic": "Landbouw & milieu", "Aantal": 37, "Rank": ""}, {"Indienende_partij": "VVD", "Topic": "Migratie", "Aantal": 52, "Rank": 1.0}, {"Indienende_partij": "VVD", "Topic": "Onderwijs", "Aantal": 48, "Rank": 3.0}, {"Indienende_partij": "VVD", "Topic": "Veiligheid", "Aantal": 119, "Rank": 1.0}, {"Indienende_partij": "VVD", "Topic": "Wonen", "Aantal": 43, "Rank": 1.0}, {"Indienende_partij": "Volt", "Topic": "Arbeid", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Asiel", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Belasting", "Aantal": 1, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Europa", "Aantal": 33, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Financien", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Gezondheidszorg", "Aantal": 4, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Jeugdzorg", "Aantal": 2, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Klimaat", "Aantal": 10, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Landbouw & milieu", "Aantal": 5, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Migratie", "Aantal": 3, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Onderwijs", "Aantal": 8, "Rank": ""}, {"Indienende_partij": "Volt", "Topic": "Veiligheid", "Aantal": 5, "Rank": ""}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p>Wat betreft het aantal succesvolle moties dan zien we daar ineens vier partijen bovendrijven: CDA, ChristenUnie, D66 en VVD. De regeringspartijen, dat is logisch want die hebben een meerderheid. Nu kijken we naar het aantal succesvolle moties <strong>per zetel</strong></p>
+<div id="cell-14" class="cell" data-execution_count="69">
+<div class="cell-output cell-output-display" data-execution_count="69">
+
+<style>
+  #altair-viz-f05a1fbaed7d4b5b8d5cfe694f275d69.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-f05a1fbaed7d4b5b8d5cfe694f275d69.vega-embed details,
+  #altair-viz-f05a1fbaed7d4b5b8d5cfe694f275d69.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-f05a1fbaed7d4b5b8d5cfe694f275d69"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-f05a1fbaed7d4b5b8d5cfe694f275d69") {
+      outputDiv = document.getElementById("altair-viz-f05a1fbaed7d4b5b8d5cfe694f275d69");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "rect"}, "encoding": {"color": {"field": "aantal_succesvol_zetel", "scale": {"scheme": "greens"}, "title": "Aantal succesvol/zetel", "type": "quantitative"}, "x": {"field": "Indienende_partij", "title": null, "type": "nominal"}, "y": {"field": "Topic", "title": "Onderwerp", "type": "nominal"}}}, {"mark": {"type": "text", "baseline": "middle", "color": "black"}, "encoding": {"text": {"field": "Rank", "type": "nominal"}, "x": {"field": "Indienende_partij", "type": "nominal"}, "y": {"field": "Topic", "type": "nominal"}}}], "data": {"name": "data-de292fb6fcd6237987b582e6b2233cab"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-de292fb6fcd6237987b582e6b2233cab": [{"index": 0, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Arbeid", "aantal": 18, "num_votes": 1.0, "aantal_succesvol": 4, "aantal_zetel": 18.0, "aantal_succesvol_zetel": 4.0, "Rank": 3.0}, {"index": 1, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Asiel", "aantal": 4, "num_votes": 1.0, "aantal_succesvol": 3, "aantal_zetel": 4.0, "aantal_succesvol_zetel": 3.0, "Rank": 4.0}, {"index": 2, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Belasting", "aantal": 6, "num_votes": 1.0, "aantal_succesvol": 3, "aantal_zetel": 6.0, "aantal_succesvol_zetel": 3.0, "Rank": ""}, {"index": 3, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Europa", "aantal": 38, "num_votes": 1.0, "aantal_succesvol": 11, "aantal_zetel": 38.0, "aantal_succesvol_zetel": 11.0, "Rank": 1.0}, {"index": 4, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Financien", "aantal": 11, "num_votes": 1.0, "aantal_succesvol": 5, "aantal_zetel": 11.0, "aantal_succesvol_zetel": 5.0, "Rank": ""}, {"index": 5, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Gezondheidszorg", "aantal": 61, "num_votes": 1.0, "aantal_succesvol": 20, "aantal_zetel": 61.0, "aantal_succesvol_zetel": 20.0, "Rank": 1.0}, {"index": 6, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Infrastructuur & water", "aantal": 33, "num_votes": 1.0, "aantal_succesvol": 20, "aantal_zetel": 33.0, "aantal_succesvol_zetel": 20.0, "Rank": 1.0}, {"index": 7, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Klimaat", "aantal": 30, "num_votes": 1.0, "aantal_succesvol": 11, "aantal_zetel": 30.0, "aantal_succesvol_zetel": 11.0, "Rank": 1.0}, {"index": 8, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Landbouw & milieu", "aantal": 118, "num_votes": 1.0, "aantal_succesvol": 40, "aantal_zetel": 118.0, "aantal_succesvol_zetel": 40.0, "Rank": 1.0}, {"index": 9, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Migratie", "aantal": 18, "num_votes": 1.0, "aantal_succesvol": 5, "aantal_zetel": 18.0, "aantal_succesvol_zetel": 5.0, "Rank": 4.0}, {"index": 10, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Onderwijs", "aantal": 25, "num_votes": 1.0, "aantal_succesvol": 4, "aantal_zetel": 25.0, "aantal_succesvol_zetel": 4.0, "Rank": ""}, {"index": 11, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Veiligheid", "aantal": 44, "num_votes": 1.0, "aantal_succesvol": 22, "aantal_zetel": 44.0, "aantal_succesvol_zetel": 22.0, "Rank": 1.0}, {"index": 12, "Kamer": "Rutte IV", "Indienende_partij": "BBB", "Topic": "Wonen", "aantal": 16, "num_votes": 1.0, "aantal_succesvol": 5, "aantal_zetel": 16.0, "aantal_succesvol_zetel": 5.0, "Rank": 2.0}, {"index": 13, "Kamer": "Rutte IV", "Indienende_partij": "BIJ1", "Topic": "Arbeid", "aantal": 18, "num_votes": 1.0, "aantal_succesvol": 1, "aantal_zetel": 18.0, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 14, "Kamer": "Rutte IV", "Indienende_partij": "BIJ1", "Topic": "Financien", "aantal": 4, "num_votes": 1.0, "aantal_succesvol": 1, "aantal_zetel": 4.0, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 15, "Kamer": "Rutte IV", "Indienende_partij": "BIJ1", "Topic": "Gezondheidszorg", "aantal": 16, "num_votes": 1.0, "aantal_succesvol": 4, "aantal_zetel": 16.0, "aantal_succesvol_zetel": 4.0, "Rank": ""}, {"index": 16, "Kamer": "Rutte IV", "Indienende_partij": "BIJ1", "Topic": "Jeugdzorg", "aantal": 15, "num_votes": 1.0, "aantal_succesvol": 1, "aantal_zetel": 15.0, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 17, "Kamer": "Rutte IV", "Indienende_partij": "BIJ1", "Topic": "Klimaat", "aantal": 3, "num_votes": 1.0, "aantal_succesvol": 1, "aantal_zetel": 3.0, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 18, "Kamer": "Rutte IV", "Indienende_partij": "BIJ1", "Topic": "Migratie", "aantal": 21, "num_votes": 1.0, "aantal_succesvol": 7, "aantal_zetel": 21.0, "aantal_succesvol_zetel": 7.0, "Rank": 1.0}, {"index": 19, "Kamer": "Rutte IV", "Indienende_partij": "BIJ1", "Topic": "Onderwijs", "aantal": 12, "num_votes": 1.0, "aantal_succesvol": 6, "aantal_zetel": 12.0, "aantal_succesvol_zetel": 6.0, "Rank": 2.0}, {"index": 20, "Kamer": "Rutte IV", "Indienende_partij": "BIJ1", "Topic": "Veiligheid", "aantal": 25, "num_votes": 1.0, "aantal_succesvol": 6, "aantal_zetel": 25.0, "aantal_succesvol_zetel": 6.0, "Rank": ""}, {"index": 21, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Arbeid", "aantal": 28, "num_votes": 15.0, "aantal_succesvol": 28, "aantal_zetel": 1.8666666666666667, "aantal_succesvol_zetel": 1.8666666666666667, "Rank": ""}, {"index": 22, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Asiel", "aantal": 1, "num_votes": 15.0, "aantal_succesvol": 1, "aantal_zetel": 0.06666666666666667, "aantal_succesvol_zetel": 0.06666666666666667, "Rank": ""}, {"index": 23, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Belasting", "aantal": 19, "num_votes": 15.0, "aantal_succesvol": 18, "aantal_zetel": 1.2666666666666666, "aantal_succesvol_zetel": 1.2, "Rank": ""}, {"index": 24, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Europa", "aantal": 59, "num_votes": 15.0, "aantal_succesvol": 57, "aantal_zetel": 3.933333333333333, "aantal_succesvol_zetel": 3.8, "Rank": ""}, {"index": 25, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Financien", "aantal": 58, "num_votes": 15.0, "aantal_succesvol": 58, "aantal_zetel": 3.8666666666666667, "aantal_succesvol_zetel": 3.8666666666666667, "Rank": ""}, {"index": 26, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Gezondheidszorg", "aantal": 89, "num_votes": 15.0, "aantal_succesvol": 86, "aantal_zetel": 5.933333333333334, "aantal_succesvol_zetel": 5.733333333333333, "Rank": 3.0}, {"index": 27, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Infrastructuur & water", "aantal": 61, "num_votes": 15.0, "aantal_succesvol": 59, "aantal_zetel": 4.066666666666666, "aantal_succesvol_zetel": 3.933333333333333, "Rank": 4.0}, {"index": 28, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Jeugdzorg", "aantal": 58, "num_votes": 15.0, "aantal_succesvol": 55, "aantal_zetel": 3.8666666666666667, "aantal_succesvol_zetel": 3.6666666666666665, "Rank": ""}, {"index": 29, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Klimaat", "aantal": 48, "num_votes": 15.0, "aantal_succesvol": 46, "aantal_zetel": 3.2, "aantal_succesvol_zetel": 3.066666666666667, "Rank": ""}, {"index": 30, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Landbouw & milieu", "aantal": 44, "num_votes": 15.0, "aantal_succesvol": 40, "aantal_zetel": 2.933333333333333, "aantal_succesvol_zetel": 2.6666666666666665, "Rank": ""}, {"index": 31, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Migratie", "aantal": 24, "num_votes": 15.0, "aantal_succesvol": 21, "aantal_zetel": 1.6, "aantal_succesvol_zetel": 1.4, "Rank": ""}, {"index": 32, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Onderwijs", "aantal": 66, "num_votes": 15.0, "aantal_succesvol": 63, "aantal_zetel": 4.4, "aantal_succesvol_zetel": 4.2, "Rank": ""}, {"index": 33, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Veiligheid", "aantal": 62, "num_votes": 15.0, "aantal_succesvol": 56, "aantal_zetel": 4.133333333333334, "aantal_succesvol_zetel": 3.7333333333333334, "Rank": ""}, {"index": 34, "Kamer": "Rutte IV", "Indienende_partij": "CDA", "Topic": "Wonen", "aantal": 21, "num_votes": 15.0, "aantal_succesvol": 21, "aantal_zetel": 1.4, "aantal_succesvol_zetel": 1.4, "Rank": ""}, {"index": 35, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Arbeid", "aantal": 32, "num_votes": 5.0, "aantal_succesvol": 32, "aantal_zetel": 6.4, "aantal_succesvol_zetel": 6.4, "Rank": 1.0}, {"index": 36, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Belasting", "aantal": 17, "num_votes": 5.0, "aantal_succesvol": 17, "aantal_zetel": 3.4, "aantal_succesvol_zetel": 3.4, "Rank": 4.0}, {"index": 37, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Europa", "aantal": 39, "num_votes": 5.0, "aantal_succesvol": 37, "aantal_zetel": 7.8, "aantal_succesvol_zetel": 7.4, "Rank": 4.0}, {"index": 38, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Financien", "aantal": 53, "num_votes": 5.0, "aantal_succesvol": 48, "aantal_zetel": 10.6, "aantal_succesvol_zetel": 9.6, "Rank": 1.0}, {"index": 39, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Gezondheidszorg", "aantal": 28, "num_votes": 5.0, "aantal_succesvol": 24, "aantal_zetel": 5.6, "aantal_succesvol_zetel": 4.8, "Rank": 4.0}, {"index": 40, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Infrastructuur & water", "aantal": 49, "num_votes": 5.0, "aantal_succesvol": 48, "aantal_zetel": 9.8, "aantal_succesvol_zetel": 9.6, "Rank": 2.0}, {"index": 41, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Jeugdzorg", "aantal": 43, "num_votes": 5.0, "aantal_succesvol": 41, "aantal_zetel": 8.6, "aantal_succesvol_zetel": 8.2, "Rank": 1.0}, {"index": 42, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Klimaat", "aantal": 42, "num_votes": 5.0, "aantal_succesvol": 42, "aantal_zetel": 8.4, "aantal_succesvol_zetel": 8.4, "Rank": 2.0}, {"index": 43, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Landbouw & milieu", "aantal": 34, "num_votes": 5.0, "aantal_succesvol": 33, "aantal_zetel": 6.8, "aantal_succesvol_zetel": 6.6, "Rank": 3.0}, {"index": 44, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Migratie", "aantal": 27, "num_votes": 5.0, "aantal_succesvol": 27, "aantal_zetel": 5.4, "aantal_succesvol_zetel": 5.4, "Rank": 3.0}, {"index": 45, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Onderwijs", "aantal": 20, "num_votes": 5.0, "aantal_succesvol": 20, "aantal_zetel": 4.0, "aantal_succesvol_zetel": 4.0, "Rank": ""}, {"index": 46, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Veiligheid", "aantal": 48, "num_votes": 5.0, "aantal_succesvol": 45, "aantal_zetel": 9.6, "aantal_succesvol_zetel": 9.0, "Rank": 3.0}, {"index": 47, "Kamer": "Rutte IV", "Indienende_partij": "ChristenUnie", "Topic": "Wonen", "aantal": 42, "num_votes": 5.0, "aantal_succesvol": 42, "aantal_zetel": 8.4, "aantal_succesvol_zetel": 8.4, "Rank": 1.0}, {"index": 48, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Arbeid", "aantal": 40, "num_votes": 24.0, "aantal_succesvol": 38, "aantal_zetel": 1.6666666666666667, "aantal_succesvol_zetel": 1.5833333333333333, "Rank": ""}, {"index": 49, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Asiel", "aantal": 2, "num_votes": 24.0, "aantal_succesvol": 2, "aantal_zetel": 0.08333333333333333, "aantal_succesvol_zetel": 0.08333333333333333, "Rank": ""}, {"index": 50, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Belasting", "aantal": 26, "num_votes": 24.0, "aantal_succesvol": 26, "aantal_zetel": 1.0833333333333333, "aantal_succesvol_zetel": 1.0833333333333333, "Rank": ""}, {"index": 51, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Europa", "aantal": 82, "num_votes": 24.0, "aantal_succesvol": 64, "aantal_zetel": 3.4166666666666665, "aantal_succesvol_zetel": 2.6666666666666665, "Rank": ""}, {"index": 52, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Financien", "aantal": 62, "num_votes": 24.0, "aantal_succesvol": 56, "aantal_zetel": 2.5833333333333335, "aantal_succesvol_zetel": 2.3333333333333335, "Rank": ""}, {"index": 53, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Gezondheidszorg", "aantal": 73, "num_votes": 24.0, "aantal_succesvol": 71, "aantal_zetel": 3.0416666666666665, "aantal_succesvol_zetel": 2.9583333333333335, "Rank": ""}, {"index": 54, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Infrastructuur & water", "aantal": 65, "num_votes": 24.0, "aantal_succesvol": 60, "aantal_zetel": 2.7083333333333335, "aantal_succesvol_zetel": 2.5, "Rank": ""}, {"index": 55, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Jeugdzorg", "aantal": 54, "num_votes": 24.0, "aantal_succesvol": 52, "aantal_zetel": 2.25, "aantal_succesvol_zetel": 2.1666666666666665, "Rank": ""}, {"index": 56, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Klimaat", "aantal": 70, "num_votes": 24.0, "aantal_succesvol": 62, "aantal_zetel": 2.9166666666666665, "aantal_succesvol_zetel": 2.5833333333333335, "Rank": ""}, {"index": 57, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Landbouw & milieu", "aantal": 56, "num_votes": 24.0, "aantal_succesvol": 53, "aantal_zetel": 2.3333333333333335, "aantal_succesvol_zetel": 2.2083333333333335, "Rank": ""}, {"index": 58, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Migratie", "aantal": 40, "num_votes": 24.0, "aantal_succesvol": 36, "aantal_zetel": 1.6666666666666667, "aantal_succesvol_zetel": 1.5, "Rank": ""}, {"index": 59, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Onderwijs", "aantal": 57, "num_votes": 24.0, "aantal_succesvol": 53, "aantal_zetel": 2.375, "aantal_succesvol_zetel": 2.2083333333333335, "Rank": ""}, {"index": 60, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Veiligheid", "aantal": 100, "num_votes": 24.0, "aantal_succesvol": 96, "aantal_zetel": 4.166666666666667, "aantal_succesvol_zetel": 4.0, "Rank": ""}, {"index": 61, "Kamer": "Rutte IV", "Indienende_partij": "D66", "Topic": "Wonen", "aantal": 29, "num_votes": 24.0, "aantal_succesvol": 27, "aantal_zetel": 1.2083333333333333, "aantal_succesvol_zetel": 1.125, "Rank": ""}, {"index": 62, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Arbeid", "aantal": 31, "num_votes": 3.0, "aantal_succesvol": 18, "aantal_zetel": 10.333333333333334, "aantal_succesvol_zetel": 6.0, "Rank": 2.0}, {"index": 63, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Asiel", "aantal": 41, "num_votes": 3.0, "aantal_succesvol": 16, "aantal_zetel": 13.666666666666666, "aantal_succesvol_zetel": 5.333333333333333, "Rank": 2.0}, {"index": 64, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Belasting", "aantal": 42, "num_votes": 3.0, "aantal_succesvol": 25, "aantal_zetel": 14.0, "aantal_succesvol_zetel": 8.333333333333334, "Rank": 1.0}, {"index": 65, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Europa", "aantal": 43, "num_votes": 3.0, "aantal_succesvol": 26, "aantal_zetel": 14.333333333333334, "aantal_succesvol_zetel": 8.666666666666666, "Rank": 3.0}, {"index": 66, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Financien", "aantal": 37, "num_votes": 3.0, "aantal_succesvol": 17, "aantal_zetel": 12.333333333333334, "aantal_succesvol_zetel": 5.666666666666667, "Rank": 4.0}, {"index": 67, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Gezondheidszorg", "aantal": 41, "num_votes": 3.0, "aantal_succesvol": 13, "aantal_zetel": 13.666666666666666, "aantal_succesvol_zetel": 4.333333333333333, "Rank": ""}, {"index": 68, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Infrastructuur & water", "aantal": 4, "num_votes": 3.0, "aantal_succesvol": 2, "aantal_zetel": 1.3333333333333333, "aantal_succesvol_zetel": 0.6666666666666666, "Rank": ""}, {"index": 69, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Jeugdzorg", "aantal": 28, "num_votes": 3.0, "aantal_succesvol": 14, "aantal_zetel": 9.333333333333334, "aantal_succesvol_zetel": 4.666666666666667, "Rank": 3.0}, {"index": 70, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Klimaat", "aantal": 5, "num_votes": 3.0, "aantal_succesvol": 2, "aantal_zetel": 1.6666666666666667, "aantal_succesvol_zetel": 0.6666666666666666, "Rank": ""}, {"index": 71, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Landbouw & milieu", "aantal": 1, "num_votes": 3.0, "aantal_succesvol": 1, "aantal_zetel": 0.3333333333333333, "aantal_succesvol_zetel": 0.3333333333333333, "Rank": ""}, {"index": 72, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Migratie", "aantal": 56, "num_votes": 3.0, "aantal_succesvol": 20, "aantal_zetel": 18.666666666666668, "aantal_succesvol_zetel": 6.666666666666667, "Rank": 2.0}, {"index": 73, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Onderwijs", "aantal": 37, "num_votes": 3.0, "aantal_succesvol": 24, "aantal_zetel": 12.333333333333334, "aantal_succesvol_zetel": 8.0, "Rank": 1.0}, {"index": 74, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Veiligheid", "aantal": 120, "num_votes": 3.0, "aantal_succesvol": 48, "aantal_zetel": 40.0, "aantal_succesvol_zetel": 16.0, "Rank": 2.0}, {"index": 75, "Kamer": "Rutte IV", "Indienende_partij": "DENK", "Topic": "Wonen", "aantal": 21, "num_votes": 3.0, "aantal_succesvol": 12, "aantal_zetel": 7.0, "aantal_succesvol_zetel": 4.0, "Rank": 3.0}, {"index": 76, "Kamer": "Rutte IV", "Indienende_partij": "FVD", "Topic": "Asiel", "aantal": 36, "num_votes": 5.0, "aantal_succesvol": 5, "aantal_zetel": 7.2, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 77, "Kamer": "Rutte IV", "Indienende_partij": "FVD", "Topic": "Europa", "aantal": 28, "num_votes": 5.0, "aantal_succesvol": 5, "aantal_zetel": 5.6, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 78, "Kamer": "Rutte IV", "Indienende_partij": "FVD", "Topic": "Financien", "aantal": 13, "num_votes": 5.0, "aantal_succesvol": 2, "aantal_zetel": 2.6, "aantal_succesvol_zetel": 0.4, "Rank": ""}, {"index": 79, "Kamer": "Rutte IV", "Indienende_partij": "FVD", "Topic": "Gezondheidszorg", "aantal": 34, "num_votes": 5.0, "aantal_succesvol": 3, "aantal_zetel": 6.8, "aantal_succesvol_zetel": 0.6, "Rank": ""}, {"index": 80, "Kamer": "Rutte IV", "Indienende_partij": "FVD", "Topic": "Veiligheid", "aantal": 17, "num_votes": 5.0, "aantal_succesvol": 1, "aantal_zetel": 3.4, "aantal_succesvol_zetel": 0.2, "Rank": ""}, {"index": 81, "Kamer": "Rutte IV", "Indienende_partij": "FVD", "Topic": "Wonen", "aantal": 11, "num_votes": 5.0, "aantal_succesvol": 1, "aantal_zetel": 2.2, "aantal_succesvol_zetel": 0.2, "Rank": ""}, {"index": 82, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Arbeid", "aantal": 37, "num_votes": 8.0, "aantal_succesvol": 13, "aantal_zetel": 4.625, "aantal_succesvol_zetel": 1.625, "Rank": ""}, {"index": 83, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Asiel", "aantal": 8, "num_votes": 8.0, "aantal_succesvol": 2, "aantal_zetel": 1.0, "aantal_succesvol_zetel": 0.25, "Rank": ""}, {"index": 84, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Belasting", "aantal": 18, "num_votes": 8.0, "aantal_succesvol": 10, "aantal_zetel": 2.25, "aantal_succesvol_zetel": 1.25, "Rank": ""}, {"index": 85, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Europa", "aantal": 53, "num_votes": 8.0, "aantal_succesvol": 32, "aantal_zetel": 6.625, "aantal_succesvol_zetel": 4.0, "Rank": ""}, {"index": 86, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Financien", "aantal": 39, "num_votes": 8.0, "aantal_succesvol": 23, "aantal_zetel": 4.875, "aantal_succesvol_zetel": 2.875, "Rank": ""}, {"index": 87, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Gezondheidszorg", "aantal": 73, "num_votes": 8.0, "aantal_succesvol": 46, "aantal_zetel": 9.125, "aantal_succesvol_zetel": 5.75, "Rank": 2.0}, {"index": 88, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Infrastructuur & water", "aantal": 64, "num_votes": 8.0, "aantal_succesvol": 22, "aantal_zetel": 8.0, "aantal_succesvol_zetel": 2.75, "Rank": ""}, {"index": 89, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Jeugdzorg", "aantal": 42, "num_votes": 8.0, "aantal_succesvol": 24, "aantal_zetel": 5.25, "aantal_succesvol_zetel": 3.0, "Rank": ""}, {"index": 90, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Klimaat", "aantal": 120, "num_votes": 8.0, "aantal_succesvol": 62, "aantal_zetel": 15.0, "aantal_succesvol_zetel": 7.75, "Rank": 3.0}, {"index": 91, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Landbouw & milieu", "aantal": 54, "num_votes": 8.0, "aantal_succesvol": 23, "aantal_zetel": 6.75, "aantal_succesvol_zetel": 2.875, "Rank": ""}, {"index": 92, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Migratie", "aantal": 24, "num_votes": 8.0, "aantal_succesvol": 9, "aantal_zetel": 3.0, "aantal_succesvol_zetel": 1.125, "Rank": ""}, {"index": 93, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Onderwijs", "aantal": 63, "num_votes": 8.0, "aantal_succesvol": 41, "aantal_zetel": 7.875, "aantal_succesvol_zetel": 5.125, "Rank": 4.0}, {"index": 94, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Veiligheid", "aantal": 44, "num_votes": 8.0, "aantal_succesvol": 28, "aantal_zetel": 5.5, "aantal_succesvol_zetel": 3.5, "Rank": ""}, {"index": 95, "Kamer": "Rutte IV", "Indienende_partij": "GroenLinks", "Topic": "Wonen", "aantal": 24, "num_votes": 8.0, "aantal_succesvol": 13, "aantal_zetel": 3.0, "aantal_succesvol_zetel": 1.625, "Rank": ""}, {"index": 96, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Arbeid", "aantal": 41, "num_votes": 3.0, "aantal_succesvol": 6, "aantal_zetel": 13.666666666666666, "aantal_succesvol_zetel": 2.0, "Rank": ""}, {"index": 97, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Asiel", "aantal": 118, "num_votes": 3.0, "aantal_succesvol": 25, "aantal_zetel": 39.333333333333336, "aantal_succesvol_zetel": 8.333333333333334, "Rank": 1.0}, {"index": 98, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Belasting", "aantal": 22, "num_votes": 3.0, "aantal_succesvol": 1, "aantal_zetel": 7.333333333333333, "aantal_succesvol_zetel": 0.3333333333333333, "Rank": ""}, {"index": 99, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Europa", "aantal": 33, "num_votes": 3.0, "aantal_succesvol": 7, "aantal_zetel": 11.0, "aantal_succesvol_zetel": 2.3333333333333335, "Rank": ""}, {"index": 100, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Financien", "aantal": 18, "num_votes": 3.0, "aantal_succesvol": 5, "aantal_zetel": 6.0, "aantal_succesvol_zetel": 1.6666666666666667, "Rank": ""}, {"index": 101, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Gezondheidszorg", "aantal": 36, "num_votes": 3.0, "aantal_succesvol": 4, "aantal_zetel": 12.0, "aantal_succesvol_zetel": 1.3333333333333333, "Rank": ""}, {"index": 102, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Infrastructuur & water", "aantal": 30, "num_votes": 3.0, "aantal_succesvol": 5, "aantal_zetel": 10.0, "aantal_succesvol_zetel": 1.6666666666666667, "Rank": ""}, {"index": 103, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Jeugdzorg", "aantal": 20, "num_votes": 3.0, "aantal_succesvol": 3, "aantal_zetel": 6.666666666666667, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 104, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Klimaat", "aantal": 76, "num_votes": 3.0, "aantal_succesvol": 15, "aantal_zetel": 25.333333333333332, "aantal_succesvol_zetel": 5.0, "Rank": 4.0}, {"index": 105, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Landbouw & milieu", "aantal": 33, "num_votes": 3.0, "aantal_succesvol": 2, "aantal_zetel": 11.0, "aantal_succesvol_zetel": 0.6666666666666666, "Rank": ""}, {"index": 106, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Migratie", "aantal": 24, "num_votes": 3.0, "aantal_succesvol": 10, "aantal_zetel": 8.0, "aantal_succesvol_zetel": 3.3333333333333335, "Rank": ""}, {"index": 107, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Onderwijs", "aantal": 6, "num_votes": 3.0, "aantal_succesvol": 1, "aantal_zetel": 2.0, "aantal_succesvol_zetel": 0.3333333333333333, "Rank": ""}, {"index": 108, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Veiligheid", "aantal": 22, "num_votes": 3.0, "aantal_succesvol": 10, "aantal_zetel": 7.333333333333333, "aantal_succesvol_zetel": 3.3333333333333335, "Rank": ""}, {"index": 109, "Kamer": "Rutte IV", "Indienende_partij": "Groep Van Haga", "Topic": "Wonen", "aantal": 21, "num_votes": 3.0, "aantal_succesvol": 3, "aantal_zetel": 7.0, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 110, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Arbeid", "aantal": 17, "num_votes": 3.0, "aantal_succesvol": 5, "aantal_zetel": 5.666666666666667, "aantal_succesvol_zetel": 1.6666666666666667, "Rank": ""}, {"index": 111, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Asiel", "aantal": 17, "num_votes": 3.0, "aantal_succesvol": 2, "aantal_zetel": 5.666666666666667, "aantal_succesvol_zetel": 0.6666666666666666, "Rank": ""}, {"index": 112, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Belasting", "aantal": 5, "num_votes": 3.0, "aantal_succesvol": 2, "aantal_zetel": 1.6666666666666667, "aantal_succesvol_zetel": 0.6666666666666666, "Rank": ""}, {"index": 113, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Europa", "aantal": 21, "num_votes": 3.0, "aantal_succesvol": 9, "aantal_zetel": 7.0, "aantal_succesvol_zetel": 3.0, "Rank": ""}, {"index": 114, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Financien", "aantal": 15, "num_votes": 3.0, "aantal_succesvol": 7, "aantal_zetel": 5.0, "aantal_succesvol_zetel": 2.3333333333333335, "Rank": ""}, {"index": 115, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Gezondheidszorg", "aantal": 19, "num_votes": 3.0, "aantal_succesvol": 14, "aantal_zetel": 6.333333333333333, "aantal_succesvol_zetel": 4.666666666666667, "Rank": ""}, {"index": 116, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Infrastructuur & water", "aantal": 8, "num_votes": 3.0, "aantal_succesvol": 5, "aantal_zetel": 2.6666666666666665, "aantal_succesvol_zetel": 1.6666666666666667, "Rank": ""}, {"index": 117, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Jeugdzorg", "aantal": 4, "num_votes": 3.0, "aantal_succesvol": 3, "aantal_zetel": 1.3333333333333333, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 118, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Klimaat", "aantal": 26, "num_votes": 3.0, "aantal_succesvol": 3, "aantal_zetel": 8.666666666666666, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 119, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Landbouw & milieu", "aantal": 16, "num_votes": 3.0, "aantal_succesvol": 5, "aantal_zetel": 5.333333333333333, "aantal_succesvol_zetel": 1.6666666666666667, "Rank": ""}, {"index": 120, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Migratie", "aantal": 28, "num_votes": 3.0, "aantal_succesvol": 7, "aantal_zetel": 9.333333333333334, "aantal_succesvol_zetel": 2.3333333333333335, "Rank": ""}, {"index": 121, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Onderwijs", "aantal": 8, "num_votes": 3.0, "aantal_succesvol": 3, "aantal_zetel": 2.6666666666666665, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 122, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Veiligheid", "aantal": 19, "num_votes": 3.0, "aantal_succesvol": 12, "aantal_zetel": 6.333333333333333, "aantal_succesvol_zetel": 4.0, "Rank": ""}, {"index": 123, "Kamer": "Rutte IV", "Indienende_partij": "JA21", "Topic": "Wonen", "aantal": 11, "num_votes": 3.0, "aantal_succesvol": 4, "aantal_zetel": 3.6666666666666665, "aantal_succesvol_zetel": 1.3333333333333333, "Rank": ""}, {"index": 124, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Arbeid", "aantal": 13, "num_votes": 1.0, "aantal_succesvol": 3, "aantal_zetel": 13.0, "aantal_succesvol_zetel": 3.0, "Rank": ""}, {"index": 125, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Asiel", "aantal": 14, "num_votes": 1.0, "aantal_succesvol": 5, "aantal_zetel": 14.0, "aantal_succesvol_zetel": 5.0, "Rank": 3.0}, {"index": 126, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Belasting", "aantal": 34, "num_votes": 1.0, "aantal_succesvol": 8, "aantal_zetel": 34.0, "aantal_succesvol_zetel": 8.0, "Rank": 2.0}, {"index": 127, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Europa", "aantal": 13, "num_votes": 1.0, "aantal_succesvol": 7, "aantal_zetel": 13.0, "aantal_succesvol_zetel": 7.0, "Rank": ""}, {"index": 128, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Financien", "aantal": 12, "num_votes": 1.0, "aantal_succesvol": 6, "aantal_zetel": 12.0, "aantal_succesvol_zetel": 6.0, "Rank": 2.0}, {"index": 129, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Gezondheidszorg", "aantal": 6, "num_votes": 1.0, "aantal_succesvol": 3, "aantal_zetel": 6.0, "aantal_succesvol_zetel": 3.0, "Rank": ""}, {"index": 130, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Jeugdzorg", "aantal": 11, "num_votes": 1.0, "aantal_succesvol": 6, "aantal_zetel": 11.0, "aantal_succesvol_zetel": 6.0, "Rank": 2.0}, {"index": 131, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Klimaat", "aantal": 14, "num_votes": 1.0, "aantal_succesvol": 4, "aantal_zetel": 14.0, "aantal_succesvol_zetel": 4.0, "Rank": ""}, {"index": 132, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Landbouw & milieu", "aantal": 6, "num_votes": 1.0, "aantal_succesvol": 3, "aantal_zetel": 6.0, "aantal_succesvol_zetel": 3.0, "Rank": ""}, {"index": 133, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Migratie", "aantal": 3, "num_votes": 1.0, "aantal_succesvol": 1, "aantal_zetel": 3.0, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 134, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Onderwijs", "aantal": 5, "num_votes": 1.0, "aantal_succesvol": 1, "aantal_zetel": 5.0, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 135, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Veiligheid", "aantal": 17, "num_votes": 1.0, "aantal_succesvol": 6, "aantal_zetel": 17.0, "aantal_succesvol_zetel": 6.0, "Rank": ""}, {"index": 136, "Kamer": "Rutte IV", "Indienende_partij": "Omtzigt", "Topic": "Wonen", "aantal": 8, "num_votes": 1.0, "aantal_succesvol": 3, "aantal_zetel": 8.0, "aantal_succesvol_zetel": 3.0, "Rank": ""}, {"index": 137, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Arbeid", "aantal": 78, "num_votes": 17.0, "aantal_succesvol": 10, "aantal_zetel": 4.588235294117647, "aantal_succesvol_zetel": 0.5882352941176471, "Rank": ""}, {"index": 138, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Asiel", "aantal": 213, "num_votes": 17.0, "aantal_succesvol": 31, "aantal_zetel": 12.529411764705882, "aantal_succesvol_zetel": 1.8235294117647058, "Rank": ""}, {"index": 139, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Belasting", "aantal": 46, "num_votes": 17.0, "aantal_succesvol": 4, "aantal_zetel": 2.7058823529411766, "aantal_succesvol_zetel": 0.23529411764705882, "Rank": ""}, {"index": 140, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Europa", "aantal": 55, "num_votes": 17.0, "aantal_succesvol": 4, "aantal_zetel": 3.235294117647059, "aantal_succesvol_zetel": 0.23529411764705882, "Rank": ""}, {"index": 141, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Financien", "aantal": 21, "num_votes": 17.0, "aantal_succesvol": 4, "aantal_zetel": 1.2352941176470589, "aantal_succesvol_zetel": 0.23529411764705882, "Rank": ""}, {"index": 142, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Gezondheidszorg", "aantal": 99, "num_votes": 17.0, "aantal_succesvol": 22, "aantal_zetel": 5.823529411764706, "aantal_succesvol_zetel": 1.2941176470588236, "Rank": ""}, {"index": 143, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Infrastructuur & water", "aantal": 40, "num_votes": 17.0, "aantal_succesvol": 9, "aantal_zetel": 2.3529411764705883, "aantal_succesvol_zetel": 0.5294117647058824, "Rank": ""}, {"index": 144, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Jeugdzorg", "aantal": 20, "num_votes": 17.0, "aantal_succesvol": 7, "aantal_zetel": 1.1764705882352942, "aantal_succesvol_zetel": 0.4117647058823529, "Rank": ""}, {"index": 145, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Klimaat", "aantal": 69, "num_votes": 17.0, "aantal_succesvol": 8, "aantal_zetel": 4.0588235294117645, "aantal_succesvol_zetel": 0.47058823529411764, "Rank": ""}, {"index": 146, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Landbouw & milieu", "aantal": 34, "num_votes": 17.0, "aantal_succesvol": 5, "aantal_zetel": 2.0, "aantal_succesvol_zetel": 0.29411764705882354, "Rank": ""}, {"index": 147, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Migratie", "aantal": 65, "num_votes": 17.0, "aantal_succesvol": 5, "aantal_zetel": 3.823529411764706, "aantal_succesvol_zetel": 0.29411764705882354, "Rank": ""}, {"index": 148, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Onderwijs", "aantal": 34, "num_votes": 17.0, "aantal_succesvol": 5, "aantal_zetel": 2.0, "aantal_succesvol_zetel": 0.29411764705882354, "Rank": ""}, {"index": 149, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Veiligheid", "aantal": 34, "num_votes": 17.0, "aantal_succesvol": 14, "aantal_zetel": 2.0, "aantal_succesvol_zetel": 0.8235294117647058, "Rank": ""}, {"index": 150, "Kamer": "Rutte IV", "Indienende_partij": "PVV", "Topic": "Wonen", "aantal": 25, "num_votes": 17.0, "aantal_succesvol": 7, "aantal_zetel": 1.4705882352941178, "aantal_succesvol_zetel": 0.4117647058823529, "Rank": ""}, {"index": 151, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Arbeid", "aantal": 63, "num_votes": 9.0, "aantal_succesvol": 19, "aantal_zetel": 7.0, "aantal_succesvol_zetel": 2.111111111111111, "Rank": ""}, {"index": 152, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Asiel", "aantal": 8, "num_votes": 9.0, "aantal_succesvol": 5, "aantal_zetel": 0.8888888888888888, "aantal_succesvol_zetel": 0.5555555555555556, "Rank": ""}, {"index": 153, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Belasting", "aantal": 27, "num_votes": 9.0, "aantal_succesvol": 14, "aantal_zetel": 3.0, "aantal_succesvol_zetel": 1.5555555555555556, "Rank": ""}, {"index": 154, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Europa", "aantal": 49, "num_votes": 9.0, "aantal_succesvol": 31, "aantal_zetel": 5.444444444444445, "aantal_succesvol_zetel": 3.4444444444444446, "Rank": ""}, {"index": 155, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Financien", "aantal": 48, "num_votes": 9.0, "aantal_succesvol": 30, "aantal_zetel": 5.333333333333333, "aantal_succesvol_zetel": 3.3333333333333335, "Rank": ""}, {"index": 156, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Gezondheidszorg", "aantal": 56, "num_votes": 9.0, "aantal_succesvol": 29, "aantal_zetel": 6.222222222222222, "aantal_succesvol_zetel": 3.2222222222222223, "Rank": ""}, {"index": 157, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Infrastructuur & water", "aantal": 34, "num_votes": 9.0, "aantal_succesvol": 21, "aantal_zetel": 3.7777777777777777, "aantal_succesvol_zetel": 2.3333333333333335, "Rank": ""}, {"index": 158, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Jeugdzorg", "aantal": 52, "num_votes": 9.0, "aantal_succesvol": 36, "aantal_zetel": 5.777777777777778, "aantal_succesvol_zetel": 4.0, "Rank": 4.0}, {"index": 159, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Klimaat", "aantal": 64, "num_votes": 9.0, "aantal_succesvol": 25, "aantal_zetel": 7.111111111111111, "aantal_succesvol_zetel": 2.7777777777777777, "Rank": ""}, {"index": 160, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Landbouw & milieu", "aantal": 31, "num_votes": 9.0, "aantal_succesvol": 12, "aantal_zetel": 3.4444444444444446, "aantal_succesvol_zetel": 1.3333333333333333, "Rank": ""}, {"index": 161, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Migratie", "aantal": 28, "num_votes": 9.0, "aantal_succesvol": 19, "aantal_zetel": 3.111111111111111, "aantal_succesvol_zetel": 2.111111111111111, "Rank": ""}, {"index": 162, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Onderwijs", "aantal": 68, "num_votes": 9.0, "aantal_succesvol": 47, "aantal_zetel": 7.555555555555555, "aantal_succesvol_zetel": 5.222222222222222, "Rank": 3.0}, {"index": 163, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Veiligheid", "aantal": 48, "num_votes": 9.0, "aantal_succesvol": 40, "aantal_zetel": 5.333333333333333, "aantal_succesvol_zetel": 4.444444444444445, "Rank": ""}, {"index": 164, "Kamer": "Rutte IV", "Indienende_partij": "PvdA", "Topic": "Wonen", "aantal": 37, "num_votes": 9.0, "aantal_succesvol": 19, "aantal_zetel": 4.111111111111111, "aantal_succesvol_zetel": 2.111111111111111, "Rank": ""}, {"index": 165, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Arbeid", "aantal": 10, "num_votes": 6.0, "aantal_succesvol": 4, "aantal_zetel": 1.6666666666666667, "aantal_succesvol_zetel": 0.6666666666666666, "Rank": ""}, {"index": 166, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Asiel", "aantal": 5, "num_votes": 6.0, "aantal_succesvol": 2, "aantal_zetel": 0.8333333333333334, "aantal_succesvol_zetel": 0.3333333333333333, "Rank": ""}, {"index": 167, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Belasting", "aantal": 20, "num_votes": 6.0, "aantal_succesvol": 5, "aantal_zetel": 3.3333333333333335, "aantal_succesvol_zetel": 0.8333333333333334, "Rank": ""}, {"index": 168, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Europa", "aantal": 33, "num_votes": 6.0, "aantal_succesvol": 13, "aantal_zetel": 5.5, "aantal_succesvol_zetel": 2.1666666666666665, "Rank": ""}, {"index": 169, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Financien", "aantal": 29, "num_votes": 6.0, "aantal_succesvol": 12, "aantal_zetel": 4.833333333333333, "aantal_succesvol_zetel": 2.0, "Rank": ""}, {"index": 170, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Gezondheidszorg", "aantal": 22, "num_votes": 6.0, "aantal_succesvol": 10, "aantal_zetel": 3.6666666666666665, "aantal_succesvol_zetel": 1.6666666666666667, "Rank": ""}, {"index": 171, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Infrastructuur & water", "aantal": 78, "num_votes": 6.0, "aantal_succesvol": 16, "aantal_zetel": 13.0, "aantal_succesvol_zetel": 2.6666666666666665, "Rank": ""}, {"index": 172, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Jeugdzorg", "aantal": 9, "num_votes": 6.0, "aantal_succesvol": 6, "aantal_zetel": 1.5, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 173, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Klimaat", "aantal": 174, "num_votes": 6.0, "aantal_succesvol": 21, "aantal_zetel": 29.0, "aantal_succesvol_zetel": 3.5, "Rank": ""}, {"index": 174, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Landbouw & milieu", "aantal": 178, "num_votes": 6.0, "aantal_succesvol": 62, "aantal_zetel": 29.666666666666668, "aantal_succesvol_zetel": 10.333333333333334, "Rank": 2.0}, {"index": 175, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Migratie", "aantal": 9, "num_votes": 6.0, "aantal_succesvol": 3, "aantal_zetel": 1.5, "aantal_succesvol_zetel": 0.5, "Rank": ""}, {"index": 176, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Onderwijs", "aantal": 16, "num_votes": 6.0, "aantal_succesvol": 8, "aantal_zetel": 2.6666666666666665, "aantal_succesvol_zetel": 1.3333333333333333, "Rank": ""}, {"index": 177, "Kamer": "Rutte IV", "Indienende_partij": "PvdD", "Topic": "Veiligheid", "aantal": 13, "num_votes": 6.0, "aantal_succesvol": 2, "aantal_zetel": 2.1666666666666665, "aantal_succesvol_zetel": 0.3333333333333333, "Rank": ""}, {"index": 178, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Arbeid", "aantal": 21, "num_votes": 3.0, "aantal_succesvol": 11, "aantal_zetel": 7.0, "aantal_succesvol_zetel": 3.6666666666666665, "Rank": 4.0}, {"index": 179, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Asiel", "aantal": 6, "num_votes": 3.0, "aantal_succesvol": 3, "aantal_zetel": 2.0, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 180, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Belasting", "aantal": 18, "num_votes": 3.0, "aantal_succesvol": 12, "aantal_zetel": 6.0, "aantal_succesvol_zetel": 4.0, "Rank": 3.0}, {"index": 181, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Europa", "aantal": 14, "num_votes": 3.0, "aantal_succesvol": 7, "aantal_zetel": 4.666666666666667, "aantal_succesvol_zetel": 2.3333333333333335, "Rank": ""}, {"index": 182, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Financien", "aantal": 36, "num_votes": 3.0, "aantal_succesvol": 18, "aantal_zetel": 12.0, "aantal_succesvol_zetel": 6.0, "Rank": 2.0}, {"index": 183, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Gezondheidszorg", "aantal": 15, "num_votes": 3.0, "aantal_succesvol": 11, "aantal_zetel": 5.0, "aantal_succesvol_zetel": 3.6666666666666665, "Rank": ""}, {"index": 184, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Infrastructuur & water", "aantal": 22, "num_votes": 3.0, "aantal_succesvol": 16, "aantal_zetel": 7.333333333333333, "aantal_succesvol_zetel": 5.333333333333333, "Rank": 3.0}, {"index": 185, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Jeugdzorg", "aantal": 7, "num_votes": 3.0, "aantal_succesvol": 4, "aantal_zetel": 2.3333333333333335, "aantal_succesvol_zetel": 1.3333333333333333, "Rank": ""}, {"index": 186, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Klimaat", "aantal": 17, "num_votes": 3.0, "aantal_succesvol": 9, "aantal_zetel": 5.666666666666667, "aantal_succesvol_zetel": 3.0, "Rank": ""}, {"index": 187, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Landbouw & milieu", "aantal": 44, "num_votes": 3.0, "aantal_succesvol": 19, "aantal_zetel": 14.666666666666666, "aantal_succesvol_zetel": 6.333333333333333, "Rank": 4.0}, {"index": 188, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Migratie", "aantal": 23, "num_votes": 3.0, "aantal_succesvol": 11, "aantal_zetel": 7.666666666666667, "aantal_succesvol_zetel": 3.6666666666666665, "Rank": ""}, {"index": 189, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Onderwijs", "aantal": 19, "num_votes": 3.0, "aantal_succesvol": 9, "aantal_zetel": 6.333333333333333, "aantal_succesvol_zetel": 3.0, "Rank": ""}, {"index": 190, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Veiligheid", "aantal": 27, "num_votes": 3.0, "aantal_succesvol": 21, "aantal_zetel": 9.0, "aantal_succesvol_zetel": 7.0, "Rank": ""}, {"index": 191, "Kamer": "Rutte IV", "Indienende_partij": "SGP", "Topic": "Wonen", "aantal": 10, "num_votes": 3.0, "aantal_succesvol": 9, "aantal_zetel": 3.3333333333333335, "aantal_succesvol_zetel": 3.0, "Rank": ""}, {"index": 192, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Arbeid", "aantal": 74, "num_votes": 9.0, "aantal_succesvol": 19, "aantal_zetel": 8.222222222222221, "aantal_succesvol_zetel": 2.111111111111111, "Rank": ""}, {"index": 193, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Asiel", "aantal": 17, "num_votes": 9.0, "aantal_succesvol": 3, "aantal_zetel": 1.8888888888888888, "aantal_succesvol_zetel": 0.3333333333333333, "Rank": ""}, {"index": 194, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Belasting", "aantal": 65, "num_votes": 9.0, "aantal_succesvol": 21, "aantal_zetel": 7.222222222222222, "aantal_succesvol_zetel": 2.3333333333333335, "Rank": ""}, {"index": 195, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Europa", "aantal": 62, "num_votes": 9.0, "aantal_succesvol": 29, "aantal_zetel": 6.888888888888889, "aantal_succesvol_zetel": 3.2222222222222223, "Rank": ""}, {"index": 196, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Financien", "aantal": 68, "num_votes": 9.0, "aantal_succesvol": 33, "aantal_zetel": 7.555555555555555, "aantal_succesvol_zetel": 3.6666666666666665, "Rank": ""}, {"index": 197, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Gezondheidszorg", "aantal": 114, "num_votes": 9.0, "aantal_succesvol": 40, "aantal_zetel": 12.666666666666666, "aantal_succesvol_zetel": 4.444444444444445, "Rank": ""}, {"index": 198, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Infrastructuur & water", "aantal": 58, "num_votes": 9.0, "aantal_succesvol": 30, "aantal_zetel": 6.444444444444445, "aantal_succesvol_zetel": 3.3333333333333335, "Rank": ""}, {"index": 199, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Jeugdzorg", "aantal": 49, "num_votes": 9.0, "aantal_succesvol": 22, "aantal_zetel": 5.444444444444445, "aantal_succesvol_zetel": 2.4444444444444446, "Rank": ""}, {"index": 200, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Klimaat", "aantal": 63, "num_votes": 9.0, "aantal_succesvol": 18, "aantal_zetel": 7.0, "aantal_succesvol_zetel": 2.0, "Rank": ""}, {"index": 201, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Landbouw & milieu", "aantal": 27, "num_votes": 9.0, "aantal_succesvol": 14, "aantal_zetel": 3.0, "aantal_succesvol_zetel": 1.5555555555555556, "Rank": ""}, {"index": 202, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Migratie", "aantal": 57, "num_votes": 9.0, "aantal_succesvol": 20, "aantal_zetel": 6.333333333333333, "aantal_succesvol_zetel": 2.2222222222222223, "Rank": ""}, {"index": 203, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Onderwijs", "aantal": 58, "num_votes": 9.0, "aantal_succesvol": 35, "aantal_zetel": 6.444444444444445, "aantal_succesvol_zetel": 3.888888888888889, "Rank": ""}, {"index": 204, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Veiligheid", "aantal": 143, "num_votes": 9.0, "aantal_succesvol": 70, "aantal_zetel": 15.88888888888889, "aantal_succesvol_zetel": 7.777777777777778, "Rank": 4.0}, {"index": 205, "Kamer": "Rutte IV", "Indienende_partij": "SP", "Topic": "Wonen", "aantal": 72, "num_votes": 9.0, "aantal_succesvol": 32, "aantal_zetel": 8.0, "aantal_succesvol_zetel": 3.5555555555555554, "Rank": 4.0}, {"index": 206, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Arbeid", "aantal": 38, "num_votes": 34.0, "aantal_succesvol": 38, "aantal_zetel": 1.1176470588235294, "aantal_succesvol_zetel": 1.1176470588235294, "Rank": ""}, {"index": 207, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Asiel", "aantal": 1, "num_votes": 34.0, "aantal_succesvol": 1, "aantal_zetel": 0.029411764705882353, "aantal_succesvol_zetel": 0.029411764705882353, "Rank": ""}, {"index": 208, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Belasting", "aantal": 22, "num_votes": 34.0, "aantal_succesvol": 21, "aantal_zetel": 0.6470588235294118, "aantal_succesvol_zetel": 0.6176470588235294, "Rank": ""}, {"index": 209, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Europa", "aantal": 76, "num_votes": 34.0, "aantal_succesvol": 74, "aantal_zetel": 2.235294117647059, "aantal_succesvol_zetel": 2.176470588235294, "Rank": ""}, {"index": 210, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Financien", "aantal": 65, "num_votes": 34.0, "aantal_succesvol": 62, "aantal_zetel": 1.911764705882353, "aantal_succesvol_zetel": 1.8235294117647058, "Rank": ""}, {"index": 211, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Gezondheidszorg", "aantal": 64, "num_votes": 34.0, "aantal_succesvol": 64, "aantal_zetel": 1.8823529411764706, "aantal_succesvol_zetel": 1.8823529411764706, "Rank": ""}, {"index": 212, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Infrastructuur & water", "aantal": 76, "num_votes": 34.0, "aantal_succesvol": 73, "aantal_zetel": 2.235294117647059, "aantal_succesvol_zetel": 2.1470588235294117, "Rank": ""}, {"index": 213, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Jeugdzorg", "aantal": 22, "num_votes": 34.0, "aantal_succesvol": 22, "aantal_zetel": 0.6470588235294118, "aantal_succesvol_zetel": 0.6470588235294118, "Rank": ""}, {"index": 214, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Klimaat", "aantal": 71, "num_votes": 34.0, "aantal_succesvol": 69, "aantal_zetel": 2.088235294117647, "aantal_succesvol_zetel": 2.0294117647058822, "Rank": ""}, {"index": 215, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Landbouw & milieu", "aantal": 37, "num_votes": 34.0, "aantal_succesvol": 37, "aantal_zetel": 1.088235294117647, "aantal_succesvol_zetel": 1.088235294117647, "Rank": ""}, {"index": 216, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Migratie", "aantal": 56, "num_votes": 34.0, "aantal_succesvol": 52, "aantal_zetel": 1.6470588235294117, "aantal_succesvol_zetel": 1.5294117647058822, "Rank": ""}, {"index": 217, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Onderwijs", "aantal": 50, "num_votes": 34.0, "aantal_succesvol": 48, "aantal_zetel": 1.4705882352941178, "aantal_succesvol_zetel": 1.411764705882353, "Rank": ""}, {"index": 218, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Veiligheid", "aantal": 122, "num_votes": 34.0, "aantal_succesvol": 119, "aantal_zetel": 3.588235294117647, "aantal_succesvol_zetel": 3.5, "Rank": ""}, {"index": 219, "Kamer": "Rutte IV", "Indienende_partij": "VVD", "Topic": "Wonen", "aantal": 46, "num_votes": 34.0, "aantal_succesvol": 43, "aantal_zetel": 1.3529411764705883, "aantal_succesvol_zetel": 1.2647058823529411, "Rank": ""}, {"index": 220, "Kamer": "Rutte IV", "Indienende_partij": "Volt", "Topic": "Arbeid", "aantal": 5, "num_votes": 3.0, "aantal_succesvol": 2, "aantal_zetel": 1.6666666666666667, "aantal_succesvol_zetel": 0.6666666666666666, "Rank": ""}, {"index": 221, "Kamer": "Rutte IV", "Indienende_partij": "Volt", "Topic": "Asiel", "aantal": 3, "num_votes": 3.0, "aantal_succesvol": 1, "aantal_zetel": 1.0, "aantal_succesvol_zetel": 0.3333333333333333, "Rank": ""}, {"index": 222, "Kamer": "Rutte IV", "Indienende_partij": "Volt", "Topic": "Belasting", "aantal": 2, "num_votes": 3.0, "aantal_succesvol": 1, "aantal_zetel": 0.6666666666666666, "aantal_succesvol_zetel": 0.3333333333333333, "Rank": ""}, {"index": 223, "Kamer": "Rutte IV", "Indienende_partij": "Volt", "Topic": "Europa", "aantal": 64, "num_votes": 3.0, "aantal_succesvol": 33, "aantal_zetel": 21.333333333333332, "aantal_succesvol_zetel": 11.0, "Rank": 1.0}, {"index": 224, "Kamer": "Rutte IV", "Indienende_partij": "Volt", "Topic": "Financien", "aantal": 9, "num_votes": 3.0, "aantal_succesvol": 5, "aantal_zetel": 3.0, "aantal_succesvol_zetel": 1.6666666666666667, "Rank": ""}, {"index": 225, "Kamer": "Rutte IV", "Indienende_partij": "Volt", "Topic": "Gezondheidszorg", "aantal": 16, "num_votes": 3.0, "aantal_succesvol": 4, "aantal_zetel": 5.333333333333333, "aantal_succesvol_zetel": 1.3333333333333333, "Rank": ""}, {"index": 226, "Kamer": "Rutte IV", "Indienende_partij": "Volt", "Topic": "Jeugdzorg", "aantal": 4, "num_votes": 3.0, "aantal_succesvol": 2, "aantal_zetel": 1.3333333333333333, "aantal_succesvol_zetel": 0.6666666666666666, "Rank": ""}, {"index": 227, "Kamer": "Rutte IV", "Indienende_partij": "Volt", "Topic": "Klimaat", "aantal": 19, "num_votes": 3.0, "aantal_succesvol": 10, "aantal_zetel": 6.333333333333333, "aantal_succesvol_zetel": 3.3333333333333335, "Rank": ""}, {"index": 228, "Kamer": "Rutte IV", "Indienende_partij": "Volt", "Topic": "Landbouw & milieu", "aantal": 9, "num_votes": 3.0, "aantal_succesvol": 5, "aantal_zetel": 3.0, "aantal_succesvol_zetel": 1.6666666666666667, "Rank": ""}, {"index": 229, "Kamer": "Rutte IV", "Indienende_partij": "Volt", "Topic": "Migratie", "aantal": 12, "num_votes": 3.0, "aantal_succesvol": 3, "aantal_zetel": 4.0, "aantal_succesvol_zetel": 1.0, "Rank": ""}, {"index": 230, "Kamer": "Rutte IV", "Indienende_partij": "Volt", "Topic": "Onderwijs", "aantal": 15, "num_votes": 3.0, "aantal_succesvol": 8, "aantal_zetel": 5.0, "aantal_succesvol_zetel": 2.6666666666666665, "Rank": ""}, {"index": 231, "Kamer": "Rutte IV", "Indienende_partij": "Volt", "Topic": "Veiligheid", "aantal": 12, "num_votes": 3.0, "aantal_succesvol": 5, "aantal_zetel": 4.0, "aantal_succesvol_zetel": 1.6666666666666667, "Rank": ""}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p>Dit overzicht geeft weer hoeveel succesvolle moties een partij er doorheen krijgt per onderwerp per zetel. Het is weer een heel ander beeld: partijen als BBB, CU en DENK doen het goed. Dit zijn natuurlijk ook partijen met weinig zetels.</p>
+</section>
+<section id="waar-richten-de-partijen-zich-op" class="level2">
+<h2 class="anchored" data-anchor-id="waar-richten-de-partijen-zich-op">Waar richten de partijen zich op?</h2>
+<p>In bovenstaande grafieken hebben we de partijen onderling vergeleken. Nu kijken we <strong>per partij</strong> op welk vlak ze het meest actief zijn</p>
+<div id="cell-19" class="cell" data-execution_count="51">
+<div class="cell-output cell-output-display" data-execution_count="51">
+
+<style>
+  #altair-viz-0afc2b414eff49d2bdab02a5f8739904.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-0afc2b414eff49d2bdab02a5f8739904.vega-embed details,
+  #altair-viz-0afc2b414eff49d2bdab02a5f8739904.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-0afc2b414eff49d2bdab02a5f8739904"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-0afc2b414eff49d2bdab02a5f8739904") {
+      outputDiv = document.getElementById("altair-viz-0afc2b414eff49d2bdab02a5f8739904");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "circle"}, "encoding": {"color": {"field": "Indienende_partij", "scale": {"domain": ["GroenLinks", "PvdA", "Volt", "PvdD", "BIJ1", "SP", "DENK", "D66", "ChristenUnie", "Omtzigt", "CDA", "VVD", "BBB", "SGP", "JA21", "PVV", "Groep Van Haga", "FVD"], "range": ["#48a641", "#df111a", "#502379", "#006b2d", "#b5b40a", "#e3001b", "#17becf", "#04a438", "#00a5e8", "#4f7cd1", "#5cb957", "#ff7f0e", "#93c01f", "#d86120", "#202e76", "#002759", "brown", "#800000"]}, "type": "nominal"}, "size": {"field": "Percentage", "scale": {"range": [0, 500]}, "type": "quantitative"}, "x": {"field": "Topic", "type": "nominal"}, "y": {"field": "Indienende_partij", "type": "nominal"}}}, {"mark": {"type": "text", "baseline": "middle", "color": "black"}, "encoding": {"text": {"field": "Rank", "type": "nominal"}, "x": {"field": "Topic", "type": "nominal"}, "y": {"field": "Indienende_partij", "type": "nominal"}}}], "data": {"name": "data-73ec7f5232076918ad471e4d29a1e2f6"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-73ec7f5232076918ad471e4d29a1e2f6": [{"Indienende_partij": "BBB", "Topic": "Gezondheidszorg", "Percentage": 0.14285714285714285, "Rank": 2.0}, {"Indienende_partij": "BBB", "Topic": "Landbouw & milieu", "Percentage": 0.27634660421545665, "Rank": 1.0}, {"Indienende_partij": "BBB", "Topic": "Veiligheid", "Percentage": 0.10304449648711944, "Rank": 3.0}, {"Indienende_partij": "BIJ1", "Topic": "Arbeid", "Percentage": 0.144, "Rank": 3.0}, {"Indienende_partij": "BIJ1", "Topic": "Migratie", "Percentage": 0.168, "Rank": 2.0}, {"Indienende_partij": "BIJ1", "Topic": "Veiligheid", "Percentage": 0.2, "Rank": 1.0}, {"Indienende_partij": "CDA", "Topic": "Gezondheidszorg", "Percentage": 0.13949843260188088, "Rank": 1.0}, {"Indienende_partij": "CDA", "Topic": "Onderwijs", "Percentage": 0.10344827586206896, "Rank": 2.0}, {"Indienende_partij": "CDA", "Topic": "Veiligheid", "Percentage": 0.09717868338557993, "Rank": 3.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Financien", "Percentage": 0.11157894736842106, "Rank": 1.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Infrastructuur & water", "Percentage": 0.1031578947368421, "Rank": 2.0}, {"Indienende_partij": "ChristenUnie", "Topic": "Veiligheid", "Percentage": 0.10105263157894737, "Rank": 3.0}, {"Indienende_partij": "D66", "Topic": "Europa", "Percentage": 0.10846560846560846, "Rank": 2.0}, {"Indienende_partij": "D66", "Topic": "Gezondheidszorg", "Percentage": 0.09656084656084656, "Rank": 3.0}, {"Indienende_partij": "D66", "Topic": "Veiligheid", "Percentage": 0.13227513227513227, "Rank": 1.0}, {"Indienende_partij": "DENK", "Topic": "Europa", "Percentage": 0.08481262327416174, "Rank": 3.0}, {"Indienende_partij": "DENK", "Topic": "Migratie", "Percentage": 0.11045364891518737, "Rank": 2.0}, {"Indienende_partij": "DENK", "Topic": "Veiligheid", "Percentage": 0.23668639053254437, "Rank": 1.0}, {"Indienende_partij": "FVD", "Topic": "Asiel", "Percentage": 0.16363636363636364, "Rank": 1.0}, {"Indienende_partij": "FVD", "Topic": "Europa", "Percentage": 0.12727272727272726, "Rank": 3.0}, {"Indienende_partij": "FVD", "Topic": "Gezondheidszorg", "Percentage": 0.15454545454545454, "Rank": 2.0}, {"Indienende_partij": "GroenLinks", "Topic": "Gezondheidszorg", "Percentage": 0.11010558069381599, "Rank": 2.0}, {"Indienende_partij": "GroenLinks", "Topic": "Infrastructuur & water", "Percentage": 0.09653092006033183, "Rank": 3.0}, {"Indienende_partij": "GroenLinks", "Topic": "Klimaat", "Percentage": 0.18099547511312217, "Rank": 1.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Arbeid", "Percentage": 0.082, "Rank": 3.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Asiel", "Percentage": 0.236, "Rank": 1.0}, {"Indienende_partij": "Groep Van Haga", "Topic": "Klimaat", "Percentage": 0.152, "Rank": 2.0}, {"Indienende_partij": "JA21", "Topic": "Europa", "Percentage": 0.09813084112149532, "Rank": 3.0}, {"Indienende_partij": "JA21", "Topic": "Klimaat", "Percentage": 0.12149532710280374, "Rank": 2.0}, {"Indienende_partij": "JA21", "Topic": "Migratie", "Percentage": 0.1308411214953271, "Rank": 1.0}, {"Indienende_partij": "Omtzigt", "Topic": "Asiel", "Percentage": 0.08917197452229299, "Rank": 3.0}, {"Indienende_partij": "Omtzigt", "Topic": "Belasting", "Percentage": 0.21656050955414013, "Rank": 1.0}, {"Indienende_partij": "Omtzigt", "Topic": "Klimaat", "Percentage": 0.08917197452229299, "Rank": 3.0}, {"Indienende_partij": "Omtzigt", "Topic": "Veiligheid", "Percentage": 0.10828025477707007, "Rank": 2.0}, {"Indienende_partij": "PVV", "Topic": "Arbeid", "Percentage": 0.0936374549819928, "Rank": 3.0}, {"Indienende_partij": "PVV", "Topic": "Asiel", "Percentage": 0.25570228091236497, "Rank": 1.0}, {"Indienende_partij": "PVV", "Topic": "Gezondheidszorg", "Percentage": 0.11884753901560624, "Rank": 2.0}, {"Indienende_partij": "PvdA", "Topic": "Arbeid", "Percentage": 0.10277324632952692, "Rank": 3.0}, {"Indienende_partij": "PvdA", "Topic": "Klimaat", "Percentage": 0.10440456769983687, "Rank": 2.0}, {"Indienende_partij": "PvdA", "Topic": "Onderwijs", "Percentage": 0.11092985318107668, "Rank": 1.0}, {"Indienende_partij": "PvdD", "Topic": "Infrastructuur & water", "Percentage": 0.1302170283806344, "Rank": 3.0}, {"Indienende_partij": "PvdD", "Topic": "Klimaat", "Percentage": 0.2904841402337229, "Rank": 2.0}, {"Indienende_partij": "PvdD", "Topic": "Landbouw & milieu", "Percentage": 0.29716193656093487, "Rank": 1.0}, {"Indienende_partij": "SGP", "Topic": "Financien", "Percentage": 0.12903225806451613, "Rank": 2.0}, {"Indienende_partij": "SGP", "Topic": "Landbouw & milieu", "Percentage": 0.15770609318996415, "Rank": 1.0}, {"Indienende_partij": "SGP", "Topic": "Veiligheid", "Percentage": 0.0967741935483871, "Rank": 3.0}, {"Indienende_partij": "SP", "Topic": "Arbeid", "Percentage": 0.07982740021574973, "Rank": 3.0}, {"Indienende_partij": "SP", "Topic": "Gezondheidszorg", "Percentage": 0.12297734627831715, "Rank": 2.0}, {"Indienende_partij": "SP", "Topic": "Veiligheid", "Percentage": 0.15426105717367852, "Rank": 1.0}, {"Indienende_partij": "VVD", "Topic": "Europa", "Percentage": 0.10187667560321716, "Rank": 2.0}, {"Indienende_partij": "VVD", "Topic": "Infrastructuur & water", "Percentage": 0.10187667560321716, "Rank": 2.0}, {"Indienende_partij": "VVD", "Topic": "Veiligheid", "Percentage": 0.16353887399463807, "Rank": 1.0}, {"Indienende_partij": "Volt", "Topic": "Europa", "Percentage": 0.3699421965317919, "Rank": 1.0}, {"Indienende_partij": "Volt", "Topic": "Gezondheidszorg", "Percentage": 0.09248554913294797, "Rank": 3.0}, {"Indienende_partij": "Volt", "Topic": "Klimaat", "Percentage": 0.10982658959537572, "Rank": 2.0}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p>Als een partij een hele grote bol heeft betekent dit dat de partij zich heel erg richt op dit onderwerp. Zijn er geen grote bollen binnen een partij is de inzet meer over de onderwerpen verspreid. Europa, Landbouw en Milieu en Veiligheid krijgen bij veel partijen veel aandacht.</p>
+</section>
+<section id="stemgedrag-per-onderwerp" class="level2">
+<h2 class="anchored" data-anchor-id="stemgedrag-per-onderwerp">Stemgedrag per onderwerp</h2>
+<p>Dan toch nog eens proberen het stemgedrag te visualiseren. Als de BBB iets indient voor Landbouw &amp; Milieu betekent dit heel iets heel anders dan als de PvdD dat doet. In onderstaande plots staat per onderwerp het stemgedrag gevisualiseerd. Positief of negatief zegt niets, het gaat om partijen die dichtbij of ver weg van elkaar staan. PvdD en VVD vormen meestal de uitersten en verschillen dus het meeste op stemgedrag. Deze grafieken verklaren meestal zo’n 35%-55% van de variatie in het stemgedrag. Let op: het is dus een enorme versimpeling van de werkelijkheid!</p>
+<p>‘#’ geeft het aantal moties aan en ‘%’ het percentage dat deze visualisatie verklaart. Meestal zien we hetzelfde patroon terug, een aantal keer zien we echt ‘regering tegenover oppositie’ (gezondheidszorg, arbeid, jeugdzorg en belasting).</p>
+</section>
+<section id="stemgedrag-op-klimaat" class="level2">
+<h2 class="anchored" data-anchor-id="stemgedrag-op-klimaat">Stemgedrag op klimaat</h2>
+<p>Hieronder zie je het stemgedrag op klimaat. De afstand tussen de partijen geeft aan hoeveel ze verschillen. Hiermee kunnen we ~40% van het stemgedrag verklaren.</p>
+<div id="cell-32" class="cell" data-execution_count="97">
+<div class="cell-output cell-output-display" data-execution_count="97">
+
+<style>
+  #altair-viz-7e134438f6764b7b81bccdfcee8e6abf.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-7e134438f6764b7b81bccdfcee8e6abf.vega-embed details,
+  #altair-viz-7e134438f6764b7b81bccdfcee8e6abf.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-7e134438f6764b7b81bccdfcee8e6abf"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-7e134438f6764b7b81bccdfcee8e6abf") {
+      outputDiv = document.getElementById("altair-viz-7e134438f6764b7b81bccdfcee8e6abf");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-c745429bedc8b5ff5d1d971c34e82bc5"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "partij", "legend": null, "scale": {"domain": ["GroenLinks", "PvdA", "Volt", "PvdD", "BIJ1", "SP", "DENK", "D66", "ChristenUnie", "Omtzigt", "CDA", "VVD", "BBB", "SGP", "JA21", "PVV", "Groep Van Haga", "FVD"], "range": ["#48a641", "#df111a", "#502379", "#006b2d", "#b5b40a", "#e3001b", "#17becf", "#04a438", "#00a5e8", "#4f7cd1", "#5cb957", "#ff7f0e", "#93c01f", "#d86120", "#202e76", "#002759", "brown", "#800000"]}, "type": "nominal"}, "x": {"field": "partij", "sort": {"field": "x", "order": "descending"}, "title": "Klimaat #925 41%", "type": "nominal"}, "y": {"axis": null, "field": "x", "type": "quantitative"}}, "height": 75.0, "width": 300.0, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-c745429bedc8b5ff5d1d971c34e82bc5": [{"x": -10.801375597233964, "partij": "FVD"}, {"x": -9.290601331636903, "partij": "Groep Van Haga"}, {"x": -9.07061166781258, "partij": "JA21"}, {"x": -8.968012644436696, "partij": "PVV"}, {"x": -0.7428051778703004, "partij": "BBB"}, {"x": -0.5231884965728915, "partij": "SGP"}, {"x": -0.08965983349712303, "partij": "VVD"}, {"x": 0.9094516347650528, "partij": "CDA"}, {"x": 2.4929118089560305, "partij": "Omtzigt"}, {"x": 3.9572280157030884, "partij": "ChristenUnie"}, {"x": 4.950098308791752, "partij": "D66"}, {"x": 9.509766928344568, "partij": "DENK"}, {"x": 10.658935442297755, "partij": "SP"}, {"x": 11.540307371409094, "partij": "BIJ1"}, {"x": 12.846943778449608, "partij": "Volt"}, {"x": 13.273507325893705, "partij": "PvdD"}, {"x": 14.05269381101273, "partij": "PvdA"}, {"x": 14.066491201574955, "partij": "GroenLinks"}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p>Als we er nog een tweede as bij zetten kunnen we 60% van de variatie verklaren.</p>
+<div id="cell-34" class="cell" data-execution_count="98">
+<div class="cell-output cell-output-display" data-execution_count="98">
+
+<style>
+  #altair-viz-c8f03e7b5b4a4b1c8ef50424a4795fce.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-c8f03e7b5b4a4b1c8ef50424a4795fce.vega-embed details,
+  #altair-viz-c8f03e7b5b4a4b1c8ef50424a4795fce.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-c8f03e7b5b4a4b1c8ef50424a4795fce"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-c8f03e7b5b4a4b1c8ef50424a4795fce") {
+      outputDiv = document.getElementById("altair-viz-c8f03e7b5b4a4b1c8ef50424a4795fce");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@5.8.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "5.8.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 1}, "axis": {"grid": false}}, "layer": [{"mark": {"type": "point"}, "encoding": {"color": {"field": "partij", "legend": null, "scale": {"domain": ["GroenLinks", "PvdA", "Volt", "PvdD", "BIJ1", "SP", "DENK", "D66", "ChristenUnie", "Omtzigt", "CDA", "VVD", "BBB", "SGP", "JA21", "PVV", "Groep Van Haga", "FVD"], "range": ["#48a641", "#df111a", "#502379", "#006b2d", "#b5b40a", "#e3001b", "#17becf", "#04a438", "#00a5e8", "#4f7cd1", "#5cb957", "#ff7f0e", "#93c01f", "#d86120", "#202e76", "#002759", "brown", "#800000"]}, "type": "nominal"}, "tooltip": [{"field": "partij", "type": "nominal"}], "x": {"axis": null, "field": "x", "type": "quantitative"}, "y": {"axis": null, "field": "y", "type": "quantitative"}}}, {"mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 4.15280783237474, "dy": 9.375297516644297}, "encoding": {"color": {"field": "partij", "legend": null, "scale": {"domain": ["GroenLinks", "PvdA", "Volt", "PvdD", "BIJ1", "SP", "DENK", "D66", "ChristenUnie", "Omtzigt", "CDA", "VVD", "BBB", "SGP", "JA21", "PVV", "Groep Van Haga", "FVD"], "range": ["#48a641", "#df111a", "#502379", "#006b2d", "#b5b40a", "#e3001b", "#17becf", "#04a438", "#00a5e8", "#4f7cd1", "#5cb957", "#ff7f0e", "#93c01f", "#d86120", "#202e76", "#002759", "brown", "#800000"]}, "type": "nominal"}, "text": {"field": "partij", "type": "nominal"}, "tooltip": [{"field": "partij", "type": "nominal"}], "x": {"axis": null, "field": "x", "type": "quantitative"}, "y": {"axis": null, "field": "y", "type": "quantitative"}}, "title": "Welke partijen lijken op elkaar"}], "data": {"name": "data-e933c1925dfa9779328996b052add284"}, "height": 183.80657797038097, "width": 369.93166391072447, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-e933c1925dfa9779328996b052add284": [{"x": -10.80137516233103, "y": -5.349889770914993, "partij": "FVD"}, {"x": -9.290601023635965, "y": -3.0514273500283338, "partij": "Groep Van Haga"}, {"x": -9.070612349246698, "y": -4.52319848205094, "partij": "JA21"}, {"x": -8.968012713202507, "y": -6.153232450071658, "partij": "PVV"}, {"x": -0.7428050200671121, "y": -4.181296431913538, "partij": "BBB"}, {"x": -0.5231891211587616, "y": 4.040343790391255, "partij": "SGP"}, {"x": -0.08966050863882824, "y": 10.502864569963833, "partij": "VVD"}, {"x": 0.9094511639724003, "y": 10.837112418030527, "partij": "CDA"}, {"x": 2.4929123410937004, "y": 1.3319177239919973, "partij": "Omtzigt"}, {"x": 3.9572286732022093, "y": 9.752635017553587, "partij": "ChristenUnie"}, {"x": 4.950098862388991, "y": 9.911609357658271, "partij": "D66"}, {"x": 9.509766667004417, "y": -1.750680899726299, "partij": "DENK"}, {"x": 10.658935250147847, "y": -5.615759103603096, "partij": "SP"}, {"x": 11.540307293750532, "y": -3.221243747108108, "partij": "BIJ1"}, {"x": 12.846944755506676, "y": -2.012140594626092, "partij": "Volt"}, {"x": 13.273507307502076, "y": -5.312001879550295, "partij": "PvdD"}, {"x": 14.052693267743296, "y": -2.507804928325405, "partij": "PvdA"}, {"x": 14.06649074152881, "y": -2.697807239670689, "partij": "GroenLinks"}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p>Vooral voor Omtzigt gaat het heel interessant worden wat de standpunten zijn ten opzichte van klimaat. Dit zou zomaar eens kunnen bepalen welke kant het beleid op gaat kantelen.</p>
+<p>Voor alle onderwerpen heb ik <a href="https://stemvinder.ew.r.appspot.com/">de MotieMachine</a> gemaakt. Hier staan alle 72 onderwerpen in, inclusief een mogelijkheid om de moties door te lezen. Veel plezier ermee!</p>
+</section>
+<section id="bijlage-1-alle-72-onderwerpen-die-in-de-motiemachine-staan" class="level2">
+<h2 class="anchored" data-anchor-id="bijlage-1-alle-72-onderwerpen-die-in-de-motiemachine-staan">Bijlage 1: alle 72 onderwerpen die in de motiemachine staan</h2>
+<ul>
+<li>[‘landbouwbeleid’ ‘landbouw’ ‘landbouwsector’ ‘landbouwgronden’], 479 moties</li>
+<li>[‘europe’ ‘europees’ ‘eurolanden’ ‘europa’], 371 moties</li>
+<li>[‘onderwijsaanbod’ ‘basisonderwijs’ ‘onderwijsveld’ ‘onderwijsroute’], 347 moties</li>
+<li>[‘cyberveiligheid’ ‘onlineprivacy’ ‘veiligheidsraad’ ‘veiligheid’], 346 moties</li>
+<li>[‘ziekenhuizen’ ‘verpleeghuizen’ ‘verpleegzorg’ ‘verpleeghuis’], 339 moties</li>
+<li>[‘woningbouw’ ‘huizenprijzen’ ‘woningmarkt’ ‘huiseigenaren’], 283 moties</li>
+<li>[‘klimaatbeleid’ ‘klimaatakkoord’ ‘klimaatakoord’ ‘klimaatcrisis’], 244 moties</li>
+<li>[‘treinverkeer’ ‘treinverbinding’ ‘spoorwegen’ ‘verkeersdoden’], 241 moties</li>
+<li>[‘jeugdzorgplus’ ‘jeugdbecherming’ ‘jeugdbeschermer’ ‘jeugdzorg’], 237 moties</li>
+<li>[‘vaccinatiegraad’ ‘vaccinatie’ ‘vaccinaties’ ‘vaccineren’], 226 moties</li>
+<li>[‘vluchtelingen’ ‘migranten’ ‘vluchteling’ ‘immigratie’], 202 moties</li>
+<li>[‘amnesty’ ‘oversterfte’ ‘overschreden’ ‘overweging’], 180 moties</li>
+<li>[‘milieuwetgeving’ ‘milieubeheer’ ‘milieugrondslag’ ‘milieuschade’], 172 moties</li>
+<li>[‘waterbeleid’ ‘waterveiligheid’ ‘hervatten’ ‘grondwater’], 169 moties</li>
+<li>[‘herstelfonds’ ‘burgerbudgetten’ ‘wijzigingen’ ‘systeemkosten’], 168 moties</li>
+<li>[‘arbeidsmarkt’ ‘werkgelegenheid’ ‘arbeidstekorten’ ‘arbeidsmiranten’], 167 moties</li>
+<li>[‘belastingwetten’ ‘belastingen’ ‘tax’ ‘belasting’], 161 moties</li>
+<li>[‘economische’ ‘economisch’ ‘economic’ ‘econoische’], 159 moties</li>
+<li>[‘volksgezondheid’ ‘sporthulpmiddel’ ‘gezondheidszorg’ ‘gezondheid’], 154 moties</li>
+<li>[‘strafrechtketen’ ‘strafrechtelijk’ ‘gevangenisstraf’ ‘strafrecht’], 150 moties</li>
+<li>[‘minimuminkomen’ ‘minimumloon’ ‘armoedegrens’ ‘minimaliseren’], 149 moties</li>
+<li>[‘politiewerk’ ‘politieagenten’ ‘politiebureau’ ‘politiebureaus’], 141 moties</li>
+<li>[‘dierenwelzijn’ ‘dierenleed’ ‘dieren’ ‘huisdieren’], 140 moties</li>
+<li>[‘luchthaven’ ‘vliegveld’ ‘luchthavens’ ‘airport’], 131 moties</li>
+<li>[‘cultuursector’ ‘cultuurbeleid’ ‘cultuur’ ‘cultureel’], 118 moties</li>
+<li>[‘pensioenstelsel’ ‘pensioenwet’ ‘pensioenopbouw’ ‘pensioenakkoord’], 114 moties</li>
+<li>[‘industriebeleid’ ‘bordstrategie’ ‘strategische’ ‘strategisch’], 112 moties</li>
+<li>[‘maatschappelijk’ ‘gerechtshof’ ‘sociale’ ‘hof’], 110 moties</li>
+<li>[‘europees’ ‘europe’ ‘eurolanden’ ‘europa’], 104 moties</li>
+<li>[‘rijksbeleid’ ‘taxibeleid’ ‘erfpachtbeleid’ ‘economiebeleid’], 103 moties</li>
+<li>[‘energieprijzen’ ‘energiekosten’ ‘energiecrisis’ ‘energieverbruik’], 102 moties</li>
+<li>[‘sporthulpmiddel’ ‘sportbeleid’ ‘sportvereniging’ ‘sport’], 98 moties</li>
+<li>[‘gaswinning’ ‘gasvelden’ ‘gasopslag’ ‘gasveld’], 96 moties</li>
+<li>[‘gepensioneerden’ ‘pensioenopbouw’ ‘ouderen’ ‘ouderenzorg’], 92 moties</li>
+<li>[‘onderzeeboten’ ‘seaports’ ‘zeegebieden’ ‘zee’], 90 moties</li>
+<li>[‘russische’ ‘russisch’ ‘europees’ ‘europe’], 89 moties</li>
+<li>[‘gasprijzen’ ‘gasopslag’ ‘gasnetwerk’ ‘gasopslagen’], 88 moties</li>
+<li>[‘biobrandstoffen’ ‘biomassa’ ‘ecoregelingen’ ‘biobrandstof’], 87 moties</li>
+<li>[‘racisme’ ‘discrimiatie’ ‘discriminatie’ ‘racistische’], 87 moties</li>
+<li>[‘ouders’ ‘belastingdienst’ ‘familierecht’ ‘belastingschuld’], 87 moties</li>
+<li>[‘verpleeghuizen’ ‘ziekenhuizen’ ‘ziekenhuiszorg’ ‘verpleeghuis’], 78 moties</li>
+<li>[‘militaire’ ‘militairen’ ‘soldaten’ ‘krijgsmacht’], 74 moties</li>
+<li>[‘inflatie’ ‘inflation’ ‘bufferstroken’ ‘buffers’], 74 moties</li>
+<li>[‘afghaanse’ ‘afghanistan’ ‘talibanregime’ ‘afghanen’], 73 moties</li>
+<li>[‘belastingdienst’ ‘belastingwetten’ ‘belastingienst’ ‘belastingen’], 72 moties</li>
+<li>[‘jeugdzorgplus’ ‘jeugdbecherming’ ‘jeugdbeschermer’ ‘jeugdzorg’], 71 moties</li>
+<li>[‘klimaatcrisis’ ‘economische’ ‘economic’ ‘klimaatakoord’], 71 moties</li>
+<li>[‘mediabeleid’ ‘journalisten’ ‘journalist’ ‘media’], 70 moties</li>
+<li>[‘taalonderwijs’ ‘onderwijsaanbod’ ‘afstuderen’ ‘afgestudeerden’], 69 moties</li>
+<li>[‘energiecrisis’ ‘energiebeleid’ ‘energiekosten’ ‘klimaatbeleid’], 66 moties</li>
+<li>[‘waterbeleid’ ‘energiebeleid’ ‘productiewater’ ‘waterveiligheid’], 66 moties</li>
+<li>[‘verkrachting’ ‘verkracht’ ‘seksualiteit’ ‘prostitutie’], 64 moties</li>
+<li>[‘financieren’ ‘financiering’ ‘financieringen’ ‘financien’], 63 moties</li>
+<li>[‘belastingen’ ‘winstbelasting’ ‘tax’ ‘belasting’], 63 moties</li>
+<li>[‘palestijnen’ ‘palestijns’ ‘palestijnse’ ‘israeli’], 57 moties</li>
+<li>[‘bankrekening’ ‘bank’ ‘volksbank’ ‘banken’], 55 moties</li>
+<li>[‘onderwijsaanbod’ ‘onderwijsroute’ ‘educatie’ ‘onderwijs’], 54 moties</li>
+<li>[‘recycling’ ‘recyclebaar’ ‘recyclen’ ‘recyclaat’], 53 moties</li>
+<li>[‘maatschappelijk’ ‘sociale’ ‘arbeidsmiranten’ ‘arbeidstekorten’], 53 moties</li>
+<li>[‘zonnepanelen’ ‘zonnepaelen’ ‘energiebeleid’ ‘zonnestroom’], 52 moties</li>
+<li>[‘china’ ‘chinese’ ‘exitstrategie’ ‘bordstrategie’], 51 moties</li>
+<li>[‘kernenergie’ ‘nuclear’ ‘nucleaire’ ‘kerncentrales’], 49 moties</li>
+<li>[‘foreign’ ‘buitenlands’ ‘buitenland’ ‘buitengrenzen’], 46 moties</li>
+<li>[‘kredietcrisis’ ‘schuldenaanpak’ ‘kredietregister’ ‘schulden’], 45 moties</li>
+<li>[‘vogelgriepvirus’ ‘vogelgriep’ ‘vogels’ ‘vogelpest’], 43 moties</li>
+<li>[‘klimaatfonds’ ‘omgevingsfonds’ ‘warmtefonds’ ‘noodfonds’], 43 moties</li>
+<li>[‘vuurwerkverbod’ ‘brandweerzorg’ ‘brandweerlieden’ ‘vuurwerk’], 40 moties</li>
+<li>[‘gascrisis’ ‘gasprijzen’ ‘broeikasgassen’ ‘gasopslagen’], 38 moties</li>
+<li>[‘drugscriminelen’ ‘drugbeleid’ ‘drugsgebruik’ ‘drugssmokkel’], 38 moties</li>
+<li>[‘abortuszorg’ ‘abortussen’ ‘abortus’ ‘zwangerschap’], 37 moties</li>
+<li>[‘terrorisme’ ‘terroristische’ ‘terroristen’ ‘terroristisch’], 36 moties</li>
+<li>[‘indonesische’ ‘indonesie’ ‘nederlanders’ ‘oorlogsmisdaden’], 36 moties</li>
+<li>[‘buitengrenzen’ ‘buitengrens’ ‘buitenlucht’ ‘out’], 32 moties</li>
+<li>[‘koning’ ‘koningshuis’ ‘koninklijk’ ‘koninklijke’], 31 moties</li>
+<li>[‘landbouwbeleid’ ‘actieprogramma’ ‘landbouwsector’ ‘programma’], 30 moties</li>
+<li>[‘groenregeling’ ‘groenprojecten’ ‘milieugrondslag’ ‘ecoregelingen’], 28 moties</li>
+<li>[‘sigaretten’ ‘sigaret’ ‘roken’ ‘tabaksproducten’], 28 moties</li>
+<li>[‘algoritmes’ ‘algoritme’ ‘algoritmen’ ‘gedragscode’], 27 moties</li>
+<li>[‘syrische’ ‘vluchtelingen’ ‘vluchteling’ ‘syriers’], 27 moties</li>
+<li>[‘iraanse’ ‘iran’ ‘europees’ ‘eurolanden’], 26 moties</li>
+<li>[‘kansspelen’ ‘loterijen’ ‘loterij’ ‘risico’], 25 moties</li>
+<li>[‘taxichauffeurs’ ‘taxibeleid’ ‘taxi’ ‘taxibranche’], 21 moties</li>
+</ul>
+</section>
+<section id="bijlage-2-wordcloud-van-de-14-onderwerpen" class="level2">
+<h2 class="anchored" data-anchor-id="bijlage-2-wordcloud-van-de-14-onderwerpen">Bijlage 2: Wordcloud van de 14 onderwerpen</h2>
+<div id="cell-43" class="cell" data-execution_count="102">
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-2.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-3.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-4.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-5.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-6.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-7.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-8.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-9.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-10.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-11.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-12.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-13.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2023-09-23-kamermoties_topics_files/figure-html/cell-26-output-14.png" class="img-fluid"></p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, function() {
+      let href = xref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note !== null) {
+        if (id.startsWith('sec-')) {
+          // Special case sections, only their first couple elements
+          const container = document.createElement("div");
+          if (note.children && note.children.length > 2) {
+            for (let i = 0; i < 2; i++) {
+              container.appendChild(note.children[i].cloneNode(true));
+            }
+            return container.innerHTML
+          } else {
+            return note.innerHTML;
+          }
+        } else {
+          return note.innerHTML;
+        }
+      } else {
+        return "";
+      }
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
