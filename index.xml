@@ -97,8 +97,13 @@
 </div>
 </div>
 <p>Note that in this chart the y-axis is logaritmic instead of linear. The blue line shows you all ways you could place pegs without minding any rules. For example, you can arrange the 32 starting pegs + 1 free spot in 33 potential ways. In the real game with 32 pegs there is only 1 position that is reachable: the start position. That’s why the orange line is lower. After the initial move, there are 4 reachable positions with 31 pegs and this ‘escalates’ quite quickly.</p>
-<p>Let’s now investigate these reachable positions further. They can be divided into 3 different types: * Winning positions from where you can still reach the winning end with 1 peg * Dead ends, where you cannot move anymore. * Losing positions, where you will eventually hit a dead end before you win the game.</p>
-<p>While playing you might not know if you are in a winning or losing position. You will notice a dead end though.</p>
+<p>Let’s now investigate these reachable positions further. They can be divided into 3 different types:</p>
+<ul>
+<li>Winning positions from where you can still reach the winning end with 1 peg</li>
+<li>Dead ends, where you cannot move anymore.</li>
+<li>Losing positions, where you will eventually hit a dead end before you win the game.</li>
+</ul>
+<p>While playing you might not know if you are in a winning or losing position. You will certainly notice a dead end though 😉</p>
 <div id="3ae41c7c" class="cell" data-execution_count="28">
 <div class="cell-output cell-output-display" data-execution_count="28">
 
@@ -3837,7 +3842,7 @@ Warning
 <style type="text/css">
 </style>
 
-<div id="T_baefe_" class="quarto-float quarto-figure quarto-figure-center anchored" style="display:inline" data-quarto-postprocess="true">
+<div id="T_baefe_" class="quarto-float quarto-figure quarto-figure-center anchored" data-quarto-postprocess="true" style="display:inline">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="T_baefe_-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: Most active users
@@ -3892,7 +3897,7 @@ Table&nbsp;1: Most active users
 <style type="text/css">
 </style>
 
-<div id="T_35a29_" class="quarto-float quarto-figure quarto-figure-center anchored" style="display:inline" data-quarto-postprocess="true">
+<div id="T_35a29_" class="quarto-float quarto-figure quarto-figure-center anchored" data-quarto-postprocess="true" style="display:inline">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="T_35a29_-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;2: Most rated games
