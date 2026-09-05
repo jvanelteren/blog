@@ -175,7 +175,7 @@
 <ul>
 <li>The first couple of moves from 32 - 29 there are no reachable losing positions, so any moves you make are still winning</li>
 <li>Eventually there are way more losing positions</li>
-<li>The first dead end is possible at 26 pegs, after only 6 moves. It’s a nice exercise to try to reach it from the start position (hint only move the center pegs)</li>
+<li>The first dead end is possible at 26 pegs, after only 6 moves. It’s a nice exercise to try to reach it from the start position.</li>
 </ul>
 <div id="f630f167" class="cell" data-execution_count="29">
 <div class="cell-output cell-output-display">
@@ -3837,7 +3837,7 @@ Warning
 <style type="text/css">
 </style>
 
-<div id="T_baefe_" class="quarto-float quarto-figure quarto-figure-center anchored" data-quarto-postprocess="true" style="display:inline">
+<div id="T_baefe_" class="quarto-float quarto-figure quarto-figure-center anchored" style="display:inline" data-quarto-postprocess="true">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="T_baefe_-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: Most active users
@@ -3892,7 +3892,7 @@ Table&nbsp;1: Most active users
 <style type="text/css">
 </style>
 
-<div id="T_35a29_" class="quarto-float quarto-figure quarto-figure-center anchored" data-quarto-postprocess="true" style="display:inline">
+<div id="T_35a29_" class="quarto-float quarto-figure quarto-figure-center anchored" style="display:inline" data-quarto-postprocess="true">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="T_35a29_-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;2: Most rated games
