@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jesse van Elteren">
+<meta name="dcterms.date" content="2026-09-06">
+<meta name="description" content="understanding the game">
+
+<title>Peg solitaire – Blog Jesse van Elteren</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-1302238-4', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<meta name="quarto:status" content="draft">
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Peg solitaire – Blog Jesse van Elteren">
+<meta property="og:description" content="understanding the game">
+<meta property="og:image" content="https://jvanelteren.github.io/blog/posts/pegsolitaire/peg.png">
+<meta property="og:site_name" content="Blog Jesse van Elteren">
+<meta property="og:image:height" content="580">
+<meta property="og:image:width" content="716">
+<meta name="twitter:title" content="Peg solitaire – Blog Jesse van Elteren">
+<meta name="twitter:description" content="understanding the game">
+<meta name="twitter:image" content="https://jvanelteren.github.io/blog/posts/pegsolitaire/peg.png">
+<meta name="twitter:image-height" content="580">
+<meta name="twitter:image-width" content="716">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Blog Jesse van Elteren</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Peg solitaire</h1>
+                  <div>
+        <div class="description">
+          understanding the game
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">game</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Jesse van Elteren </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 6, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p><img src="peg.png" class="img-fluid"></p>
+<p>For some reason the peg solitaire game ended up on our table. I played it a couple of times in my younger years and you might have too. The rules are dead simple: take a peg, jump over an adjecent one to a free square and take the other peg away. Try to end up with 1 peg to win.</p>
+<p>But it’s not so easy and this seemed like a nice opportunity to do some coding. The board has 33 places where pegs can be placed, leading to roughly 8,5 billion potential positions. Because of the start position and the rules not all of these positions can be reached while playing:</p>
+<div id="11ef864b" class="cell" data-execution_count="66">
+<div class="cell-output cell-output-display" data-execution_count="66">
+
+<style>
+  #altair-viz-b18900f34e34477dac0f2eb1be15cdc2.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-b18900f34e34477dac0f2eb1be15cdc2.vega-embed details,
+  #altair-viz-b18900f34e34477dac0f2eb1be15cdc2.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-b18900f34e34477dac0f2eb1be15cdc2"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-b18900f34e34477dac0f2eb1be15cdc2") {
+      outputDiv = document.getElementById("altair-viz-b18900f34e34477dac0f2eb1be15cdc2");
+    }
+
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.4.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.4.1"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-dccfabcd2366e8da805262b25d44720d"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "Legend", "type": "nominal"}, "x": {"field": "#pegs", "scale": {"reverse": true}, "title": "Number of pegs left", "type": "ordinal"}, "y": {"field": "#", "scale": {"type": "log"}, "title": "Positions", "type": "quantitative"}}, "height": 300, "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-dccfabcd2366e8da805262b25d44720d": [{"#pegs": 1, "Legend": "Reachable positions", "#": 5}, {"#pegs": 2, "Legend": "Reachable positions", "#": 32}, {"#pegs": 3, "Legend": "Reachable positions", "#": 334}, {"#pegs": 4, "Legend": "Reachable positions", "#": 2529}, {"#pegs": 5, "Legend": "Reachable positions", "#": 14727}, {"#pegs": 6, "Legend": "Reachable positions", "#": 68236}, {"#pegs": 7, "Legend": "Reachable positions", "#": 255544}, {"#pegs": 8, "Legend": "Reachable positions", "#": 800152}, {"#pegs": 9, "Legend": "Reachable positions", "#": 2120101}, {"#pegs": 10, "Legend": "Reachable positions", "#": 4792664}, {"#pegs": 11, "Legend": "Reachable positions", "#": 9274496}, {"#pegs": 12, "Legend": "Reachable positions", "#": 15425572}, {"#pegs": 13, "Legend": "Reachable positions", "#": 22106348}, {"#pegs": 14, "Legend": "Reachable positions", "#": 27286330}, {"#pegs": 15, "Legend": "Reachable positions", "#": 28994876}, {"#pegs": 16, "Legend": "Reachable positions", "#": 26482824}, {"#pegs": 17, "Legend": "Reachable positions", "#": 20773236}, {"#pegs": 18, "Legend": "Reachable positions", "#": 14020166}, {"#pegs": 19, "Legend": "Reachable positions", "#": 8171208}, {"#pegs": 20, "Legend": "Reachable positions", "#": 4138302}, {"#pegs": 21, "Legend": "Reachable positions", "#": 1834379}, {"#pegs": 22, "Legend": "Reachable positions", "#": 717788}, {"#pegs": 23, "Legend": "Reachable positions", "#": 249690}, {"#pegs": 24, "Legend": "Reachable positions", "#": 77559}, {"#pegs": 25, "Legend": "Reachable positions", "#": 21842}, {"#pegs": 26, "Legend": "Reachable positions", "#": 5648}, {"#pegs": 27, "Legend": "Reachable positions", "#": 1338}, {"#pegs": 28, "Legend": "Reachable positions", "#": 296}, {"#pegs": 29, "Legend": "Reachable positions", "#": 60}, {"#pegs": 30, "Legend": "Reachable positions", "#": 12}, {"#pegs": 31, "Legend": "Reachable positions", "#": 4}, {"#pegs": 32, "Legend": "Reachable positions", "#": 1}, {"#pegs": 1, "Legend": "Potential positions", "#": 33}, {"#pegs": 2, "Legend": "Potential positions", "#": 528}, {"#pegs": 3, "Legend": "Potential positions", "#": 5456}, {"#pegs": 4, "Legend": "Potential positions", "#": 40920}, {"#pegs": 5, "Legend": "Potential positions", "#": 237336}, {"#pegs": 6, "Legend": "Potential positions", "#": 1107568}, {"#pegs": 7, "Legend": "Potential positions", "#": 4272048}, {"#pegs": 8, "Legend": "Potential positions", "#": 13884156}, {"#pegs": 9, "Legend": "Potential positions", "#": 38567100}, {"#pegs": 10, "Legend": "Potential positions", "#": 92561040}, {"#pegs": 11, "Legend": "Potential positions", "#": 193536720}, {"#pegs": 12, "Legend": "Potential positions", "#": 354817320}, {"#pegs": 13, "Legend": "Potential positions", "#": 573166440}, {"#pegs": 14, "Legend": "Potential positions", "#": 818809200}, {"#pegs": 15, "Legend": "Potential positions", "#": 1037158320}, {"#pegs": 16, "Legend": "Potential positions", "#": 1166803110}, {"#pegs": 17, "Legend": "Potential positions", "#": 1166803110}, {"#pegs": 18, "Legend": "Potential positions", "#": 1037158320}, {"#pegs": 19, "Legend": "Potential positions", "#": 818809200}, {"#pegs": 20, "Legend": "Potential positions", "#": 573166440}, {"#pegs": 21, "Legend": "Potential positions", "#": 354817320}, {"#pegs": 22, "Legend": "Potential positions", "#": 193536720}, {"#pegs": 23, "Legend": "Potential positions", "#": 92561040}, {"#pegs": 24, "Legend": "Potential positions", "#": 38567100}, {"#pegs": 25, "Legend": "Potential positions", "#": 13884156}, {"#pegs": 26, "Legend": "Potential positions", "#": 4272048}, {"#pegs": 27, "Legend": "Potential positions", "#": 1107568}, {"#pegs": 28, "Legend": "Potential positions", "#": 237336}, {"#pegs": 29, "Legend": "Potential positions", "#": 40920}, {"#pegs": 30, "Legend": "Potential positions", "#": 5456}, {"#pegs": 31, "Legend": "Potential positions", "#": 528}, {"#pegs": 32, "Legend": "Potential positions", "#": 33}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p>Note that in this chart the y-axis is logaritmic instead of linear. The blue line shows you all ways you could place pegs without minding any rules. For example, you can arrange the 32 starting pegs + 1 free spot in 33 potential ways. In the real game with 32 pegs there is only 1 position that is reachable: the start position. That’s why the orange line is lower. After the initial move, there are 4 reachable positions with 31 pegs and this ‘escalates’ quite quickly.</p>
+<p>Let’s now investigate these reachable positions further. They can be divided into 3 different types: * Winning positions from where you can still reach the winning end with 1 peg * Dead ends, where you cannot move anymore. * Losing positions, where you will eventually hit a dead end before you win the game.</p>
+<p>While playing you might not know if you are in a winning or losing position. You will notice a dead end though.</p>
+<div id="3ae41c7c" class="cell" data-execution_count="74">
+<div class="cell-output cell-output-display" data-execution_count="74">
+
+<style>
+  #altair-viz-5adfbff967ba4976a40d0768c85f7f5f.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-5adfbff967ba4976a40d0768c85f7f5f.vega-embed details,
+  #altair-viz-5adfbff967ba4976a40d0768c85f7f5f.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-5adfbff967ba4976a40d0768c85f7f5f"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-5adfbff967ba4976a40d0768c85f7f5f") {
+      outputDiv = document.getElementById("altair-viz-5adfbff967ba4976a40d0768c85f7f5f");
+    }
+
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.4.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.4.1"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-98123d58b1e1117d07144c3d7729d87c"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "Legend", "scale": {"domain": ["Reachable and winning", "Reachable and losing", "Reachable and dead end"], "range": ["green", "red", "purple"]}, "type": "nominal"}, "x": {"field": "#pegs", "scale": {"reverse": true}, "title": "Number of pegs left", "type": "ordinal"}, "y": {"field": "#", "scale": {"type": "log"}, "title": "Positions", "type": "quantitative"}}, "height": 300, "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-98123d58b1e1117d07144c3d7729d87c": [{"#pegs": 1, "Legend": "Reachable and winning", "#": 5.0}, {"#pegs": 2, "Legend": "Reachable and winning", "#": 4.0}, {"#pegs": 3, "Legend": "Reachable and winning", "#": 12.0}, {"#pegs": 4, "Legend": "Reachable and winning", "#": 60.0}, {"#pegs": 5, "Legend": "Reachable and winning", "#": 292.0}, {"#pegs": 6, "Legend": "Reachable and winning", "#": 1292.0}, {"#pegs": 7, "Legend": "Reachable and winning", "#": 5012.0}, {"#pegs": 8, "Legend": "Reachable and winning", "#": 16628.0}, {"#pegs": 9, "Legend": "Reachable and winning", "#": 49236.0}, {"#pegs": 10, "Legend": "Reachable and winning", "#": 127964.0}, {"#pegs": 11, "Legend": "Reachable and winning", "#": 285740.0}, {"#pegs": 12, "Legend": "Reachable and winning", "#": 546308.0}, {"#pegs": 13, "Legend": "Reachable and winning", "#": 902056.0}, {"#pegs": 14, "Legend": "Reachable and winning", "#": 1298248.0}, {"#pegs": 15, "Legend": "Reachable and winning", "#": 1639652.0}, {"#pegs": 16, "Legend": "Reachable and winning", "#": 1841556.0}, {"#pegs": 17, "Legend": "Reachable and winning", "#": 1841556.0}, {"#pegs": 18, "Legend": "Reachable and winning", "#": 1639652.0}, {"#pegs": 19, "Legend": "Reachable and winning", "#": 1298248.0}, {"#pegs": 20, "Legend": "Reachable and winning", "#": 902056.0}, {"#pegs": 21, "Legend": "Reachable and winning", "#": 546308.0}, {"#pegs": 22, "Legend": "Reachable and winning", "#": 285740.0}, {"#pegs": 23, "Legend": "Reachable and winning", "#": 127964.0}, {"#pegs": 24, "Legend": "Reachable and winning", "#": 49236.0}, {"#pegs": 25, "Legend": "Reachable and winning", "#": 16628.0}, {"#pegs": 26, "Legend": "Reachable and winning", "#": 5012.0}, {"#pegs": 27, "Legend": "Reachable and winning", "#": 1292.0}, {"#pegs": 28, "Legend": "Reachable and winning", "#": 292.0}, {"#pegs": 29, "Legend": "Reachable and winning", "#": 60.0}, {"#pegs": 30, "Legend": "Reachable and winning", "#": 12.0}, {"#pegs": 31, "Legend": "Reachable and winning", "#": 4.0}, {"#pegs": 32, "Legend": "Reachable and winning", "#": 1.0}, {"#pegs": 1, "Legend": "Reachable and losing", "#": null}, {"#pegs": 2, "Legend": "Reachable and losing", "#": null}, {"#pegs": 3, "Legend": "Reachable and losing", "#": 68.0}, {"#pegs": 4, "Legend": "Reachable and losing", "#": 1174.0}, {"#pegs": 5, "Legend": "Reachable and losing", "#": 9448.0}, {"#pegs": 6, "Legend": "Reachable and losing", "#": 53802.0}, {"#pegs": 7, "Legend": "Reachable and losing", "#": 226810.0}, {"#pegs": 8, "Legend": "Reachable and losing", "#": 750473.0}, {"#pegs": 9, "Legend": "Reachable and losing", "#": 2036974.0}, {"#pegs": 10, "Legend": "Reachable and losing", "#": 4638854.0}, {"#pegs": 11, "Legend": "Reachable and losing", "#": 8973634.0}, {"#pegs": 12, "Legend": "Reachable and losing", "#": 14872374.0}, {"#pegs": 13, "Legend": "Reachable and losing", "#": 21201617.0}, {"#pegs": 14, "Legend": "Reachable and losing", "#": 25987266.0}, {"#pegs": 15, "Legend": "Reachable and losing", "#": 27354922.0}, {"#pegs": 16, "Legend": "Reachable and losing", "#": 24641092.0}, {"#pegs": 17, "Legend": "Reachable and losing", "#": 18931640.0}, {"#pegs": 18, "Legend": "Reachable and losing", "#": 12380448.0}, {"#pegs": 19, "Legend": "Reachable and losing", "#": 6872932.0}, {"#pegs": 20, "Legend": "Reachable and losing", "#": 3236246.0}, {"#pegs": 21, "Legend": "Reachable and losing", "#": 1288067.0}, {"#pegs": 22, "Legend": "Reachable and losing", "#": 432040.0}, {"#pegs": 23, "Legend": "Reachable and losing", "#": 121726.0}, {"#pegs": 24, "Legend": "Reachable and losing", "#": 28323.0}, {"#pegs": 25, "Legend": "Reachable and losing", "#": 5214.0}, {"#pegs": 26, "Legend": "Reachable and losing", "#": 632.0}, {"#pegs": 27, "Legend": "Reachable and losing", "#": 46.0}, {"#pegs": 28, "Legend": "Reachable and losing", "#": 4.0}, {"#pegs": 29, "Legend": "Reachable and losing", "#": null}, {"#pegs": 30, "Legend": "Reachable and losing", "#": null}, {"#pegs": 31, "Legend": "Reachable and losing", "#": null}, {"#pegs": 32, "Legend": "Reachable and losing", "#": null}, {"#pegs": 1, "Legend": "Reachable and dead end", "#": null}, {"#pegs": 2, "Legend": "Reachable and dead end", "#": 28.0}, {"#pegs": 3, "Legend": "Reachable and dead end", "#": 254.0}, {"#pegs": 4, "Legend": "Reachable and dead end", "#": 1295.0}, {"#pegs": 5, "Legend": "Reachable and dead end", "#": 4987.0}, {"#pegs": 6, "Legend": "Reachable and dead end", "#": 13142.0}, {"#pegs": 7, "Legend": "Reachable and dead end", "#": 23722.0}, {"#pegs": 8, "Legend": "Reachable and dead end", "#": 33051.0}, {"#pegs": 9, "Legend": "Reachable and dead end", "#": 33891.0}, {"#pegs": 10, "Legend": "Reachable and dead end", "#": 25846.0}, {"#pegs": 11, "Legend": "Reachable and dead end", "#": 15122.0}, {"#pegs": 12, "Legend": "Reachable and dead end", "#": 6890.0}, {"#pegs": 13, "Legend": "Reachable and dead end", "#": 2675.0}, {"#pegs": 14, "Legend": "Reachable and dead end", "#": 816.0}, {"#pegs": 15, "Legend": "Reachable and dead end", "#": 302.0}, {"#pegs": 16, "Legend": "Reachable and dead end", "#": 176.0}, {"#pegs": 17, "Legend": "Reachable and dead end", "#": 40.0}, {"#pegs": 18, "Legend": "Reachable and dead end", "#": 66.0}, {"#pegs": 19, "Legend": "Reachable and dead end", "#": 28.0}, {"#pegs": 20, "Legend": "Reachable and dead end", "#": null}, {"#pegs": 21, "Legend": "Reachable and dead end", "#": 4.0}, {"#pegs": 22, "Legend": "Reachable and dead end", "#": 8.0}, {"#pegs": 23, "Legend": "Reachable and dead end", "#": null}, {"#pegs": 24, "Legend": "Reachable and dead end", "#": null}, {"#pegs": 25, "Legend": "Reachable and dead end", "#": null}, {"#pegs": 26, "Legend": "Reachable and dead end", "#": 4.0}, {"#pegs": 27, "Legend": "Reachable and dead end", "#": null}, {"#pegs": 28, "Legend": "Reachable and dead end", "#": null}, {"#pegs": 29, "Legend": "Reachable and dead end", "#": null}, {"#pegs": 30, "Legend": "Reachable and dead end", "#": null}, {"#pegs": 31, "Legend": "Reachable and dead end", "#": null}, {"#pegs": 32, "Legend": "Reachable and dead end", "#": null}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p>Some observations: * The first couple of moves from 32 - 29 there are no reachable losing positions, so any moves you make are still winning * Eventually there are way more losing positions * There is a purple dot at 26 pegs, which shows it’s possible to reach a dead end after only 6 moves. It’s a nice exercise to try to reach it from the start position</p>
+<ul>
+<li>There are 4 winning positions with 2 pegs left, but 5 winning positions with 1 peg. That sounds strange untill you see it:</li>
+</ul>
+<div id="798d84e5" class="cell" data-execution_count="76">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="optimal_solitair_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="778ea3a8" class="cell" data-execution_count="77">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="optimal_solitair_files/figure-html/cell-16-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>These are the <strong>only</strong> winning positions you can reach.</p>
+<p>How do games proceed in practice if you would play randomly?</p>
+<div id="4f3abc81" class="cell" data-execution_count="78">
+<div class="cell-output cell-output-display" data-execution_count="78">
+
+<style>
+  #altair-viz-ede554311f8b403a8e665b591e128b04.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-ede554311f8b403a8e665b591e128b04.vega-embed details,
+  #altair-viz-ede554311f8b403a8e665b591e128b04.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-ede554311f8b403a8e665b591e128b04"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-ede554311f8b403a8e665b591e128b04") {
+      outputDiv = document.getElementById("altair-viz-ede554311f8b403a8e665b591e128b04");
+    }
+
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.4.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.4.1"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-ba214a4646d15b1d225fdd8923d8ce09"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "Legend", "type": "nominal"}, "x": {"field": "#pegs", "scale": {"reverse": true}, "title": "Number of pegs left", "type": "ordinal"}, "y": {"axis": {"format": ".0%"}, "field": "#", "scale": {"type": "linear"}, "title": "", "type": "quantitative"}}, "height": 300, "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-ba214a4646d15b1d225fdd8923d8ce09": [{"#pegs": 1, "Legend": "% Games at a dead end", "#": 0.0}, {"#pegs": 2, "Legend": "% Games at a dead end", "#": 0.005690037305445936}, {"#pegs": 3, "Legend": "% Games at a dead end", "#": 0.06792264065263026}, {"#pegs": 4, "Legend": "% Games at a dead end", "#": 0.20299885044139138}, {"#pegs": 5, "Legend": "% Games at a dead end", "#": 0.21436087089611597}, {"#pegs": 6, "Legend": "% Games at a dead end", "#": 0.24712943153588376}, {"#pegs": 7, "Legend": "% Games at a dead end", "#": 0.13915378368533662}, {"#pegs": 8, "Legend": "% Games at a dead end", "#": 0.0742344613853725}, {"#pegs": 9, "Legend": "% Games at a dead end", "#": 0.03208892722940838}, {"#pegs": 10, "Legend": "% Games at a dead end", "#": 0.010589781640325856}, {"#pegs": 11, "Legend": "% Games at a dead end", "#": 0.0032754406583731413}, {"#pegs": 12, "Legend": "% Games at a dead end", "#": 0.0008754582172512926}, {"#pegs": 13, "Legend": "% Games at a dead end", "#": 0.00021968600066881315}, {"#pegs": 14, "Legend": "% Games at a dead end", "#": 6.285302643352143e-05}, {"#pegs": 15, "Legend": "% Games at a dead end", "#": 4.238020605412591e-05}, {"#pegs": 16, "Legend": "% Games at a dead end", "#": 5.0513889644913475e-06}, {"#pegs": 17, "Legend": "% Games at a dead end", "#": 3.79097298007261e-06}, {"#pegs": 18, "Legend": "% Games at a dead end", "#": 1.1377460732007943e-05}, {"#pegs": 19, "Legend": "% Games at a dead end", "#": 2.195223683871034e-06}, {"#pegs": 20, "Legend": "% Games at a dead end", "#": 0.0}, {"#pegs": 21, "Legend": "% Games at a dead end", "#": 1.645656851252992e-05}, {"#pegs": 22, "Legend": "% Games at a dead end", "#": 1.414031798526992e-06}, {"#pegs": 23, "Legend": "% Games at a dead end", "#": 0.0}, {"#pegs": 24, "Legend": "% Games at a dead end", "#": 0.0}, {"#pegs": 25, "Legend": "% Games at a dead end", "#": 0.0}, {"#pegs": 26, "Legend": "% Games at a dead end", "#": 0.0013008130081300813}, {"#pegs": 27, "Legend": "% Games at a dead end", "#": 0.0}, {"#pegs": 28, "Legend": "% Games at a dead end", "#": 0.0}, {"#pegs": 29, "Legend": "% Games at a dead end", "#": 0.0}, {"#pegs": 30, "Legend": "% Games at a dead end", "#": 0.0}, {"#pegs": 31, "Legend": "% Games at a dead end", "#": 0.0}, {"#pegs": 32, "Legend": "% Games at a dead end", "#": 0.0}, {"#pegs": 1, "Legend": "% Games unfinished", "#": 1.4298464507087507e-05}, {"#pegs": 2, "Legend": "% Games unfinished", "#": 1.4298464507087507e-05}, {"#pegs": 3, "Legend": "% Games unfinished", "#": 0.005704335769953023}, {"#pegs": 4, "Legend": "% Games unfinished", "#": 0.07362697642258328}, {"#pegs": 5, "Legend": "% Games unfinished", "#": 0.2766258268639747}, {"#pegs": 6, "Legend": "% Games unfinished", "#": 0.49098669776009063}, {"#pegs": 7, "Legend": "% Games unfinished", "#": 0.7381161292959745}, {"#pegs": 8, "Legend": "% Games unfinished", "#": 0.8772699129813112}, {"#pegs": 9, "Legend": "% Games unfinished", "#": 0.9515043743666838}, {"#pegs": 10, "Legend": "% Games unfinished", "#": 0.983593301596092}, {"#pegs": 11, "Legend": "% Games unfinished", "#": 0.994183083236418}, {"#pegs": 12, "Legend": "% Games unfinished", "#": 0.9974585238947911}, {"#pegs": 13, "Legend": "% Games unfinished", "#": 0.9983339821120424}, {"#pegs": 14, "Legend": "% Games unfinished", "#": 0.9985536681127112}, {"#pegs": 15, "Legend": "% Games unfinished", "#": 0.9986165211391447}, {"#pegs": 16, "Legend": "% Games unfinished", "#": 0.9986589013451989}, {"#pegs": 17, "Legend": "% Games unfinished", "#": 0.9986639527341633}, {"#pegs": 18, "Legend": "% Games unfinished", "#": 0.9986677437071433}, {"#pegs": 19, "Legend": "% Games unfinished", "#": 0.9986791211678753}, {"#pegs": 20, "Legend": "% Games unfinished", "#": 0.998681316391559}, {"#pegs": 21, "Legend": "% Games unfinished", "#": 0.998681316391559}, {"#pegs": 22, "Legend": "% Games unfinished", "#": 0.9986977729600715}, {"#pegs": 23, "Legend": "% Games unfinished", "#": 0.99869918699187}, {"#pegs": 24, "Legend": "% Games unfinished", "#": 0.99869918699187}, {"#pegs": 25, "Legend": "% Games unfinished", "#": 0.99869918699187}, {"#pegs": 26, "Legend": "% Games unfinished", "#": 0.99869918699187}, {"#pegs": 27, "Legend": "% Games unfinished", "#": 1.0}, {"#pegs": 28, "Legend": "% Games unfinished", "#": 1.0}, {"#pegs": 29, "Legend": "% Games unfinished", "#": 1.0}, {"#pegs": 30, "Legend": "% Games unfinished", "#": 1.0}, {"#pegs": 31, "Legend": "% Games unfinished", "#": 1.0}, {"#pegs": 32, "Legend": "% Games unfinished", "#": 1.0}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p>The blue line shows that given a position, how high the chance it’s a dead end. The yellow line is cumulative: how high is the chance a game is still unfinished (you are still alive) with a certain number of pegs left. 50% of the games end with 6 or more pegs. Therefore, if you finish with 5 pegs or fewer you are doing better then average. You have 0,001% to end up with 2 or even 1 peg winning the game. That’s…. not great.</p>
+<p>This chart showed when the game will end. What’s also interesting is if you are in a potential winning position, or in an effectively losing position where you can no longer end with 1 peg:</p>
+<div id="51134c57" class="cell" data-execution_count="86">
+<div class="cell-output cell-output-display" data-execution_count="86">
+
+<style>
+  #altair-viz-621fdaf989d94ed8aa62de77cc7e2802.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-621fdaf989d94ed8aa62de77cc7e2802.vega-embed details,
+  #altair-viz-621fdaf989d94ed8aa62de77cc7e2802.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-621fdaf989d94ed8aa62de77cc7e2802"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-621fdaf989d94ed8aa62de77cc7e2802") {
+      outputDiv = document.getElementById("altair-viz-621fdaf989d94ed8aa62de77cc7e2802");
+    }
+
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.4.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.4.1"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-775a00e020752b0ee47facbe52d6d160"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "Legend", "type": "nominal"}, "x": {"field": "#pegs", "scale": {"reverse": true}, "title": "Number of pegs left", "type": "ordinal"}, "y": {"axis": {"format": ".0%"}, "field": "#", "title": "", "type": "quantitative"}}, "height": 300, "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-775a00e020752b0ee47facbe52d6d160": [{"#pegs": 1, "Legend": "Cumulative chance to win", "#": 1.8363899529660904e-08}, {"#pegs": 2, "Legend": "Cumulative chance to win", "#": 1.8363899529660904e-08}, {"#pegs": 3, "Legend": "Cumulative chance to win", "#": 1.8363899529660904e-08}, {"#pegs": 4, "Legend": "Cumulative chance to win", "#": 3.672779905932181e-08}, {"#pegs": 5, "Legend": "Cumulative chance to win", "#": 6.734516547379307e-08}, {"#pegs": 6, "Legend": "Cumulative chance to win", "#": 1.529002147035049e-07}, {"#pegs": 7, "Legend": "Cumulative chance to win", "#": 4.053653992928599e-07}, {"#pegs": 8, "Legend": "Cumulative chance to win", "#": 1.020697158666064e-06}, {"#pegs": 9, "Legend": "Cumulative chance to win", "#": 2.5650200283357743e-06}, {"#pegs": 10, "Legend": "Cumulative chance to win", "#": 6.482236372842995e-06}, {"#pegs": 11, "Legend": "Cumulative chance to win", "#": 1.647933014089091e-05}, {"#pegs": 12, "Legend": "Cumulative chance to win", "#": 4.192818487020049e-05}, {"#pegs": 13, "Legend": "Cumulative chance to win", "#": 0.00010569755821686698}, {"#pegs": 14, "Legend": "Cumulative chance to win", "#": 0.0002636141173512578}, {"#pegs": 15, "Legend": "Cumulative chance to win", "#": 0.0006469611888312361}, {"#pegs": 16, "Legend": "Cumulative chance to win", "#": 0.0015513587912820382}, {"#pegs": 17, "Legend": "Cumulative chance to win", "#": 0.0036107785772782597}, {"#pegs": 18, "Legend": "Cumulative chance to win", "#": 0.008122386475810274}, {"#pegs": 19, "Legend": "Cumulative chance to win", "#": 0.01758066398047906}, {"#pegs": 20, "Legend": "Cumulative chance to win", "#": 0.03636721081779333}, {"#pegs": 21, "Legend": "Cumulative chance to win", "#": 0.07135310132865483}, {"#pegs": 22, "Legend": "Cumulative chance to win", "#": 0.13148114983605774}, {"#pegs": 23, "Legend": "Cumulative chance to win", "#": 0.22465606389038448}, {"#pegs": 24, "Legend": "Cumulative chance to win", "#": 0.352548033184034}, {"#pegs": 25, "Legend": "Cumulative chance to win", "#": 0.5099432718950329}, {"#pegs": 26, "Legend": "Cumulative chance to win", "#": 0.6851897429540257}, {"#pegs": 27, "Legend": "Cumulative chance to win", "#": 0.8502030408948803}, {"#pegs": 28, "Legend": "Cumulative chance to win", "#": 0.9553814382896016}, {"#pegs": 29, "Legend": "Cumulative chance to win", "#": 0.9833333333333334}, {"#pegs": 30, "Legend": "Cumulative chance to win", "#": 1.0}, {"#pegs": 31, "Legend": "Cumulative chance to win", "#": 1.0}, {"#pegs": 32, "Legend": "Cumulative chance to win", "#": 1.0}, {"#pegs": 1, "Legend": "Chance to pick a winning move", "#": null}, {"#pegs": 2, "Legend": "Chance to pick a winning move", "#": 1.0}, {"#pegs": 3, "Legend": "Chance to pick a winning move", "#": 0.5}, {"#pegs": 4, "Legend": "Chance to pick a winning move", "#": 0.5453665278113273}, {"#pegs": 5, "Legend": "Chance to pick a winning move", "#": 0.44045173909261576}, {"#pegs": 6, "Legend": "Chance to pick a winning move", "#": 0.3771910848094875}, {"#pegs": 7, "Legend": "Chance to pick a winning move", "#": 0.39714561351638006}, {"#pegs": 8, "Legend": "Chance to pick a winning move", "#": 0.3979295083041938}, {"#pegs": 9, "Legend": "Chance to pick a winning move", "#": 0.3956998604805276}, {"#pegs": 10, "Legend": "Chance to pick a winning move", "#": 0.3933555743724272}, {"#pegs": 11, "Legend": "Chance to pick a winning move", "#": 0.39303705113653087}, {"#pegs": 12, "Legend": "Chance to pick a winning move", "#": 0.39668073300400697}, {"#pegs": 13, "Legend": "Chance to pick a winning move", "#": 0.40095560616743525}, {"#pegs": 14, "Legend": "Chance to pick a winning move", "#": 0.4074651183133386}, {"#pegs": 15, "Legend": "Chance to pick a winning move", "#": 0.4170287315009762}, {"#pegs": 16, "Legend": "Chance to pick a winning move", "#": 0.42964661445715807}, {"#pegs": 17, "Legend": "Chance to pick a winning move", "#": 0.4445465120419618}, {"#pegs": 18, "Legend": "Chance to pick a winning move", "#": 0.46200680957380685}, {"#pegs": 19, "Legend": "Chance to pick a winning move", "#": 0.48342074041810745}, {"#pegs": 20, "Legend": "Chance to pick a winning move", "#": 0.5096794692957313}, {"#pegs": 21, "Legend": "Chance to pick a winning move", "#": 0.5426869282602422}, {"#pegs": 22, "Legend": "Chance to pick a winning move", "#": 0.5852552900606806}, {"#pegs": 23, "Legend": "Chance to pick a winning move", "#": 0.6372353346050622}, {"#pegs": 24, "Legend": "Chance to pick a winning move", "#": 0.6913475529815457}, {"#pegs": 25, "Legend": "Chance to pick a winning move", "#": 0.744236581383339}, {"#pegs": 26, "Legend": "Chance to pick a winning move", "#": 0.8059130701683094}, {"#pegs": 27, "Legend": "Chance to pick a winning move", "#": 0.8899095239038557}, {"#pegs": 28, "Legend": "Chance to pick a winning move", "#": 0.9715743440233237}, {"#pegs": 29, "Legend": "Chance to pick a winning move", "#": 0.9833333333333334}, {"#pegs": 30, "Legend": "Chance to pick a winning move", "#": 1.0}, {"#pegs": 31, "Legend": "Chance to pick a winning move", "#": 1.0}, {"#pegs": 32, "Legend": "Chance to pick a winning move", "#": 1.0}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p>The blue line shows the chance you have of making a move that still keeps you in a winning state. As mentioned, in the beginning you cannot make a wrong move, but after 20 pegs left many time you have 40% chance to pick a winning continuation. When you have 2 pegs left in a winning position you cannot make a mistake anymore.</p>
+<p>The yellow line shows you the cumulative chance you are still winning. With 18 pegs left, you have &lt;5% chance to still be in a potential winning position.</p>
+<p>To close a fun fact: even though it’s really hard to reach the final state with 1 peg, there are 81723294080159936 different ways in which you can reach it!</p>
+<div id="441ae330" class="cell" data-execution_count="94">
+<div class="cell-output cell-output-display" data-execution_count="94">
+
+    <div id="wrap-f33757f1" style="font-family:monospace;max-width:420px">
+      <canvas id="canvas-f33757f1" width="294" height="294" style="width:100%;aspect-ratio:7/7;
+                     background:#ffffff;border-radius:6px"></canvas>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:10px">
+        <button id="play-f33757f1">▶</button>
+        <input id="slider-f33757f1" type="range" min="0" max="31" value="0" step="1" style="flex:1">
+        <span id="label-f33757f1" style="min-width:70px;text-align:right;font-size:12px;color:#8a8fa3">0 / 31</span>
+      </div>
+    </div>
+    <script>
+    (function() {
+      const frames = [[[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0], [2, 2, 2, 2, 2, 2, 2], [2, 2, 2, 1, 2, 2, 2], [2, 2, 2, 2, 2, 2, 2], [0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0], [2, 2, 2, 2, 2, 2, 2], [2, 2, 2, 2, 1, 1, 2], [2, 2, 2, 2, 2, 2, 2], [0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0], [2, 2, 2, 2, 2, 2, 2], [2, 2, 1, 1, 2, 1, 2], [2, 2, 2, 2, 2, 2, 2], [0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0], [2, 2, 2, 2, 2, 2, 2], [2, 2, 2, 1, 2, 1, 2], [2, 2, 1, 2, 2, 2, 2], [0, 0, 1, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0], [2, 2, 2, 2, 2, 2, 2], [2, 2, 2, 1, 2, 1, 2], [2, 2, 1, 2, 2, 2, 2], [0, 0, 2, 1, 1, 0, 0], [0, 0, 2, 2, 2, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0], [2, 2, 2, 2, 2, 2, 2], [2, 2, 2, 1, 1, 1, 2], [2, 2, 1, 2, 1, 2, 2], [0, 0, 2, 1, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0], [2, 2, 2, 2, 2, 2, 2], [2, 2, 2, 1, 1, 1, 2], [2, 2, 1, 2, 2, 1, 1], [0, 0, 2, 1, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0], [2, 2, 2, 2, 2, 2, 1], [2, 2, 2, 1, 1, 1, 1], [2, 2, 1, 2, 2, 1, 2], [0, 0, 2, 1, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0], [2, 2, 2, 2, 2, 2, 1], [2, 2, 2, 1, 1, 1, 1], [2, 2, 1, 1, 1, 2, 2], [0, 0, 2, 1, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0], [2, 2, 2, 2, 2, 2, 1], [2, 2, 2, 1, 1, 1, 1], [2, 2, 2, 1, 1, 2, 2], [0, 0, 1, 1, 2, 0, 0], [0, 0, 1, 2, 2, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 2, 0, 0], [2, 2, 2, 2, 2, 2, 1], [2, 2, 2, 1, 1, 1, 1], [2, 2, 2, 1, 2, 2, 2], [0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 2, 1, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 1, 0, 0], [2, 2, 2, 2, 1, 2, 1], [2, 2, 2, 1, 2, 1, 1], [2, 2, 2, 1, 2, 2, 2], [0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 2, 1, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 1, 0, 0], [2, 2, 2, 2, 1, 2, 1], [2, 2, 1, 1, 2, 1, 1], [2, 2, 1, 1, 2, 2, 2], [0, 0, 2, 1, 1, 0, 0], [0, 0, 1, 2, 1, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 1, 2, 1, 0, 0], [2, 2, 1, 2, 1, 2, 1], [2, 2, 2, 1, 2, 1, 1], [2, 2, 1, 1, 2, 2, 2], [0, 0, 2, 1, 1, 0, 0], [0, 0, 1, 2, 1, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 1, 2, 1, 0, 0], [2, 2, 1, 2, 1, 2, 1], [2, 2, 2, 1, 1, 1, 1], [2, 2, 1, 1, 1, 2, 2], [0, 0, 2, 1, 2, 0, 0], [0, 0, 1, 2, 1, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 1, 2, 1, 0, 0], [1, 1, 2, 2, 1, 2, 1], [2, 2, 2, 1, 1, 1, 1], [2, 2, 1, 1, 1, 2, 2], [0, 0, 2, 1, 2, 0, 0], [0, 0, 1, 2, 1, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 1, 0, 0], [1, 1, 1, 2, 1, 2, 1], [2, 2, 1, 1, 1, 1, 1], [2, 2, 1, 1, 1, 2, 2], [0, 0, 2, 1, 2, 0, 0], [0, 0, 1, 2, 1, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 1, 0, 0], [1, 1, 1, 2, 1, 2, 1], [2, 2, 1, 1, 1, 1, 1], [2, 2, 1, 1, 2, 1, 1], [0, 0, 2, 1, 2, 0, 0], [0, 0, 1, 2, 1, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 1, 0, 0], [1, 1, 1, 2, 1, 2, 1], [2, 2, 1, 1, 1, 1, 1], [2, 2, 1, 1, 1, 1, 1], [0, 0, 2, 1, 1, 0, 0], [0, 0, 1, 2, 2, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 1, 0, 0], [1, 1, 1, 2, 1, 2, 1], [2, 2, 1, 1, 1, 1, 1], [2, 2, 1, 1, 1, 1, 1], [0, 0, 2, 1, 1, 0, 0], [0, 0, 2, 1, 1, 0, 0]], [[0, 0, 2, 2, 2, 0, 0], [0, 0, 2, 2, 1, 0, 0], [1, 1, 1, 2, 1, 2, 1], [2, 2, 1, 1, 1, 1, 1], [2, 2, 2, 1, 1, 1, 1], [0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0]], [[0, 0, 1, 2, 2, 0, 0], [0, 0, 1, 2, 1, 0, 0], [1, 1, 2, 2, 1, 2, 1], [2, 2, 1, 1, 1, 1, 1], [2, 2, 2, 1, 1, 1, 1], [0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0]], [[0, 0, 2, 1, 1, 0, 0], [0, 0, 1, 2, 1, 0, 0], [1, 1, 2, 2, 1, 2, 1], [2, 2, 1, 1, 1, 1, 1], [2, 2, 2, 1, 1, 1, 1], [0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0]], [[0, 0, 2, 1, 1, 0, 0], [0, 0, 1, 2, 1, 0, 0], [1, 1, 2, 2, 1, 2, 1], [1, 1, 2, 1, 1, 1, 1], [2, 2, 2, 1, 1, 1, 1], [0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0]], [[0, 0, 2, 1, 1, 0, 0], [0, 0, 1, 2, 1, 0, 0], [1, 1, 2, 2, 1, 2, 1], [1, 1, 1, 1, 1, 1, 1], [2, 2, 1, 1, 1, 1, 1], [0, 0, 2, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0]], [[0, 0, 2, 1, 1, 0, 0], [0, 0, 1, 2, 1, 0, 0], [1, 1, 2, 2, 1, 2, 1], [1, 1, 1, 1, 1, 1, 1], [1, 1, 2, 1, 1, 1, 1], [0, 0, 2, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0]], [[0, 0, 2, 1, 1, 0, 0], [0, 0, 1, 2, 1, 0, 0], [1, 1, 2, 2, 1, 2, 1], [1, 1, 2, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0]], [[0, 0, 2, 1, 1, 0, 0], [0, 0, 2, 2, 1, 0, 0], [1, 1, 1, 2, 1, 2, 1], [1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0]], [[0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 2, 1, 0, 0], [1, 1, 2, 2, 1, 2, 1], [1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0]], [[0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 2, 1, 0, 0], [1, 1, 1, 1, 2, 2, 1], [1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0]], [[0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 2, 1, 0, 0], [1, 1, 1, 2, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0]], [[0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0], [1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 2, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [0, 0, 1, 1, 1, 0, 0], [0, 0, 1, 1, 1, 0, 0]]];
+      const colors = {1: "#f2f2f2", 2: "#2f6fed"};
+      const CELL = 42;
+      const canvas = document.getElementById("canvas-f33757f1");
+      const ctx = canvas.getContext("2d");
+      const slider = document.getElementById("slider-f33757f1");
+      const label = document.getElementById("label-f33757f1");
+      const playBtn = document.getElementById("play-f33757f1");
+      let playing = false, timer = null;
+
+      function draw(i) {
+        const g = frames[i];
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        for (let r = 0; r < g.length; r++) {
+          for (let c = 0; c < g[0].length; c++) {
+            const v = g[r][c];
+            if (v === 0) continue; // not part of the board
+            ctx.fillStyle = colors[v] || "#000";
+            ctx.beginPath();
+            ctx.arc(c * CELL + CELL / 2, r * CELL + CELL / 2, CELL * 0.35, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = "#000";
+            ctx.stroke();
+          }
+        }
+        label.textContent = i + " / 31";
+      }
+
+      slider.addEventListener("input", () => draw(+slider.value));
+      playBtn.addEventListener("click", () => {
+        playing = !playing;
+        playBtn.textContent = playing ? "⏸" : "▶";
+        if (playing) {
+          timer = setInterval(() => {
+            let next = +slider.value + 1;
+            if (next > 31) next = 0;
+            slider.value = next;
+            draw(next);
+          }, 1000);
+        } else clearInterval(timer);
+      });
+
+      draw(0);
+    })();
+    </script>
+    
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A technical explanation on the calculations:</p>
+<p>I encoded positions as binary numbers with an empty hole as 0 and a filled hole with 1. For example, a certain position with 5 pegs left becomes 00000001001110000000001000. The index of the binary number is the specific position on the board. I manually wrote down all the potential moves. For each position I checked if which moves are possible. Because it’s a binary number this can be done quite fast. To find a winning path we first compute all the reachable positions, and once we reach the end we calculate back (with reversed rules) to the starting position. This way we can find all the reachable and winning positions.</p>
+<p>Computing all the reachable positions is doable in ~20 minutes, but calculating back from all winning positions, didn’t work (with 200M positions memory was full).</p>
+<p>I didn’t use the symmetry of the board, that would have reduced the amount of positions to calculate.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There is a strategy to win. I didn’t look at it because it solves the game. But in case you want to know, <a href="https://www.youtube.com/watch?v=_2UKhe1bg-Y&amp;t=1s">here it one video</a></p>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/jvanelteren\.github\.io\/blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
